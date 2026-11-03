@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Discover Aurelia International School, where curiosity, creativity and excellence shape tomorrow's leaders."
+    />
+
+    <!-- FAVICON & APP ICONS -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link rel="apple-touch-icon" href="assets/aurelia-icon.png" />
+
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Aurelia International School</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- =====================================
+     ANNOUNCEMENT TICKER
+====================================== -->
+
+    <div class="announcement-bar" id="announcementBar">
+      <div class="announcement-inner">
+        <div class="announcement-item">
+          <span class="announcement-icon" id="announcementIcon">
+            <i data-lucide="megaphone"></i>
+          </span>
+
+          <span class="announcement-message" id="announcementMessage">
+            Admissions Open for Academic Year 2027–28
+          </span>
+
+          <a href="#admissions" class="announcement-link" id="announcementLink">
+            Explore Now
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <div class="announcement-progress">
+          <span id="announcementProgress"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================
+     MAIN NAVBAR
+====================================== -->
+
+    <header class="site-header" id="siteHeader">
+      <nav class="navbar">
+        <!-- LOGO -->
+
+        <a href="#home" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path
+                d="M24 4L4 14L24 24L44 14L24 4Z"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M11 18V29C11 29 16 36 24 36C32 36 37 29 37 29V18"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M20 24V30H28V24"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M44 14V29"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+
+              <circle cx="44" cy="32" r="2" fill="currentColor" />
+            </svg>
+          </div>
+
+          <div class="brand-text">
+            <span class="brand-name">AURELIA</span>
+            <span class="brand-subtitle">INTERNATIONAL SCHOOL</span>
+          </div>
+        </a>
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="#home" class="nav-link active">
+              <i data-lucide="house"></i>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#about" class="nav-link">
+              <i data-lucide="sparkles"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#academics" class="nav-link">
+              <i data-lucide="book-open"></i>
+              <span>Academics</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#admissions" class="nav-link">
+              <i data-lucide="graduation-cap"></i>
+              <span>Admissions</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#campus" class="nav-link">
+              <i data-lucide="trees"></i>
+              <span>Campus Life</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" class="nav-link">
+              <i data-lucide="mail"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+
+          <!-- MOBILE CTA -->
+
+          <li class="mobile-nav-cta">
+            <a href="#contact" class="mobile-apply-btn">
+              Visit Our Campus
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- DESKTOP CTA -->
+
+        <div class="nav-action">
+          <a href="#contact" class="visit-btn">
+            <span class="visit-icon">
+              <i data-lucide="map-pin"></i>
+            </span>
+
+            <span>Visit Our Campus</span>
+
+            <span class="visit-arrow">
+              <i data-lucide="arrow-up-right"></i>
+            </span>
+          </a>
+        </div>
+
+        <!-- MOBILE TOGGLE -->
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- =====================================
+         TEMPORARY DEMO SECTIONS
+         Replace with actual sections later
+    ====================================== -->
+
+    <main>
+      <!-- =========================================
+            HERO SECTION
+        ========================================= -->
+      <section class="hero-section" id="home">
+        <!-- Campus background -->
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+
+        <!-- Decorative SVG stickers -->
+        <div class="hero-decoration planet-decoration" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="23" />
+            <ellipse
+              cx="50"
+              cy="50"
+              rx="43"
+              ry="13"
+              transform="rotate(-25 50 50)"
+            />
+            <path d="M35 34c5-5 13-7 20-5" />
+            <circle cx="67" cy="43" r="2" />
+          </svg>
+        </div>
+
+        <div class="hero-decoration earth-decoration" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="35" />
+            <path d="M20 40l15-9 8 5 4 12-9 8-3 14" />
+            <path d="M57 17l-4 14 12 8 14-2" />
+            <path d="M69 62l-8 8 3 12" />
+            <path d="M27 68l13 5 9 10" />
+          </svg>
+        </div>
+
+        <div class="hero-decoration star-decoration" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path
+              d="M50 7C55 36 64 45 93 50
+                     C64 55 55 64 50 93
+                     C45 64 36 55 7 50
+                     C36 45 45 36 50 7Z"
+            />
+          </svg>
+        </div>
+
+        <div class="hero-decoration book-decoration" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M50 32C38 21 20 22 9 27V75C24 69 39 72 50 83" />
+            <path d="M50 32C62 21 80 22 91 27V75C76 69 61 72 50 83" />
+            <path d="M50 32V83" />
+            <path d="M18 39C28 36 36 39 42 43" />
+            <path d="M18 51C28 48 36 51 42 55" />
+            <path d="M58 43C66 39 74 36 82 39" />
+            <path d="M58 55C66 51 74 48 82 51" />
+          </svg>
+        </div>
+
+        <div class="hero-decoration geometry-decoration" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M50 8L92 84H8L50 8Z" />
+            <path d="M50 8V84M8 84L71 46" />
+          </svg>
+        </div>
+
+        <div class="hero-decoration graduation-decoration" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M10 38L50 19L90 38L50 57L10 38Z" />
+            <path d="M25 46V65C40 78 60 78 75 65V46" />
+            <path d="M90 38V65" />
+            <circle cx="90" cy="70" r="4" />
+            <path d="M35 31L50 38L65 31" />
+          </svg>
+        </div>
+
+        <!-- Hero content -->
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              <span class="eyebrow-line"></span>
+              <span>WELCOME TO AURELIA</span>
+              <span class="eyebrow-line"></span>
+            </div>
+
+            <h1 class="hero-title">
+              Where Little Minds
+              <span>Discover Big Possibilities.</span>
+            </h1>
+
+            <p class="hero-description">
+              An inspiring environment where curiosity is encouraged, creativity
+              is celebrated, and every child finds their own path to a brighter
+              future.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#about" class="hero-btn hero-btn-primary">
+                <span>Explore Our School</span>
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+
+              <a href="#contact" class="hero-btn hero-btn-secondary">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="16" rx="2" />
+                  <path d="M16 3v4M8 3v4M3 10h18" />
+                  <path d="M8 14h3" />
+                </svg>
+                <span>Book a School Visit</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-line">
+              <span class="trust-star">✳</span>
+              <span>Curiosity begins here. Confidence grows everywhere.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom decorative wave -->
+        <div class="hero-wave">
+          <!-- Back Wave -->
+          <svg
+            class="wave wave-back"
+            viewBox="0 0 1440 150"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="
+            M0,75
+            C180,120 320,25 520,65
+            C720,105 850,130 1040,65
+            C1220,5 1330,30 1440,65
+            L1440,150 L0,150 Z
+        "
+            />
+          </svg>
+
+          <!-- Front Wave -->
+          <svg
+            class="wave wave-front"
+            viewBox="0 0 1440 150"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="
+            M0,95
+            C180,45 330,120 520,90
+            C710,55 850,30 1040,90
+            C1210,140 1320,65 1440,85
+            L1440,150 L0,150 Z
+        "
+            />
+          </svg>
+        </div>
+
+        <!-- Paper plane flight path -->
+        <svg
+          class="plane-flight-path"
+          viewBox="0 0 1200 250"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            class="plane-trail"
+            d="M30 180 C260 30 450 220 650 115
+               S980 30 1170 90"
+          />
+
+          <path
+            id="planeMotionPath"
+            d="M30 180 C260 30 450 220 650 115
+               S980 30 1170 90"
+            fill="none"
+            stroke="none"
+          />
+
+          <g class="paper-plane">
+            <svg
+              x="-18"
+              y="-18"
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+            >
+              <path d="M3 16.5L32 3L21 32L15.5 20.5L3 16.5Z" />
+              <path d="M15.5 20.5L32 3" />
+            </svg>
+            <animateMotion dur="17s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#planeMotionPath" />
+            </animateMotion>
+          </g>
+        </svg>
+      </section>
+
+      <!-- =========================================
+     SCHOOL STATISTICS
+========================================= -->
+      <section class="stats-section" id="school-stats">
+        <div class="stats-container">
+          <div class="stats-heading">
+            <span class="stats-eyebrow">OUR SCHOOL AT A GLANCE</span>
+            <h2>Growing Together, <span>Achieving More.</span></h2>
+          </div>
+
+          <div class="stats-grid">
+            <!-- Students -->
+            <article class="stat-card stat-mint">
+              <div class="stat-icon">
+                <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <path d="M5 17L24 7L43 17L24 27L5 17Z" />
+                  <path d="M13 22V32C13 32 17 38 24 38C31 38 35 32 35 32V22" />
+                  <path d="M43 17V30" />
+                  <path d="M40 34H46" />
+                </svg>
+              </div>
+
+              <div class="stat-number">
+                <span class="counter" data-target="1200" data-suffix="+"
+                  >0</span
+                >
+              </div>
+
+              <p class="stat-label">Happy Students</p>
+            </article>
+
+            <!-- Educators -->
+            <article class="stat-card stat-peach">
+              <div class="stat-icon">
+                <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <circle cx="24" cy="15" r="7" />
+                  <path d="M10 39V35C10 27 16 23 24 23C32 23 38 27 38 35V39" />
+                  <path d="M6 17C6 13 9 10 13 10" />
+                  <path d="M42 17C42 13 39 10 35 10" />
+                  <path d="M5 39H43" />
+                </svg>
+              </div>
+
+              <div class="stat-number">
+                <span class="counter" data-target="85" data-suffix="+">0</span>
+              </div>
+
+              <p class="stat-label">Expert Educators</p>
+            </article>
+
+            <!-- Experience -->
+            <article class="stat-card stat-lavender">
+              <div class="stat-icon">
+                <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <path
+                    d="M17 7H31V17C31 24 28 28 24 28C20 28 17 24 17 17V7Z"
+                  />
+                  <path d="M17 12H9V17C9 23 13 26 20 26" />
+                  <path d="M31 12H39V17C39 23 35 26 28 26" />
+                  <path d="M24 28V36" />
+                  <path d="M17 41H31" />
+                  <path d="M19 36H29L31 41H17L19 36Z" />
+                  <path
+                    d="M24 11L26 15H30L27 18L28 22L24 20L20 22L21 18L18 15H22L24 11Z"
+                  />
+                </svg>
+              </div>
+
+              <div class="stat-number">
+                <span class="counter" data-target="25" data-suffix="+">0</span>
+              </div>
+
+              <p class="stat-label">Years of Excellence</p>
+            </article>
+
+            <!-- Programs -->
+            <article class="stat-card stat-yellow">
+              <div class="stat-icon">
+                <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <circle cx="24" cy="24" r="18" />
+                  <path d="M6 24H42" />
+                  <path d="M24 6C30 12 33 18 33 24C33 30 30 36 24 42" />
+                  <path d="M24 6C18 12 15 18 15 24C15 30 18 36 24 42" />
+                  <path d="M9 15H39" />
+                  <path d="M9 33H39" />
+                </svg>
+              </div>
+
+              <div class="stat-number">
+                <span class="counter" data-target="15" data-suffix="+">0</span>
+              </div>
+
+              <p class="stat-label">Learning Programs</p>
+            </article>
+
+            <!-- Learning Environment -->
+            <article class="stat-card stat-blue">
+              <div class="stat-icon">
+                <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <rect x="5" y="7" width="38" height="26" rx="3" />
+                  <path d="M24 33V40" />
+                  <path d="M16 41H32" />
+                  <path d="M14 16H34" />
+                  <path d="M17 22L21 26L29 18" />
+                  <path d="M34 26H35" />
+                </svg>
+              </div>
+
+              <div class="stat-number">
+                <span class="counter" data-target="30" data-suffix="+">0</span>
+              </div>
+
+              <p class="stat-label">Smart Classrooms</p>
+            </article>
+          </div>
+
+          <p class="stats-footer">
+            <span class="stats-footer-star">✳</span>
+            Every number represents a story of growth.
+          </p>
+        </div>
+      </section>
+
+      
+<section class="about-section" id="about">
+    <div class="about-container">
+
+        <!-- LEFT: Illustration and values -->
+        <div class="about-visual">
+
+            <div class="about-visual-bg"></div>
+
+            <!-- Rotating decorative wheel -->
+            <div class="values-wheel">
+                <svg viewBox="0 0 500 500" class="wheel-svg">
+                    <circle cx="250" cy="250" r="205"
+                        fill="none" stroke="#D6B98C"
+                        stroke-width="2" stroke-dasharray="5 9"/>
+
+                    <circle cx="250" cy="250" r="178"
+                        fill="none" stroke="#E9CDB5"
+                        stroke-width="1.5"/>
+
+                    <circle cx="250" cy="250" r="150"
+                        fill="none" stroke="#D9D1EE"
+                        stroke-width="1.5" stroke-dasharray="3 8"/>
+
+                    <path d="M250 45 A205 205 0 0 1 455 250"
+                        fill="none" stroke="#F1BFA9" stroke-width="4"
+                        stroke-linecap="round"/>
+
+                    <path d="M455 250 A205 205 0 0 1 250 455"
+                        fill="none" stroke="#B8D9C5" stroke-width="4"
+                        stroke-linecap="round"/>
+
+                    <path d="M250 455 A205 205 0 0 1 45 250"
+                        fill="none" stroke="#D3C8EB" stroke-width="4"
+                        stroke-linecap="round"/>
+
+                    <path d="M45 250 A205 205 0 0 1 250 45"
+                        fill="none" stroke="#E8D69D" stroke-width="4"
+                        stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- Girl illustration -->
+            <div class="about-girl">
+                <img
+                    src="assets/images/about-girl.png"
+                    alt="Illustration of a young girl exploring and learning"
+                >
+            </div>
+
+            <!-- Floating value badges -->
+            <div class="value-badge value-curiosity">
+                <span class="value-icon">
+                    <i data-lucide="search"></i>
+                </span>
+                <span>Curiosity</span>
+            </div>
+
+            <div class="value-badge value-kindness">
+                <span class="value-icon">
+                    <i data-lucide="heart"></i>
+                </span>
+                <span>Kindness</span>
+            </div>
+
+            <div class="value-badge value-creativity">
+                <span class="value-icon">
+                    <i data-lucide="palette"></i>
+                </span>
+                <span>Creativity</span>
+            </div>
+
+            <div class="value-badge value-confidence">
+                <span class="value-icon">
+                    <i data-lucide="star"></i>
+                </span>
+                <span>Confidence</span>
+            </div>
+
+            <!-- Small decorative elements -->
+            <span class="about-sparkle sparkle-one">✳</span>
+            <span class="about-sparkle sparkle-two">✦</span>
+            <span class="about-sparkle sparkle-three">✧</span>
+
+            <div class="about-visual-note">
+                <span class="note-dot"></span>
+                Learning with love, every day
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT: About content -->
+        <div class="about-content">
+
+            <div class="about-eyebrow">
+                <span></span>
+                GET TO KNOW US
+            </div>
+
+            <h2 class="about-heading">
+                 Where Every Child's
+                <span>Potential Blooms.</span>
+            </h2>
+
+            <p class="about-description">
+                At Aurelia, we believe every child is naturally curious,
+                wonderfully unique, and full of possibilities. We create
+                an environment where learning goes beyond textbooks,
+                encouraging children to explore ideas, express themselves,
+                build meaningful friendships, and grow with confidence.
+            </p>
+
+            <p class="about-description about-description-secondary">
+                Through joyful experiences, caring guidance, and
+                meaningful opportunities, we help every child discover
+                what makes them special.
+            </p>
+
+            <div class="about-highlight">
+                <div class="highlight-icon">
+                    <i data-lucide="sprout"></i>
+                </div>
+
+                <div>
+                    <h3>Growing More Than Just Minds</h3>
+                    <p>
+                        Nurturing thoughtful, creative, and compassionate
+                        learners ready to make a difference.
+                    </p>
+                </div>
+            </div>
+
+            <a href="#contact" class="about-button">
+                <span>Discover Our Story</span>
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <div class="about-bottom-note">
+                <span class="about-note-line"></span>
+                LITTLE STEPS TODAY. BIG POSSIBILITIES TOMORROW.
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+      <section class="demo-section" id="about">
+        <h1>About Our School</h1>
+      </section>
+
+      <section class="demo-section" id="academics">
+        <h1>Our Academics</h1>
+      </section>
+
+      <section class="demo-section" id="admissions">
+        <h1>Admissions</h1>
+      </section>
+
+      <section class="demo-section" id="campus">
+        <h1>Campus Life</h1>
+      </section>
+
+      <section class="demo-section" id="contact">
+        <h1>Contact Us</h1>
+      </section>
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
