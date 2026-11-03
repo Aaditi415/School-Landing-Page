@@ -2001,3 +2001,472 @@ a {
         transition: none !important;
     }
 }
+
+
+
+/* =========================================
+   VISION & MISSION SECTION
+========================================= */
+
+.purpose-section {
+    position: relative;
+    padding: 30px 6% 30px;
+    background: #FFF7EB;
+    overflow: hidden;
+}
+
+.purpose-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Heading */
+
+.purpose-heading {
+    max-width: 680px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.purpose-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 17px;
+    color: #C77A62;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+}
+
+.purpose-eyebrow span {
+    width: 27px;
+    height: 2px;
+    border-radius: 5px;
+    background: #E6A58B;
+}
+
+.purpose-heading h2 {
+    margin: 0;
+    color: #303B48;
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(32px, 4vw, 47px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.8px;
+}
+
+.purpose-heading h2 span {
+    color: #D8876D;
+}
+
+.purpose-heading > p {
+    max-width: 490px;
+    margin: 17px auto 0;
+    color: #788087;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Grid */
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 27px;
+    align-items: stretch;
+}
+
+/* Cards */
+
+.purpose-card {
+    position: relative;
+    min-width: 0;
+    padding: 25px;
+    border-radius: 23px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.purpose-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(70, 60, 50, 0.09);
+}
+
+.vision-card {
+    background: #EDE8F8;
+}
+
+.mission-card {
+    background: #E5F1E7;
+}
+
+/* Top row */
+
+.purpose-card-top {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.purpose-number {
+    color: rgba(61, 57, 78, 0.45);
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.purpose-label {
+    padding: 8px 13px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.65);
+    color: #70658C;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.mission-card .purpose-label {
+    color: #5D8068;
+}
+
+/* Artwork areas */
+
+.purpose-art {
+    position: relative;
+    height: 260px;
+    margin: 12px -5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.purpose-art img {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    transition: transform 0.5s ease;
+}
+
+.purpose-card:hover .purpose-art img {
+    transform: translateY(-5px) scale(1.025);
+}
+
+/* Vision artwork */
+
+.vision-art {
+    background: radial-gradient(
+        circle at 50% 65%,
+        rgba(255,255,255,0.65),
+        transparent 67%
+    );
+}
+
+.vision-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    height: 220px;
+    border: 1.5px dashed rgba(128, 111, 168, 0.42);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-one {
+    animation: visionOrbit 35s linear infinite;
+}
+
+.orbit-two {
+    width: 280px;
+    height: 280px;
+    border-style: dotted;
+    border-color: rgba(128, 111, 168, 0.25);
+    animation: visionOrbit 50s linear infinite reverse;
+}
+
+@keyframes visionOrbit {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.vision-moon {
+    position: absolute;
+    top: 30px;
+    right: 20%;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background: #F4DDAA;
+    box-shadow: 0 0 25px rgba(244, 221, 170, 0.7);
+}
+
+.vision-star {
+    position: absolute;
+    z-index: 3;
+    color: #9985C3;
+    animation: visionTwinkle 3s ease-in-out infinite;
+}
+
+.star-a {
+    top: 20%;
+    left: 16%;
+    font-size: 25px;
+}
+
+.star-b {
+    top: 37%;
+    right: 12%;
+    font-size: 29px;
+    animation-delay: 1s;
+}
+
+.star-c {
+    bottom: 16%;
+    left: 22%;
+    font-size: 21px;
+    animation-delay: 1.5s;
+}
+
+@keyframes visionTwinkle {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Mission artwork */
+
+.mission-art {
+    background: radial-gradient(
+        circle at 50% 65%,
+        rgba(255,255,255,0.6),
+        transparent 67%
+    );
+}
+
+.mission-ground {
+    position: absolute;
+    bottom: 9px;
+    width: 78%;
+    height: 31px;
+    border-radius: 50%;
+    background: rgba(114, 162, 123, 0.18);
+}
+
+.mission-sun {
+    position: absolute;
+    top: 27px;
+    left: 19%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #F4D99A;
+    opacity: 0.85;
+}
+
+.mission-leaf {
+    position: absolute;
+    z-index: 3;
+    color: #82A88B;
+    animation: leafFloat 4s ease-in-out infinite;
+}
+
+.leaf-a {
+    top: 20%;
+    right: 18%;
+    font-size: 27px;
+}
+
+.leaf-b {
+    top: 48%;
+    left: 12%;
+    font-size: 22px;
+    animation-delay: 1s;
+}
+
+.leaf-c {
+    bottom: 18%;
+    right: 15%;
+    font-size: 24px;
+    animation-delay: 1.8s;
+}
+
+@keyframes leafFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(10deg);
+    }
+}
+
+/* Artwork captions */
+
+.vision-art-caption,
+.mission-art-caption {
+    position: absolute;
+    z-index: 4;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 14px;
+    border: 1px solid rgba(255,255,255,0.85);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.88);
+    color: #74678E;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 5px 16px rgba(60,50,40,0.06);
+}
+
+.mission-art-caption {
+    color: #64846C;
+}
+
+.vision-art-caption svg,
+.mission-art-caption svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Text content */
+
+.purpose-card-content {
+    position: relative;
+    z-index: 4;
+    padding: 18px 12px 8px;
+}
+
+.purpose-card-content h3 {
+    margin: 0 0 12px;
+    color: #393A4B;
+    font-family: 'Manrope', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.mission-card .purpose-card-content h3 {
+    color: #344D3B;
+}
+
+.purpose-card-content p {
+    max-width: 490px;
+    margin: 0;
+    color: #666A76;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.mission-card .purpose-card-content p {
+    color: #63766A;
+}
+
+/* Keywords */
+
+.purpose-keyword {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.purpose-keyword span {
+    padding: 7px 12px;
+    border: 1px solid rgba(123, 105, 159, 0.2);
+    border-radius: 30px;
+    color: #766991;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.mission-card .purpose-keyword span {
+    border-color: rgba(93, 128, 104, 0.25);
+    color: #5E8068;
+}
+
+/* Footer */
+
+.purpose-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.purpose-footer-line {
+    width: 100px;
+    height: 1px;
+    background: #E4D7C8;
+}
+
+.purpose-footer-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.purpose-footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #F9E2D7;
+    color: #C87B65;
+}
+
+.purpose-footer-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.purpose-footer-content p {
+    margin: 0;
+    color: #77736E;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.purpose-footer-content strong {
+    color: #C77A62;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .purpose-card,
+    .purpose-art img {
+        transition: none;
+    }
+
+    .orbit-one,
+    .orbit-two,
+    .vision-star,
+    .mission-leaf {
+        animation: none !important;
+    }
+}
