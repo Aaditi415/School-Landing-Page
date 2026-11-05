@@ -1417,3 +1417,490 @@
     }
 
 }
+
+
+/* =====================================================
+   LEADERSHIP RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .leadership-layout {
+        gap: 35px;
+        grid-template-columns: 1fr 0.95fr;
+    }
+
+    .leadership-visual {
+        min-height: 490px;
+    }
+
+    .leadership-message {
+        min-height: 490px;
+    }
+
+    .leadership-message-footer {
+        align-items: flex-start;
+    }
+
+    .leader-tabs {
+        gap: 5px;
+    }
+
+    .leader-tab {
+        padding: 9px 10px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .leadership-section {
+        padding: 85px 5%;
+    }
+
+    .leadership-heading {
+        margin-bottom: 35px;
+    }
+
+    .leadership-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .leadership-visual {
+        min-height: 540px;
+        grid-row: 1;
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .leadership-message {
+        grid-row: 2;
+        min-height: auto;
+        padding: 20px 0 0;
+    }
+
+    .message-content {
+        padding: 35px 0;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .leadership-section {
+        padding: 70px 5%;
+    }
+
+    .leadership-visual {
+        min-height: 410px;
+    }
+
+    .leader-photo-main {
+        width: 64%;
+        height: 76%;
+        left: 4%;
+        top: 10%;
+        border-radius: 130px 130px 15px 15px;
+    }
+
+    .leader-photo-small {
+        width: 37%;
+        height: 37%;
+        right: 0;
+        border-width: 5px;
+        border-radius: 12px;
+    }
+
+    .leader-photo-principal {
+        top: 10%;
+    }
+
+    .leader-photo-vice {
+        bottom: 10%;
+    }
+
+    .leader-photo-caption {
+        left: 15px;
+        bottom: 17px;
+    }
+
+    .leader-photo-caption h3 {
+        font-size: 17px;
+    }
+
+    .leader-photo-caption p {
+        font-size: 9px;
+    }
+
+    .leader-photo-caption span {
+        font-size: 8px;
+    }
+
+    .leadership-visual-note {
+        right: 0;
+        bottom: 0;
+        padding: 10px 12px;
+        font-size: 9px;
+    }
+
+    .leadership-deco-star {
+        font-size: 35px;
+    }
+
+    .leadership-message {
+        padding-top: 10px;
+    }
+
+    .message-topline {
+        padding-bottom: 18px;
+    }
+
+    .message-label {
+        font-size: 9px;
+    }
+
+    .message-content {
+        padding: 30px 0;
+    }
+
+    .message-content h3 {
+        font-size: 28px;
+    }
+
+    .leader-message-text,
+    .leader-message-extra {
+        font-size: 13px;
+    }
+
+    .leadership-message-footer {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .leader-tabs {
+        width: 100%;
+    }
+
+    .leader-tab {
+        flex: 1;
+        padding: 10px 7px;
+        text-align: center;
+    }
+
+    .leader-arrows {
+        margin-left: auto;
+    }
+
+}
+
+/* =====================================================
+   WHY CHOOSE US RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .why-choose-layout {
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 18px;
+    }
+
+    .why-feature-panel {
+        padding: 24px;
+        min-height: 620px;
+    }
+
+    .why-reasons-grid {
+        gap: 12px;
+    }
+
+    .why-reason-card {
+        padding: 19px;
+        min-height: 195px;
+    }
+
+    .why-feature-image {
+        height: 260px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .why-choose-section {
+        padding: 85px 5%;
+    }
+
+    .why-choose-heading {
+        margin-bottom: 40px;
+    }
+
+    .why-choose-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .why-feature-panel {
+        min-height: auto;
+    }
+
+    .why-feature-image {
+        height: 330px;
+    }
+
+    .why-reasons-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .why-choose-section {
+        padding: 70px 5%;
+    }
+
+    .why-choose-heading {
+        margin-bottom: 32px;
+    }
+
+    .why-choose-heading p {
+        font-size: 14px;
+    }
+
+    .why-feature-panel {
+        padding: 19px;
+        border-radius: 19px;
+    }
+
+    .why-feature-image {
+        height: 235px;
+        border-radius: 13px;
+    }
+
+    .why-feature-copy {
+        padding-top: 20px;
+    }
+
+    .why-feature-copy h3 {
+        font-size: 24px;
+    }
+
+    .why-feature-copy p {
+        font-size: 12px;
+    }
+
+    .why-reasons-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .why-reason-card {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .why-reason-top {
+        margin-bottom: 14px;
+    }
+
+    .why-reason-card h3 {
+        font-size: 16px;
+    }
+
+    .why-reason-card p {
+        font-size: 12px;
+    }
+
+    .why-choose-bottom {
+        gap: 10px;
+        margin-top: 32px;
+    }
+
+    .why-bottom-line {
+        width: 22px;
+        flex-shrink: 0;
+    }
+
+    .why-choose-bottom p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+}
+
+/* =====================================================
+   LEARNING JOURNEY RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .learning-timeline {
+        gap: 12px;
+    }
+
+    .journey-stage {
+        padding: 16px;
+    }
+
+    .stage-age {
+        font-size: 8px;
+        padding: 7px;
+    }
+
+    .stage-content h3 {
+        font-size: 18px;
+    }
+
+    .stage-content p {
+        font-size: 10px;
+    }
+
+    .stage-focus span {
+        font-size: 8px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .learning-journey-section {
+        padding: 85px 5%;
+    }
+
+    .learning-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .journey-path {
+        display: none;
+    }
+
+    .journey-stage {
+        min-height: 440px;
+        padding: 21px;
+    }
+
+    .stage-content h3 {
+        font-size: 21px;
+    }
+
+    .stage-content p {
+        font-size: 11px;
+    }
+
+    .stage-focus span {
+        font-size: 9px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .learning-journey-section {
+        padding: 70px 5%;
+    }
+
+    .journey-heading {
+        margin-bottom: 30px;
+    }
+
+    .journey-heading p {
+        font-size: 14px;
+    }
+
+    .journey-intro {
+        margin-bottom: 35px;
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .journey-intro-icon {
+        width: 37px;
+        height: 37px;
+        min-width: 37px;
+    }
+
+    .journey-intro strong {
+        font-size: 11px;
+    }
+
+    .journey-intro div:nth-child(2) span {
+        font-size: 10px;
+    }
+
+    .journey-intro-decoration {
+        display: none;
+    }
+
+    .learning-timeline {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .journey-stage {
+        min-height: auto;
+        padding: 21px;
+    }
+
+    .stage-illustration {
+        height: 120px;
+        margin: 12px 0;
+    }
+
+    .stage-illustration-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stage-main-icon {
+        width: 53px;
+        height: 53px;
+    }
+
+    .stage-content h3 {
+        font-size: 21px;
+    }
+
+    .stage-content p {
+        font-size: 12px;
+    }
+
+    .stage-focus {
+        margin-top: 14px;
+    }
+
+    .stage-focus span {
+        font-size: 9px;
+    }
+
+    .journey-footer {
+        padding: 16px;
+        gap: 11px;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    .journey-footer-icon {
+        width: 37px;
+        height: 37px;
+        min-width: 37px;
+    }
+
+    .journey-footer-text strong {
+        font-size: 11px;
+    }
+
+    .journey-footer-text span {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .journey-footer-decoration {
+        display: none;
+    }
+
+}

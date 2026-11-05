@@ -721,3 +721,165 @@ campusNext.addEventListener("click", () => {
 /* INITIAL LOCATION */
 
 updateCampusLocation(0);
+
+
+
+/* =====================================================
+   LEADERSHIP MESSAGE INTERACTION
+===================================================== */
+
+const leaders = [
+    {
+        role: "OUR FOUNDING VISION",
+        title: "Education is not just about learning. It's about becoming.",
+        description:
+            "At Aurelia International School, we believe every child carries extraordinary potential. Our vision is to create an environment where curiosity is encouraged, individuality is celebrated and every learner feels inspired to achieve more.",
+        extra:
+            "Together, let us nurture confident minds, compassionate hearts and responsible global citizens.",
+        name: "Founder Name",
+        designation: "Founder & Chairperson",
+        signature: "A. Founder"
+    },
+
+    {
+        role: "A MESSAGE FROM OUR PRINCIPAL",
+        title: "Every child deserves the opportunity to shine.",
+        description:
+            "Education is a journey of discovery, growth and meaningful experiences. At Aurelia, our focus is on creating a supportive environment where every student feels valued, challenged and motivated to reach their fullest potential.",
+        extra:
+            "We are committed to making every school day a step towards a brighter and more confident future.",
+        name: "Principal Name",
+        designation: "Principal",
+        signature: "P. Principal"
+    },
+
+    {
+        role: "A MESSAGE FROM OUR VICE PRINCIPAL",
+        title: "Small steps today create extraordinary futures.",
+        description:
+            "We believe that learning extends far beyond textbooks. Through encouragement, creativity, discipline and collaboration, we help students build the skills and values they need to navigate the world with confidence.",
+        extra:
+            "Our promise is to make every child's learning experience meaningful, joyful and full of possibilities.",
+        name: "Vice Principal Name",
+        designation: "Vice Principal",
+        signature: "V. Principal"
+    }
+];
+
+
+const leaderTabs = document.querySelectorAll(".leader-tab");
+const leaderPhotos = document.querySelectorAll("[data-leader-photo]");
+
+const leaderRole = document.getElementById("leaderRole");
+const leaderTitle = document.getElementById("leaderTitle");
+const leaderDescription = document.getElementById("leaderDescription");
+const leaderExtra = document.getElementById("leaderExtra");
+const leaderName = document.getElementById("leaderName");
+const leaderDesignation = document.getElementById("leaderDesignation");
+const leaderSignature = document.getElementById("leaderSignature");
+const leaderIndex = document.getElementById("leaderIndex");
+
+const leaderMessage = document.getElementById("leaderMessage");
+
+const leaderPrev = document.getElementById("leaderPrev");
+const leaderNext = document.getElementById("leaderNext");
+
+let activeLeader = 0;
+
+
+/* CHANGE LEADER */
+
+function showLeader(index) {
+
+    if (index < 0 || index >= leaders.length) return;
+
+    activeLeader = index;
+
+    const leader = leaders[index];
+
+    // Update message
+    leaderRole.textContent = leader.role;
+    leaderTitle.textContent = leader.title;
+    leaderDescription.textContent = leader.description;
+    leaderExtra.textContent = leader.extra;
+    leaderName.textContent = leader.name;
+    leaderDesignation.textContent = leader.designation;
+    leaderSignature.textContent = leader.signature;
+
+    leaderIndex.textContent =
+        `${String(index + 1).padStart(2, "0")} / 03`;
+
+
+    // Update tabs
+    leaderTabs.forEach((tab, i) => {
+        tab.classList.toggle("active", i === index);
+    });
+
+
+    // Update main portrait
+    leaderPhotos.forEach((photo, i) => {
+        photo.classList.toggle("active", i === index);
+    });
+
+
+    // Re-run message animation
+    leaderMessage.style.animation = "none";
+    void leaderMessage.offsetWidth;
+    leaderMessage.style.animation = "leaderMessageReveal 0.45s ease";
+
+}
+
+
+/* TAB CLICK */
+
+leaderTabs.forEach((tab, index) => {
+
+    tab.addEventListener("click", () => {
+        showLeader(index);
+    });
+
+});
+
+
+/* PORTRAIT CLICK */
+
+leaderPhotos.forEach((photo) => {
+
+    photo.addEventListener("click", () => {
+
+        const index = Number(photo.dataset.leaderPhoto);
+
+        showLeader(index);
+
+    });
+
+});
+
+
+/* PREVIOUS */
+
+leaderPrev.addEventListener("click", () => {
+
+    const index =
+        (activeLeader - 1 + leaders.length) % leaders.length;
+
+    showLeader(index);
+
+});
+
+
+/* NEXT */
+
+leaderNext.addEventListener("click", () => {
+
+    const index =
+        (activeLeader + 1) % leaders.length;
+
+    showLeader(index);
+
+});
+
+
+/* DEFAULT */
+
+showLeader(0);
