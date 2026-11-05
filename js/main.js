@@ -520,3 +520,204 @@ if (document.readyState === "loading") {
 } else {
     initStatistics();
 }
+
+
+/* =====================================================
+   EXPLORE OUR CAMPUS - INTERACTIVE MAP
+===================================================== */
+
+const campusLocations = [
+    {
+        title: "Academic Building",
+        category: "LEARNING SPACES",
+        description:
+            "A welcoming learning environment where young minds explore new ideas, develop their skills and grow with confidence.",
+        area: "25,000 sq. ft.",
+        capacity: "600 Students",
+        features: ["Smart Classrooms", "Digital Learning", "Interactive Spaces"]
+    },
+    {
+        title: "Sports Ground",
+        category: "SPORTS & FITNESS",
+        description:
+            "A spacious outdoor sports area where students build teamwork, confidence and healthy habits through physical activities.",
+        area: "18,000 sq. ft.",
+        capacity: "200 Students",
+        features: ["Football", "Athletics", "Outdoor Games"]
+    },
+    {
+        title: "Library",
+        category: "READING & DISCOVERY",
+        description:
+            "A peaceful and inspiring reading space filled with stories, knowledge and resources that encourage a lifelong love of learning.",
+        area: "3,500 sq. ft.",
+        capacity: "80 Students",
+        features: ["Story Books", "Reading Corners", "Digital Resources"]
+    },
+    {
+        title: "Science Laboratories",
+        category: "EXPERIMENT & EXPLORE",
+        description:
+            "Purpose-designed spaces where students learn by experimenting, observing and discovering how the world around them works.",
+        area: "4,000 sq. ft.",
+        capacity: "60 Students",
+        features: ["Physics Lab", "Chemistry Lab", "Biology Lab"]
+    },
+    {
+        title: "Art & Music Rooms",
+        category: "CREATIVITY & EXPRESSION",
+        description:
+            "Creative spaces where students express themselves through painting, music, dance and hands-on artistic activities.",
+        area: "2,800 sq. ft.",
+        capacity: "70 Students",
+        features: ["Painting Studio", "Music Room", "Dance Space"]
+    },
+    {
+        title: "Playground",
+        category: "PLAY & GROW",
+        description:
+            "A cheerful and engaging play area where children develop coordination, imagination and friendships through play.",
+        area: "5,000 sq. ft.",
+        capacity: "100 Students",
+        features: ["Play Equipment", "Open Play", "Activity Zone"]
+    },
+    {
+        title: "Cafeteria",
+        category: "FOOD & WELLBEING",
+        description:
+            "A comfortable dining space designed for students to enjoy meals, connect with friends and develop healthy eating habits.",
+        area: "2,200 sq. ft.",
+        capacity: "120 Students",
+        features: ["Dining Area", "Clean Facilities", "Seating Zones"]
+    },
+    {
+        title: "Garden & Open Spaces",
+        category: "NATURE & WELLBEING",
+        description:
+            "Green outdoor spaces that bring students closer to nature and provide opportunities for relaxation and outdoor learning.",
+        area: "8,000 sq. ft.",
+        capacity: "150 Students",
+        features: ["Green Gardens", "Nature Walks", "Outdoor Learning"]
+    }
+];
+
+const campusHotspots = document.querySelectorAll(".campus-hotspot");
+
+const campusTitle = document.getElementById("campusTitle");
+const campusCategory = document.getElementById("campusCategory");
+const campusDescription = document.getElementById("campusDescription");
+const campusArea = document.getElementById("campusArea");
+const campusCapacity = document.getElementById("campusCapacity");
+const campusNumber = document.getElementById("campusNumber");
+const campusFeatures = document.getElementById("campusFeatures");
+const campusProgress = document.getElementById("campusProgress");
+
+const campusPrev = document.getElementById("campusPrev");
+const campusNext = document.getElementById("campusNext");
+
+let activeCampusLocation = 0;
+
+
+/* UPDATE INFORMATION */
+
+function updateCampusLocation(index) {
+
+    if (index < 0 || index >= campusLocations.length) return;
+
+    activeCampusLocation = index;
+
+    const location = campusLocations[index];
+
+    // Update text
+    campusTitle.textContent = location.title;
+    campusCategory.textContent = location.category;
+    campusDescription.textContent = location.description;
+    campusArea.textContent = location.area;
+    campusCapacity.textContent = location.capacity;
+    campusNumber.textContent =
+        `${String(index + 1).padStart(2, "0")} / ${String(campusLocations.length).padStart(2, "0")}`;
+
+    // Update features
+    campusFeatures.innerHTML = "";
+
+    location.features.forEach(feature => {
+
+        const featureTag = document.createElement("span");
+
+        featureTag.textContent = feature;
+
+        campusFeatures.appendChild(featureTag);
+
+    });
+
+    // Update active hotspot
+    campusHotspots.forEach((hotspot, i) => {
+
+        hotspot.classList.toggle("active", i === index);
+
+    });
+
+    // Update progress
+    const progressDots = campusProgress.querySelectorAll("span");
+
+    progressDots.forEach((dot, i) => {
+
+        dot.classList.toggle("active", i === index);
+
+    });
+
+    // Replay information animation
+    const infoContent = document.getElementById("campusInfo");
+
+    infoContent.style.animation = "none";
+
+    void infoContent.offsetWidth;
+
+    infoContent.style.animation = "campusFade 0.35s ease";
+
+}
+
+
+/* HOTSPOT CLICK */
+
+campusHotspots.forEach(hotspot => {
+
+    hotspot.addEventListener("click", () => {
+
+        const index = Number(hotspot.dataset.location);
+
+        updateCampusLocation(index);
+
+    });
+
+});
+
+
+/* PREVIOUS LOCATION */
+
+campusPrev.addEventListener("click", () => {
+
+    const nextIndex =
+        (activeCampusLocation - 1 + campusLocations.length) %
+        campusLocations.length;
+
+    updateCampusLocation(nextIndex);
+
+});
+
+
+/* NEXT LOCATION */
+
+campusNext.addEventListener("click", () => {
+
+    const nextIndex =
+        (activeCampusLocation + 1) % campusLocations.length;
+
+    updateCampusLocation(nextIndex);
+
+});
+
+
+/* INITIAL LOCATION */
+
+updateCampusLocation(0);

@@ -1290,3 +1290,130 @@
         font-size: 28px;
     }
 }
+
+
+/* =====================================================
+   EXPLORE CAMPUS RESPONSIVE
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .campus-explorer {
+        grid-template-columns: 1fr 1.1fr;
+        gap: 18px;
+    }
+
+    .campus-info-panel {
+        padding: 25px;
+    }
+
+    .campus-map,
+    .campus-info-panel {
+        min-height: 500px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .campus-section {
+        padding: 80px 5%;
+    }
+
+    .campus-explorer {
+        grid-template-columns: 1fr;
+    }
+
+    .campus-info-panel {
+        min-height: auto;
+        order: 2;
+    }
+
+    .campus-map {
+        min-height: 480px;
+        order: 1;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .campus-section {
+        padding: 70px 5%;
+    }
+
+    .campus-heading {
+        margin-bottom: 35px;
+    }
+
+    .campus-heading p {
+        font-size: 14px;
+    }
+
+    .campus-map {
+        min-height: 350px;
+        border-radius: 18px;
+    }
+
+    .campus-map-label {
+        top: 13px;
+        left: 13px;
+        padding: 10px 12px;
+        font-size: 9px;
+    }
+
+    .campus-hotspot {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hotspot-number {
+        font-size: 10px;
+    }
+
+    .hotspot-tooltip {
+        font-size: 9px;
+    }
+
+    .campus-map-legend {
+        bottom: 13px;
+        font-size: 9px;
+        padding: 10px 13px;
+    }
+
+    .campus-info-panel {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .campus-info-content h3 {
+        font-size: 27px;
+    }
+
+    .campus-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campus-stat {
+        padding: 12px 9px;
+        gap: 8px;
+    }
+
+    .campus-stat-icon {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+    }
+
+    .campus-stat strong {
+        font-size: 11px;
+    }
+
+    .campus-bottom-note {
+        align-items: flex-start;
+        text-align: center;
+        line-height: 1.7;
+        font-size: 11px;
+    }
+
+}
