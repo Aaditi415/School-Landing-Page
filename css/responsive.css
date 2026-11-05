@@ -1904,3 +1904,646 @@
     }
 
 }
+
+/* =========================================================
+   ADMISSIONS RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+    .admissions-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .admission-step {
+        min-height: 410px;
+    }
+
+    .admissions-cta {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 650px) {
+    .admissions-section {
+        padding: 75px 5%;
+    }
+
+    .admissions-heading {
+        margin-bottom: 40px;
+    }
+
+    .admissions-heading h2 {
+        font-size: 31px;
+    }
+
+    .admissions-heading p {
+        font-size: 13px;
+    }
+
+    .admissions-steps {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .admission-step {
+        min-height: 0;
+        padding: 23px;
+    }
+
+    .admission-illustration {
+        height: 125px;
+    }
+
+    .admission-step-content h3 {
+        font-size: 20px;
+    }
+
+    .admission-step-content p {
+        font-size: 13px;
+    }
+
+    .admission-step-footer {
+        margin-top: 19px;
+    }
+
+    .admissions-cta {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 35px;
+        padding: 27px 23px;
+    }
+
+    .admissions-cta-text h3 {
+        font-size: 20px;
+    }
+
+    .admissions-cta-actions {
+        width: 100%;
+    }
+
+    .admissions-primary-btn {
+        width: 100%;
+    }
+
+    .admissions-cta-decoration {
+        right: -10px;
+        bottom: -25px;
+    }
+}
+
+@media (max-width: 380px) {
+    .admissions-heading h2 {
+        font-size: 27px;
+    }
+
+    .admission-step {
+        padding: 19px;
+    }
+
+    .admission-step-content h3 {
+        font-size: 18px;
+    }
+}
+
+/* =========================================================
+   SCHOOL GALLERY RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+    .school-gallery-container {
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 40px;
+    }
+
+    .gallery-masonry {
+        grid-template-rows: 125px 110px 125px;
+        gap: 10px;
+    }
+
+    .gallery-intro h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 760px) {
+    .school-gallery-section {
+        padding: 80px 5%;
+    }
+
+    .school-gallery-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .gallery-intro {
+        padding: 10px 0;
+    }
+
+    .gallery-intro h2 {
+        max-width: 550px;
+        font-size: 43px;
+    }
+
+    .gallery-description {
+        max-width: 560px;
+    }
+
+    .gallery-masonry {
+        grid-template-rows: 150px 125px 150px;
+        gap: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .school-gallery-section {
+        padding: 65px 5%;
+    }
+
+    .gallery-intro h2 {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    .gallery-description {
+        font-size: 13px;
+    }
+
+    .gallery-masonry {
+        grid-template-rows: 120px 105px 120px;
+        gap: 8px;
+    }
+
+    .gallery-item {
+        border-radius: 12px;
+    }
+
+    .gallery-image-overlay {
+        padding: 8px;
+        opacity: 1;
+        background: linear-gradient(
+            to top,
+            rgba(27, 35, 42, 0.65),
+            transparent 75%
+        );
+    }
+
+    .gallery-image-overlay span {
+        font-size: 9px;
+    }
+
+    .gallery-image-overlay svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .gallery-highlight p {
+        font-size: 11px;
+    }
+}
+
+/* =========================================================
+   EVENTS RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .event-image {
+        height: 240px;
+    }
+
+    .event-content h3,
+    .event-content p {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .school-events-section {
+        padding: 75px 5%;
+    }
+
+    .events-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+        margin-bottom: 32px;
+    }
+
+    .events-heading h2 {
+        font-size: 32px;
+    }
+
+    .events-heading p {
+        font-size: 13px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .event-image {
+        height: 230px;
+    }
+
+    .event-content {
+        padding: 19px;
+    }
+
+    .event-content h3 {
+        font-size: 19px;
+    }
+
+    .event-content p {
+        font-size: 12px;
+        min-height: auto;
+    }
+
+    .events-bottom-banner {
+        flex-wrap: wrap;
+        padding: 22px;
+        gap: 15px;
+    }
+
+    .events-banner-text {
+        flex-basis: calc(100% - 70px);
+    }
+
+    .events-banner-text h3 {
+        font-size: 14px;
+    }
+
+    .events-banner-text p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .events-banner-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .events-heading h2 {
+        font-size: 28px;
+    }
+
+    .event-image {
+        height: 195px;
+    }
+}
+
+/* =========================================================
+   FAQ RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+    .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .faq-help-card {
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .faq-help-card > p {
+        max-width: 430px;
+    }
+}
+
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 75px 5%;
+    }
+
+    .faq-heading {
+        margin-bottom: 35px;
+    }
+
+    .faq-heading h2 {
+        font-size: 32px;
+    }
+
+    .faq-heading p {
+        font-size: 12px;
+    }
+
+    .faq-layout {
+        gap: 25px;
+    }
+
+    .faq-list {
+        gap: 10px;
+    }
+
+    .faq-question {
+        min-height: 70px;
+        gap: 10px;
+        padding: 14px 12px;
+    }
+
+    .faq-question-number {
+        width: 29px;
+        height: 29px;
+        font-size: 9px;
+    }
+
+    .faq-question-text {
+        font-size: 12px;
+    }
+
+    .faq-toggle {
+        width: 27px;
+        height: 27px;
+    }
+
+    .faq-answer-inner {
+        padding-right: 50px;
+        padding-left: 51px;
+        font-size: 11px;
+    }
+
+    .faq-item.active .faq-answer-inner {
+        padding-bottom: 17px;
+    }
+
+    .faq-help-card {
+        padding: 27px 20px 22px;
+    }
+
+    .faq-help-card h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 360px) {
+    .faq-heading h2 {
+        font-size: 28px;
+    }
+
+    .faq-question-text {
+        font-size: 11px;
+    }
+}
+
+/* =========================================================
+   CONTACT SECTION RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px 25px;
+    }
+
+    .contact-info-top {
+        grid-column: 1 / -1;
+    }
+
+    .contact-social {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-section {
+        padding: 75px 5%;
+    }
+
+    .contact-heading {
+        margin-bottom: 35px;
+    }
+
+    .contact-heading h2 {
+        font-size: 32px;
+    }
+
+    .contact-heading p {
+        font-size: 12px;
+    }
+
+    .contact-info-panel {
+        display: block;
+        padding: 27px 22px;
+    }
+
+    .contact-info-top h3 {
+        font-size: 22px;
+    }
+
+    .contact-form-panel {
+        padding: 25px 19px;
+    }
+
+    .contact-form-heading h3 {
+        font-size: 21px;
+    }
+
+    .contact-form-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .contact-form-group input,
+    .contact-form-group select,
+    .contact-form-group textarea {
+        font-size: 12px;
+    }
+
+    .contact-location {
+        margin-top: 30px;
+    }
+
+    .contact-location-text {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 23px 20px;
+    }
+
+    .contact-location-text h3 {
+        font-size: 18px;
+    }
+
+    .contact-location-btn {
+        width: 100%;
+    }
+
+    .contact-map-placeholder {
+        min-height: 200px;
+    }
+
+    .contact-map-marker {
+        gap: 9px;
+        padding: 11px 13px;
+    }
+
+    .contact-map-marker-label strong {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-heading h2 {
+        font-size: 28px;
+    }
+
+    .contact-info-panel,
+    .contact-form-panel {
+        padding: 22px 16px;
+    }
+
+    .contact-detail {
+        gap: 10px;
+    }
+
+    .contact-detail-text a,
+    .contact-detail-text p {
+        font-size: 11px;
+    }
+}
+
+/* =====================================================
+   FOOTER RESPONSIVE
+===================================================== */
+
+@media (max-width: 1050px) {
+    .footer-main {
+        grid-template-columns: 1.3fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 700px) {
+    .school-footer {
+        padding: 60px 6% 22px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 38px 25px;
+        padding-bottom: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-description {
+        max-width: 430px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+        padding-top: 22px;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        gap: 15px 22px;
+    }
+}
+
+@media (max-width: 430px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 17px;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-logo strong {
+        font-size: 23px;
+    }
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .school-cta-banner {
+        padding: 38px;
+    }
+
+    .cta-gradient-orb {
+        width: 350px;
+        height: 350px;
+        right: -170px;
+    }
+}
+
+@media (max-width: 700px) {
+    .school-cta-banner {
+        width: 90%;
+        margin: 45px auto;
+        padding: 32px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .cta-gradient-orb {
+        width: 260px;
+        height: 260px;
+        top: auto;
+        bottom: -170px;
+        right: -100px;
+        transform: none;
+        opacity: 0.55;
+    }
+
+    .cta-banner-action {
+        align-items: flex-start;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .rocket-back-top {
+        right: 15px;
+        bottom: 18px;
+        transform: scale(0.85);
+        transform-origin: bottom right;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rocket-illustration,
+    .rocket-back-top.launching,
+    .rocket-smoke span,
+    .rocket-flame {
+        animation: none !important;
+    }
+}

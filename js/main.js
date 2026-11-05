@@ -883,3 +883,123 @@ leaderNext.addEventListener("click", () => {
 /* DEFAULT */
 
 showLeader(0);
+
+/* =========================================================
+   FAQ ACCORDION
+========================================================= */
+
+document.querySelectorAll(".faq-item").forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        // Close all FAQ items
+        document.querySelectorAll(".faq-item").forEach((faq) => {
+            faq.classList.remove("active");
+            faq.querySelector(".faq-question")
+                .setAttribute("aria-expanded", "false");
+        });
+
+        // Open clicked item if it was previously closed
+        if (!isActive) {
+            item.classList.add("active");
+            question.setAttribute("aria-expanded", "true");
+        }
+    });
+});
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const schoolContactForm = document.getElementById("schoolContactForm");
+
+if (schoolContactForm) {
+    schoolContactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const messageBox = document.getElementById("contactFormMessage");
+
+        if (!schoolContactForm.checkValidity()) {
+            schoolContactForm.reportValidity();
+            return;
+        }
+
+        const formData = new FormData(schoolContactForm);
+
+        const parentName = formData.get("parentName");
+
+        messageBox.textContent =
+            `Thank you, ${parentName}! Your form is valid. Please connect a form service to submit your enquiry to the school.`;
+
+        messageBox.className = "contact-form-message success";
+
+        schoolContactForm.reset();
+    });
+}
+
+/* =====================================================
+   FOOTER YEAR
+===================================================== */
+
+const footerYear = document.getElementById("footerYear");
+
+if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+}
+
+
+
+/* =====================================================
+   ROCKET BACK TO TOP INTERACTION
+===================================================== */
+
+const rocketButton = document.getElementById("rocketBackTop");
+
+if (rocketButton) {
+
+    let rocketLaunching = false;
+
+    // Show rocket after scrolling
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 350 && !rocketLaunching) {
+            rocketButton.classList.add("visible");
+        } else if (window.scrollY <= 350 && !rocketLaunching) {
+            rocketButton.classList.remove("visible");
+        }
+    }, { passive: true });
+
+    // Launch rocket
+    rocketButton.addEventListener("click", () => {
+
+        if (rocketLaunching) return;
+
+        rocketLaunching = true;
+
+        rocketButton.classList.add("visible", "launching");
+
+        // Scroll page to top
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        // Reset rocket after launch animation
+        setTimeout(() => {
+
+            rocketButton.classList.remove("launching");
+
+            rocketButton.classList.remove("visible");
+
+            // Allow the next launch
+            rocketLaunching = false;
+
+            if (window.scrollY > 350) {
+                rocketButton.classList.add("visible");
+            }
+
+        }, 1700);
+
+    });
+}
