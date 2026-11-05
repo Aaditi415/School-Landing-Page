@@ -949,7 +949,7 @@ a {
 
     color: rgba(255, 255, 255, 0.88);
     font-family: "DM Sans", sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.85;
     text-wrap: pretty;
@@ -1054,7 +1054,7 @@ a {
 
 .trust-star {
     color: #FFD18E;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 /* =========================================
@@ -1333,7 +1333,7 @@ a {
     display: inline-block;
     margin-bottom: 12px;
     color: #D77B62;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
     letter-spacing: 2.3px;
 }
@@ -1396,29 +1396,28 @@ a {
 
 /* Pastel backgrounds */
 
-.stat-mint {
+.stat-mint, .stat-mint > .stat-icon {
     background: #E3F2E8;
 }
 
-.stat-peach {
+.stat-peach, .stat-peach > .stat-icon {
     background: #FCE9DE;
 }
 
-.stat-lavender {
+.stat-lavender, .stat-lavender > .stat-icon {
     background: #EBE7F8;
 }
 
-.stat-yellow {
+.stat-yellow, .stat-yellow > .stat-icon {
     background: #F8F0D7;
 }
 
-.stat-blue {
+.stat-blue, .stat-blue > .stat-icon{
     background: #DFECF8;
 }
 
 
 /* Icon */
-
 .stat-icon {
     position: absolute;
     top: -24px;
@@ -1433,18 +1432,16 @@ a {
     align-items: center;
 
     border-radius: 17px;
-
     background: #fff;
 
     box-shadow:
-        0 5px 12px rgba(48, 59, 72, 0.10),
-        0 9px 20px rgba(48, 59, 72, 0.07);
+        0 -5px 12px rgba(48, 59, 72, 0.06),
+        -5px 0 12px rgba(48, 59, 72, 0.06),
+        5px 0 12px rgba(48, 59, 72, 0.06);
 
     z-index: 2;
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .stat-icon svg {
@@ -1814,7 +1811,7 @@ a {
     border-radius: 30px;
     box-shadow: 0 5px 18px rgba(60,50,40,0.06);
     color: #68736E;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -2035,7 +2032,7 @@ a {
     gap: 12px;
     margin-bottom: 17px;
     color: #C77A62;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
     letter-spacing: 2.2px;
 }
@@ -2333,7 +2330,7 @@ a {
     border-radius: 30px;
     background: rgba(255,255,255,0.88);
     color: #74678E;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     white-space: nowrap;
     box-shadow: 0 5px 16px rgba(60,50,40,0.06);
@@ -2470,3 +2467,530 @@ a {
         animation: none !important;
     }
 }
+
+
+/* =========================================
+   FACILITIES SECTION
+========================================= */
+
+.facilities-section {
+    padding: 30px 5% 30px;
+    background: #FFFDF8;
+    overflow: hidden;
+}
+
+.facilities-container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* Heading */
+
+.facilities-heading {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.facilities-eyebrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 17px;
+    color: #C77A62;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.facilities-eyebrow span {
+    width: 26px;
+    height: 2px;
+    background: #E6A58B;
+    border-radius: 5px;
+}
+
+.facilities-heading h2 {
+    margin: 0;
+    color: #303B48;
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    line-height: 1.2;
+}
+
+.facilities-heading h2 span {
+    color: #DE896F;
+}
+
+.facilities-heading p {
+    max-width: 570px;
+    margin: 17px auto 0;
+    color: #788087;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* Grid */
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* Card */
+
+.facility-card {
+    position: relative;
+    min-width: 0;
+    min-height: 250px;
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 19px;
+    overflow: hidden;
+    isolation: isolate;
+
+    display: flex;
+    align-items: flex-start;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(63, 55, 45, 0.09);
+}
+/* Individual pastel backgrounds */
+.facility-art {
+    --facility-accent: #B9785F;
+    background: #FCE9DF;
+}
+
+.facility-music {
+    --facility-accent: #8273AC;
+    background: #EDE7F8;
+}
+
+.facility-sports {
+    --facility-accent: #638A6C;
+    background: #E4F1E7;
+}
+
+.facility-robotics {
+    --facility-accent: #6385A9;
+    background: #E1EDF8;
+}
+
+.facility-science {
+    --facility-accent: #A48B49;
+    background: #F8F0D8;
+}
+
+.facility-reading {
+    --facility-accent: #AE7284;
+    background: #F8E6EB;
+}
+
+.facility-nature {
+    --facility-accent: #62866B;
+    background: #E5F0DF;
+}
+
+.facility-tech {
+    --facility-accent: #7E70A9;
+    background: #EAE7F7;
+}
+
+/* Large background number */
+
+.facility-watermark {
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    right: 10px;
+    color: rgba(255,255,255,0.55);
+    font-family: 'Manrope', sans-serif;
+    font-size: 95px;
+    font-weight: 900;
+    line-height: 1;
+    pointer-events: none;
+}
+
+
+/* Illustration area */
+
+.facility-illustration {
+    position: absolute;
+    z-index: 2;
+    right: 8px;
+    bottom: -24px;
+
+    width: 35%;
+    height: 150px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    pointer-events: none;
+}
+
+.facility-svg {
+    display: block;
+    width: 100%;
+    max-width: 175px;
+    height: 100%;
+    object-fit: contain;
+    overflow: visible;
+
+    opacity: 0.5;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+/* Hover: illustration becomes fully visible */
+
+.facility-card:hover .facility-svg {
+    opacity: 1;
+}
+
+/* Illustration hover animations */
+
+.facility-card:hover .art-brush {
+    transform: rotate(-15deg) translate(-3px, -4px);
+    transform-origin: 135px 88px;
+}
+
+.art-brush {
+    transition: transform 0.45s ease;
+}
+
+.facility-card:hover .art-palette {
+    transform: rotate(9deg) translateY(-4px);
+    transform-origin: 145px 60px;
+}
+
+.art-palette {
+    transition: transform 0.45s ease;
+}
+
+.facility-card:hover .art-canvas {
+    transform: rotate(-2deg);
+    transform-origin: 65px 75px;
+}
+
+.art-canvas {
+    transition: transform 0.4s ease;
+}
+
+.facility-card:hover .music-guitar {
+    transform: rotate(-10deg) translateY(-4px);
+    transform-origin: 58px 85px;
+}
+
+.music-guitar {
+    transition: transform 0.45s ease;
+}
+
+.facility-card:hover .music-notes {
+    animation: musicBounce 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes musicBounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-9px); }
+}
+
+.facility-card:hover .music-keyboard {
+    transform: translateY(-3px);
+}
+
+.music-keyboard {
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover .sports-ball {
+    animation: ballBounce 0.7s ease-in-out;
+}
+
+@keyframes ballBounce {
+    0%, 100% { transform: translateY(0); }
+    35% { transform: translateY(-13px) rotate(25deg); }
+    70% { transform: translateY(0) rotate(50deg); }
+}
+
+.facility-card:hover .sports-hockey {
+    transform: rotate(8deg);
+    transform-origin: 110px 100px;
+}
+
+.sports-hockey {
+    transition: transform 0.45s ease;
+}
+
+.facility-card:hover .sports-chess {
+    transform: translateY(-6px);
+}
+
+.sports-chess {
+    transition: transform 0.35s ease;
+}
+
+.facility-card:hover .robot-body {
+    animation: robotMove 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes robotMove {
+    from { transform: translateY(0); }
+    to { transform: translateY(-6px); }
+}
+
+.facility-card:hover .robot-gear {
+    transform: rotate(90deg);
+    transform-origin: 145px 104px;
+}
+
+.robot-gear {
+    transition: transform 0.6s ease;
+}
+
+.facility-card:hover .robot-circuits {
+    opacity: 0.55;
+}
+
+.robot-circuits {
+    transition: opacity 0.3s ease;
+}
+
+.facility-card:hover .science-flask {
+    transform: rotate(-5deg);
+    transform-origin: 82px 90px;
+}
+
+.science-flask {
+    transition: transform 0.4s ease;
+}
+
+.facility-card:hover .science-atom {
+    transform: rotate(25deg);
+    transform-origin: 132px 55px;
+}
+
+.science-atom {
+    transition: transform 0.6s ease;
+}
+
+.facility-card:hover .science-bubbles {
+    animation: bubbleRise 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes bubbleRise {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+}
+
+.facility-card:hover .reading-book {
+    transform: scale(1.04);
+    transform-origin: 88px 90px;
+}
+
+.reading-book {
+    transition: transform 0.4s ease;
+}
+
+.facility-card:hover .reading-letters {
+    animation: letterFloat 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes letterFloat {
+    from { transform: translateY(0); }
+    to { transform: translateY(-7px); }
+}
+
+.facility-card:hover .nature-plant {
+    transform: rotate(-5deg);
+    transform-origin: 88px 100px;
+}
+
+.nature-plant {
+    transition: transform 0.45s ease;
+}
+
+.facility-card:hover .nature-pot {
+    transform: translateY(-3px);
+}
+
+.nature-pot {
+    transition: transform 0.35s ease;
+}
+
+.facility-card:hover .nature-can {
+    transform: rotate(-8deg) translateY(-4px);
+    transform-origin: 150px 100px;
+}
+
+.nature-can {
+    transition: transform 0.4s ease;
+}
+
+.facility-card:hover .tech-code {
+    animation: codePulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes codePulse {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.facility-card:hover .tech-cursor {
+    transform: translate(5px, -5px);
+}
+
+.tech-cursor {
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover .tech-laptop {
+    transform: translateY(-4px);
+}
+
+.tech-laptop {
+    transition: transform 0.35s ease;
+}
+
+/* Card content */
+
+.facility-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 95%;
+    min-width: 0;
+    padding-bottom: 5px;
+}
+
+.facility-title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    margin-bottom: 13px;
+}
+
+.facility-number {
+    color: var(--facility-accent);
+    opacity: 0.75;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.facility-content h3 {
+    margin: 0;
+    color: var(--facility-accent);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.facility-content p {
+    max-width: 260px;
+    margin: 0;
+    color: var(--facility-accent);
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+.facility-tag {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--facility-accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+/* Card-specific text colors */
+
+.facility-music .facility-tag,
+.facility-tech .facility-tag {
+    color: #7E70A9;
+}
+
+.facility-sports .facility-tag,
+.facility-nature .facility-tag {
+    color: #62866B;
+}
+
+.facility-robotics .facility-tag {
+    color: #6486A5;
+}
+
+.facility-science .facility-tag {
+    color: #A48B49;
+}
+
+.facility-reading .facility-tag {
+    color: #AE7284;
+}
+
+/* Footer */
+
+.facilities-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin-top: 43px;
+}
+
+.facilities-footer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #FCE8D9;
+    color: #C77A62;
+}
+
+.facilities-footer-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.facilities-footer p {
+    margin: 0;
+    color: #85847D;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .facility-card,
+    .facility-card *,
+    .facility-card *::before,
+    .facility-card *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+
+
