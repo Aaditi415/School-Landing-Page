@@ -1003,3 +1003,68 @@ if (rocketButton) {
 
     });
 }
+
+/* =========================================================
+   CULTURE GALLERY FILTER
+========================================================= */
+
+const cultureFilters = document.querySelectorAll(".culture-filter");
+const cultureItems = document.querySelectorAll(".culture-gallery-item");
+const cultureGalleryCount = document.querySelector(".culture-gallery-count");
+
+if (cultureFilters.length && cultureItems.length) {
+
+    function filterCultureGallery(selectedCategory) {
+
+        let visibleCount = 0;
+
+        cultureItems.forEach((item) => {
+
+            const itemCategory = item.dataset.category;
+
+            const shouldShow =
+                selectedCategory === "all" ||
+                itemCategory === selectedCategory;
+
+            item.classList.toggle("is-hidden", !shouldShow);
+
+            if (shouldShow) {
+                visibleCount++;
+            }
+
+        });
+
+        if (cultureGalleryCount) {
+            cultureGalleryCount.textContent =
+                `${String(visibleCount).padStart(2, "0")} MOMENTS`;
+        }
+
+        cultureFilters.forEach((button) => {
+
+            const isActive =
+                button.dataset.filter === selectedCategory;
+
+            button.classList.toggle("active", isActive);
+
+            button.setAttribute(
+                "aria-pressed",
+                String(isActive)
+            );
+
+        });
+
+    }
+
+    cultureFilters.forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+            filterCultureGallery(button.dataset.filter);
+
+        });
+
+    });
+
+    filterCultureGallery("all");
+
+}
