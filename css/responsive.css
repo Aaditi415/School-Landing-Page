@@ -1,40 +1,41 @@
+/* =========================================================
+   01. NAVIGATION & ANNOUNCEMENT BAR
+========================================================= */
 
-/* =========================================
-   LARGE LAPTOPS
-========================================= */
-
+/* Laptop navigation */
 @media (max-width: 1200px) {
-
     .navbar {
         width: calc(100% - 60px);
     }
 
     .nav-menu {
-        gap: 20px;
-    }
-
-    .brand-name {
-        font-size: 20px;
+        gap: 3px;
     }
 
     .nav-link {
+        gap: 5px;
+        padding: 10px 8px;
         font-size: 12px;
     }
 
-    .visit-btn {
-        padding: 10px 12px 10px 16px;
-        gap: 8px;
+    .brand-name {
+        font-size: 19px;
     }
 
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .visit-btn {
+        gap: 7px;
+        padding: 7px 8px 7px 11px;
+        font-size: 12px;
+    }
 }
 
-
-/* =========================================
-   TABLETS / SMALL LAPTOPS
-========================================= */
-
+/* Compact desktop / tablet navigation */
 @media (max-width: 1024px) {
-
     .navbar {
         width: calc(100% - 40px);
     }
@@ -68,323 +69,10 @@
     .visit-btn {
         font-size: 12px;
     }
-
 }
 
-
-/* =========================================
-   TABLET / MOBILE NAVIGATION
-========================================= */
-
-@media (max-width: 850px) {
-
-    .site-header {
-        height: 78px;
-    }
-
-    .site-header.scrolled {
-        height: 70px;
-    }
-
-    .navbar {
-
-        width: calc(100% - 40px);
-
-        display: flex;
-
-        justify-content: space-between;
-    }
-
-    /* Hide desktop button */
-
-    .nav-action {
-        display: none;
-    }
-
-    /* Show hamburger */
-
-    .menu-toggle {
-        display: flex;
-        flex-shrink: 0;
-    }
-
-    /* Mobile dropdown */
-
-    .nav-menu {
-
-        position: absolute;
-
-        top: 100%;
-        left: 0;
-
-        width: 100%;
-        height: auto;
-
-        display: flex;
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        padding: 12px 25px 22px;
-
-        background: var(--bg-white);
-
-        border-top: 1px solid var(--border);
-
-        box-shadow: var(--shadow-md);
-
-        visibility: hidden;
-        opacity: 0;
-
-        transform: translateY(-10px);
-
-        pointer-events: none;
-
-        transition:
-            opacity 0.3s ease,
-            transform 0.3s ease,
-            visibility 0.3s ease;
-    }
-
-    .nav-menu.show {
-
-        visibility: visible;
-        opacity: 1;
-
-        transform: translateY(0);
-
-        pointer-events: auto;
-    }
-
-    .nav-menu > li {
-
-        height: auto;
-        width: 100%;
-
-        display: block;
-    }
-
-    .nav-link {
-
-        width: 100%;
-        height: auto;
-
-        padding: 15px 10px;
-
-        font-size: 14px;
-
-        border-bottom: 1px solid #F2EFEA;
-    }
-
-    .nav-link::after {
-
-        left: 10px;
-        bottom: 0;
-
-        width: 0;
-        height: 3px;
-
-        transform: none;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-        width: 35px;
-    }
-
-    /* Show mobile CTA */
-
-    .mobile-nav-cta {
-        display: block !important;
-        padding-top: 18px;
-    }
-
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 480px) {
-
-    .announcement-bar {
-        padding: 7px 10px;
-    }
-
-    .announcement-content {
-        gap: 6px;
-    }
-
-    .announcement-text {
-        font-size: 9px;
-    }
-
-    .announcement-link {
-        font-size: 9px;
-    }
-
-    .announcement-icon {
-        width: 14px;
-        height: 14px;
-    }
-
-    .site-header {
-        height: 72px;
-    }
-
-    .navbar {
-        width: calc(100% - 30px);
-    }
-
-    .brand {
-        gap: 7px;
-    }
-
-    .brand-icon {
-        width: 37px;
-        height: 37px;
-    }
-
-    .brand-name {
-        font-size: 18px;
-        letter-spacing: 2px;
-    }
-
-    .brand-subtitle {
-        font-size: 6px;
-        letter-spacing: 1.1px;
-    }
-
-    .menu-toggle {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nav-menu {
-        padding: 10px 20px 20px;
-    }
-
-}
-
-
-/* =========================================
-   VERY SMALL MOBILE
-========================================= */
-
-@media (max-width: 350px) {
-
-    .announcement-content {
-        gap: 5px;
-    }
-
-    .announcement-text {
-        font-size: 8px;
-    }
-
-    .announcement-link {
-        font-size: 8px;
-    }
-
-    .brand-name {
-        font-size: 16px;
-    }
-
-    .brand-subtitle {
-        font-size: 5px;
-    }
-
-}
-
-/* =========================================
-   RESPONSIVE ANNOUNCEMENT
-========================================= */
-
-@media (max-width: 600px) {
-
-    .announcement-bar {
-        padding: 7px 10px 9px;
-        min-height: 39px;
-    }
-
-    .announcement-item {
-        gap: 7px;
-    }
-
-    .announcement-icon {
-        width: 15px;
-        height: 15px;
-        flex-shrink: 0;
-    }
-
-    .announcement-icon svg {
-        width: 15px;
-        height: 15px;
-    }
-
-    .announcement-message {
-        font-size: 9px;
-    }
-
-    .announcement-link {
-        font-size: 9px;
-        white-space: nowrap;
-    }
-
-    .announcement-link svg {
-        width: 11px;
-        height: 11px;
-    }
-
-}
-
-
-/* =========================================
-   LAPTOP
-========================================= */
-
-@media (max-width: 1200px) {
-
-    .navbar {
-        width: calc(100% - 60px);
-    }
-
-    .nav-menu {
-        gap: 3px;
-    }
-
-    .nav-link {
-        gap: 5px;
-        padding: 10px 8px;
-        font-size: 12px;
-    }
-
-    .brand-name {
-        font-size: 19px;
-    }
-
-    .brand-icon {
-        width: 42px;
-        height: 42px;
-    }
-
-    .visit-btn {
-        gap: 7px;
-        padding: 7px 8px 7px 11px;
-        font-size: 12px;
-    }
-
-}
-
-
-/* =========================================
-   TABLET / MOBILE NAVIGATION
-========================================= */
-
+/* Mobile navigation */
 @media (max-width: 900px) {
-
     .site-header {
         height: 76px;
     }
@@ -394,11 +82,8 @@
     }
 
     .navbar {
-
         width: calc(100% - 40px);
-
         display: flex;
-
         justify-content: space-between;
     }
 
@@ -412,37 +97,23 @@
     }
 
     .nav-menu {
-
         position: absolute;
-
         top: 100%;
         left: 0;
-
         width: 100%;
         height: auto;
-
         display: flex;
         flex-direction: column;
-
         align-items: stretch;
-
         gap: 5px;
-
         padding: 15px 22px 22px;
-
-        background: #FFFFFF;
-
+        background: var(--bg-white, #fff);
         border-top: 1px solid var(--border);
-
         box-shadow: var(--shadow-md);
-
         visibility: hidden;
         opacity: 0;
-
         transform: translateY(-10px);
-
         pointer-events: none;
-
         transition:
             opacity 0.3s ease,
             transform 0.3s ease,
@@ -450,34 +121,25 @@
     }
 
     .nav-menu.show {
-
         visibility: visible;
         opacity: 1;
-
         transform: translateY(0);
-
         pointer-events: auto;
     }
 
     .nav-menu > li {
-
-        height: auto;
-        width: 100%;
-
         display: block;
+        width: 100%;
+        height: auto;
     }
 
     .nav-link {
-
-        width: 100%;
-
         display: flex;
         justify-content: flex-start;
-
+        width: 100%;
+        height: auto;
         padding: 13px 15px;
-
         font-size: 13px;
-
         border-radius: 10px;
     }
 
@@ -491,29 +153,56 @@
     }
 
     .nav-link.active {
-        background: #FFF0E9;
+        background: #fff0e9;
     }
 
     .mobile-nav-cta {
-
         display: block !important;
-
         padding-top: 12px;
     }
 
     .mobile-apply-btn {
         width: 100%;
     }
-
 }
 
+/* Announcement bar */
+@media (max-width: 600px) {
+    .announcement-bar {
+        min-height: 39px;
+        padding: 7px 10px 9px;
+    }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+    .announcement-content,
+    .announcement-item {
+        gap: 7px;
+    }
 
+    .announcement-icon,
+    .announcement-icon svg {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+    }
+
+    .announcement-message,
+    .announcement-text,
+    .announcement-link {
+        font-size: 9px;
+    }
+
+    .announcement-link {
+        white-space: nowrap;
+    }
+
+    .announcement-link svg {
+        width: 11px;
+        height: 11px;
+    }
+}
+
+/* Small mobile navigation */
 @media (max-width: 480px) {
-
     .navbar {
         width: calc(100% - 30px);
     }
@@ -546,23 +235,29 @@
         padding: 12px 16px 20px;
     }
 
+    .announcement-content {
+        gap: 6px;
+    }
+
+    .announcement-text,
+    .announcement-link {
+        font-size: 9px;
+    }
+
+    .announcement-icon {
+        width: 14px;
+        height: 14px;
+    }
 }
 
-
-/* =========================================
-   EXTRA SMALL DEVICES
-========================================= */
-
 @media (max-width: 350px) {
-
+    .announcement-content,
     .announcement-item {
         gap: 5px;
     }
 
-    .announcement-message {
-        font-size: 8px;
-    }
-
+    .announcement-text,
+    .announcement-message,
     .announcement-link {
         font-size: 8px;
     }
@@ -574,14 +269,12 @@
     .brand-subtitle {
         font-size: 5px;
     }
-
 }
 
 
-
-/* =========================================
-   HERO RESPONSIVE
-========================================= */
+/* =========================================================
+   02. HERO SECTION
+========================================================= */
 
 @media (max-width: 1100px) {
     .hero-section {
@@ -681,7 +374,8 @@
         height: 42px;
     }
 
-    .geometry-decoration, .graduation-decoration {
+    .geometry-decoration,
+    .graduation-decoration {
         display: none;
     }
 
@@ -799,9 +493,10 @@
     }
 }
 
-/* =========================================
-   STATISTICS RESPONSIVE
-========================================= */
+
+/* =========================================================
+   03. STATISTICS SECTION
+========================================================= */
 
 @media (max-width: 900px) {
     .stats-section {
@@ -865,8 +560,8 @@
     }
 
     .stat-label {
-        font-size: 12px;
         margin-top: 7px;
+        font-size: 12px;
     }
 
     .stats-footer {
@@ -890,25 +585,10 @@
     }
 }
 
-/* Accessibility */
 
-@media (prefers-reduced-motion: reduce) {
-    .stat-card,
-    .stat-icon svg {
-        transition: none !important;
-    }
-
-    .stat-card {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-
-
-/* =========================================
-   ABOUT SECTION RESPONSIVE
-========================================= */
+/* =========================================================
+   04. ABOUT SECTION
+========================================================= */
 
 @media (max-width: 1050px) {
     .about-container {
@@ -939,14 +619,14 @@
         gap: 45px;
     }
 
-    .about-girl img{
+    .about-girl img {
         width: 100%;
         height: 100%;
     }
 
     .about-visual {
-        max-width: 500px;
         width: 100%;
+        max-width: 500px;
     }
 
     .about-content {
@@ -1001,18 +681,18 @@
     }
 
     .value-curiosity {
-        left: -2%;
         top: 13%;
+        left: -2%;
     }
 
     .value-kindness {
-        right: -2%;
         top: 13%;
+        right: -2%;
     }
 
     .value-creativity {
-        left: -2%;
         bottom: 20%;
+        left: -2%;
     }
 
     .value-confidence {
@@ -1022,8 +702,8 @@
 
     .about-visual-note {
         bottom: 0;
-        font-size: 9px;
         padding: 8px 12px;
+        font-size: 9px;
     }
 
     .about-heading {
@@ -1046,8 +726,8 @@
 
 @media (max-width: 350px) {
     .value-badge {
-        font-size: 9px;
         padding: 6px 8px;
+        font-size: 9px;
     }
 
     .about-heading {
@@ -1056,9 +736,9 @@
 }
 
 
-/* =========================================
-   VISION & MISSION RESPONSIVE
-========================================= */
+/* =========================================================
+   05. VISION & MISSION SECTION
+========================================================= */
 
 @media (max-width: 900px) {
     .purpose-section {
@@ -1161,9 +841,11 @@
         display: none;
     }
 }
-/* =========================================
-   FACILITIES RESPONSIVE
-========================================= */
+
+
+/* =========================================================
+   06. FACILITIES SECTION
+========================================================= */
 
 @media (max-width: 1100px) {
     .facilities-grid {
@@ -1292,12 +974,11 @@
 }
 
 
-/* =====================================================
-   EXPLORE CAMPUS RESPONSIVE
-===================================================== */
+/* =========================================================
+   07. EXPLORE CAMPUS SECTION
+========================================================= */
 
 @media (max-width: 1050px) {
-
     .campus-explorer {
         grid-template-columns: 1fr 1.1fr;
         gap: 18px;
@@ -1311,11 +992,9 @@
     .campus-info-panel {
         min-height: 500px;
     }
-
 }
 
 @media (max-width: 800px) {
-
     .campus-section {
         padding: 80px 5%;
     }
@@ -1333,11 +1012,9 @@
         min-height: 480px;
         order: 1;
     }
-
 }
 
 @media (max-width: 550px) {
-
     .campus-section {
         padding: 70px 5%;
     }
@@ -1367,18 +1044,19 @@
         height: 36px;
     }
 
-    .hotspot-number {
+    .hotspot-number,
+    .hotspot-tooltip {
         font-size: 10px;
     }
 
-    .hotspot-tooltip {
+    .campus-hotspot .hotspot-tooltip {
         font-size: 9px;
     }
 
     .campus-map-legend {
         bottom: 13px;
-        font-size: 9px;
         padding: 10px 13px;
+        font-size: 9px;
     }
 
     .campus-info-panel {
@@ -1391,7 +1069,7 @@
     }
 
     .campus-stats {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .campus-stat {
@@ -1412,28 +1090,23 @@
     .campus-bottom-note {
         align-items: flex-start;
         text-align: center;
-        line-height: 1.7;
         font-size: 11px;
+        line-height: 1.7;
     }
-
 }
 
 
-/* =====================================================
-   LEADERSHIP RESPONSIVE
-===================================================== */
+/* =========================================================
+   08. LEADERSHIP SECTION
+========================================================= */
 
 @media (max-width: 1000px) {
-
     .leadership-layout {
-        gap: 35px;
         grid-template-columns: 1fr 0.95fr;
+        gap: 35px;
     }
 
-    .leadership-visual {
-        min-height: 490px;
-    }
-
+    .leadership-visual,
     .leadership-message {
         min-height: 490px;
     }
@@ -1450,11 +1123,9 @@
         padding: 9px 10px;
         font-size: 10px;
     }
-
 }
 
 @media (max-width: 800px) {
-
     .leadership-section {
         padding: 85px 5%;
     }
@@ -1469,10 +1140,10 @@
     }
 
     .leadership-visual {
-        min-height: 540px;
         grid-row: 1;
-        max-width: 600px;
         width: 100%;
+        max-width: 600px;
+        min-height: 540px;
         margin: 0 auto;
     }
 
@@ -1485,11 +1156,9 @@
     .message-content {
         padding: 35px 0;
     }
-
 }
 
 @media (max-width: 550px) {
-
     .leadership-section {
         padding: 70px 5%;
     }
@@ -1499,18 +1168,18 @@
     }
 
     .leader-photo-main {
+        top: 10%;
+        left: 4%;
         width: 64%;
         height: 76%;
-        left: 4%;
-        top: 10%;
         border-radius: 130px 130px 15px 15px;
     }
 
     .leader-photo-small {
+        right: 0;
         width: 37%;
         height: 37%;
-        right: 0;
-        border-width: 5px;
+        border: 5px solid;
         border-radius: 12px;
     }
 
@@ -1593,23 +1262,22 @@
     .leader-arrows {
         margin-left: auto;
     }
-
 }
 
-/* =====================================================
-   WHY CHOOSE US RESPONSIVE
-===================================================== */
+
+/* =========================================================
+   09. WHY CHOOSE US SECTION
+========================================================= */
 
 @media (max-width: 1100px) {
-
     .why-choose-layout {
         grid-template-columns: 0.85fr 1.15fr;
         gap: 18px;
     }
 
     .why-feature-panel {
-        padding: 24px;
         min-height: 620px;
+        padding: 24px;
     }
 
     .why-reasons-grid {
@@ -1617,18 +1285,16 @@
     }
 
     .why-reason-card {
-        padding: 19px;
         min-height: 195px;
+        padding: 19px;
     }
 
     .why-feature-image {
         height: 260px;
     }
-
 }
 
 @media (max-width: 850px) {
-
     .why-choose-section {
         padding: 85px 5%;
     }
@@ -1653,11 +1319,9 @@
     .why-reasons-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 }
 
 @media (max-width: 550px) {
-
     .why-choose-section {
         padding: 70px 5%;
     }
@@ -1728,15 +1392,14 @@
         font-size: 11px;
         line-height: 1.7;
     }
-
 }
 
-/* =====================================================
-   LEARNING JOURNEY RESPONSIVE
-===================================================== */
+
+/* =========================================================
+   10. LEARNING JOURNEY SECTION
+========================================================= */
 
 @media (max-width: 1100px) {
-
     .learning-timeline {
         gap: 12px;
     }
@@ -1746,8 +1409,8 @@
     }
 
     .stage-age {
-        font-size: 8px;
         padding: 7px;
+        font-size: 8px;
     }
 
     .stage-content h3 {
@@ -1761,11 +1424,9 @@
     .stage-focus span {
         font-size: 8px;
     }
-
 }
 
 @media (max-width: 850px) {
-
     .learning-journey-section {
         padding: 85px 5%;
     }
@@ -1795,11 +1456,9 @@
     .stage-focus span {
         font-size: 9px;
     }
-
 }
 
 @media (max-width: 550px) {
-
     .learning-journey-section {
         padding: 70px 5%;
     }
@@ -1813,9 +1472,9 @@
     }
 
     .journey-intro {
+        gap: 10px;
         margin-bottom: 35px;
         padding: 14px;
-        gap: 10px;
     }
 
     .journey-intro-icon {
@@ -1878,10 +1537,10 @@
     }
 
     .journey-footer {
-        padding: 16px;
-        gap: 11px;
         align-items: flex-start;
+        gap: 11px;
         margin-top: 30px;
+        padding: 16px;
     }
 
     .journey-footer-icon {
@@ -1902,11 +1561,11 @@
     .journey-footer-decoration {
         display: none;
     }
-
 }
 
+
 /* =========================================================
-   ADMISSIONS RESPONSIVE
+   11. ADMISSIONS SECTION
 ========================================================= */
 
 @media (max-width: 1050px) {
@@ -1978,10 +1637,7 @@
         font-size: 20px;
     }
 
-    .admissions-cta-actions {
-        width: 100%;
-    }
-
+    .admissions-cta-actions,
     .admissions-primary-btn {
         width: 100%;
     }
@@ -2006,8 +1662,9 @@
     }
 }
 
+
 /* =========================================================
-   SCHOOL GALLERY RESPONSIVE
+   12. SCHOOL GALLERY SECTION
 ========================================================= */
 
 @media (max-width: 1050px) {
@@ -2102,8 +1759,9 @@
     }
 }
 
+
 /* =========================================================
-   EVENTS RESPONSIVE
+   13. EVENTS SECTION
 ========================================================= */
 
 @media (max-width: 1100px) {
@@ -2160,14 +1818,14 @@
     }
 
     .event-content p {
-        font-size: 12px;
         min-height: auto;
+        font-size: 12px;
     }
 
     .events-bottom-banner {
         flex-wrap: wrap;
-        padding: 22px;
         gap: 15px;
+        padding: 22px;
     }
 
     .events-banner-text {
@@ -2199,8 +1857,9 @@
     }
 }
 
+
 /* =========================================================
-   FAQ RESPONSIVE
+   14. FAQ SECTION
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -2292,10 +1951,24 @@
     .faq-question-text {
         font-size: 11px;
     }
+        .chatbot-window {
+        right: 7px;
+        width: calc(100vw - 14px);
+    }
+
+    .chatbot-header {
+        padding: 12px;
+    }
+
+    .chatbot-messages {
+        padding: 14px 10px;
+    }
+
 }
 
+
 /* =========================================================
-   CONTACT SECTION RESPONSIVE
+   15. CONTACT SECTION
 ========================================================= */
 
 @media (max-width: 950px) {
@@ -2305,14 +1978,11 @@
 
     .contact-info-panel {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 15px 25px;
     }
 
-    .contact-info-top {
-        grid-column: 1 / -1;
-    }
-
+    .contact-info-top,
     .contact-social {
         grid-column: 1 / -1;
     }
@@ -2415,9 +2085,10 @@
     }
 }
 
-/* =====================================================
-   FOOTER RESPONSIVE
-===================================================== */
+
+/* =========================================================
+   16. FOOTER SECTION
+========================================================= */
 
 @media (max-width: 1050px) {
     .footer-main {
@@ -2488,7 +2159,9 @@
 }
 
 
-/* Responsive */
+/* =========================================================
+   17. SCHOOL CTA BANNER
+========================================================= */
 
 @media (max-width: 900px) {
     .school-cta-banner {
@@ -2513,11 +2186,11 @@
     }
 
     .cta-gradient-orb {
+        top: auto;
+        right: -100px;
+        bottom: -170px;
         width: 260px;
         height: 260px;
-        top: auto;
-        bottom: -170px;
-        right: -100px;
         transform: none;
         opacity: 0.55;
     }
@@ -2528,32 +2201,11 @@
 }
 
 
-/* Mobile */
-
-@media (max-width: 600px) {
-    .rocket-back-top {
-        right: 15px;
-        bottom: 98px;
-        transform: scale(0.85);
-        transform-origin: bottom right;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .rocket-illustration,
-    .rocket-back-top.launching,
-    .rocket-smoke span,
-    .rocket-flame {
-        animation: none !important;
-    }
-}
-
 /* =========================================================
-   CULTURE GALLERY RESPONSIVE
+   18. CULTURE GALLERY
 ========================================================= */
 
 @media (max-width: 1000px) {
-
     .culture-gallery-heading {
         gap: 35px;
     }
@@ -2563,17 +2215,13 @@
         gap: 12px;
     }
 
-    .culture-medium {
-        grid-row: span 3;
-    }
-
+    .culture-medium,
     .culture-wide {
         grid-row: span 3;
     }
 }
 
 @media (max-width: 750px) {
-
     .culture-gallery-section {
         padding: 80px 0;
     }
@@ -2611,8 +2259,8 @@
     }
 
     .culture-filter {
-        white-space: nowrap;
         flex-shrink: 0;
+        white-space: nowrap;
     }
 
     .culture-gallery-grid {
@@ -2621,7 +2269,8 @@
         gap: 11px;
     }
 
-    .culture-large {
+    .culture-large,
+    .culture-wide {
         grid-column: span 2;
         grid-row: span 2;
     }
@@ -2631,15 +2280,10 @@
         grid-row: span 2;
     }
 
-    .culture-wide {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
     .culture-image-content {
-        left: 13px;
         right: 12px;
         bottom: 14px;
+        left: 13px;
     }
 
     .culture-image-content h3 {
@@ -2655,8 +2299,8 @@
     }
 
     .culture-image-number {
-        left: 13px;
         top: 13px;
+        left: 13px;
     }
 
     .culture-gallery-footer {
@@ -2665,7 +2309,6 @@
 }
 
 @media (max-width: 450px) {
-
     .culture-gallery-section {
         padding: 65px 0;
     }
@@ -2689,10 +2332,10 @@
     }
 
     .culture-image-arrow {
-        width: 29px;
-        height: 29px;
         top: 10px;
         right: 10px;
+        width: 29px;
+        height: 29px;
     }
 
     .culture-gallery-footer p {
@@ -2701,23 +2344,12 @@
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
 
-    .culture-gallery-item,
-    .culture-gallery-item img,
-    .culture-image-content,
-    .culture-image-arrow {
-        transition: none;
-    }
-
-}
-
-/* ==========================================
-   PARENT LETTERS RESPONSIVE
-========================================== */
+/* =========================================================
+   19. PARENT LETTERS
+========================================================= */
 
 @media (max-width: 1000px) {
-
     .parent-letters-container {
         width: 90%;
         grid-template-columns: 0.8fr 1.2fr;
@@ -2725,18 +2357,16 @@
     }
 
     .parent-notebook {
-        padding-right: 35px;
         min-height: 590px;
+        padding-right: 35px;
     }
 
     .letter-message {
         font-size: 12px;
     }
-
 }
 
 @media (max-width: 750px) {
-
     .parent-letters-section {
         padding: 80px 0 65px;
     }
@@ -2776,11 +2406,9 @@
     .parent-letters-bottom {
         margin-top: 65px;
     }
-
 }
 
 @media (max-width: 520px) {
-
     .parent-letters-section {
         padding: 65px 0 50px;
     }
@@ -2812,8 +2440,8 @@
     }
 
     .notebook-rings {
-        left: 12px;
         right: 12px;
+        left: 12px;
     }
 
     .notebook-rings span {
@@ -2828,14 +2456,14 @@
     }
 
     .letter-topline {
+        margin-bottom: 20px;
         font-size: 8px;
         letter-spacing: 0.8px;
-        margin-bottom: 20px;
     }
 
     .letter-date {
-        font-size: 8px;
         padding: 5px 7px;
+        font-size: 8px;
     }
 
     .parent-letter h3 {
@@ -2847,10 +2475,7 @@
         line-height: 1.45;
     }
 
-    .letter-signature {
-        font-size: 12px;
-    }
-
+    .letter-signature,
     .letter-signature strong {
         font-size: 12px;
     }
@@ -2861,8 +2486,8 @@
     }
 
     .notebook-bottom {
-        left: 52px;
         right: 17px;
+        left: 52px;
         font-size: 12px;
     }
 
@@ -2881,15 +2506,14 @@
         gap: 9px;
     }
 
-
     .letter-arrow {
         width: 38px;
         height: 38px;
     }
 
     .parent-letters-bottom {
-        margin-top: 55px;
         gap: 8px;
+        margin-top: 55px;
     }
 
     .parent-letters-bottom p {
@@ -2899,11 +2523,29 @@
     .bottom-doodle {
         font-size: 17px;
     }
+    .aurelia-chatbot {
+        right: 16px;
+        bottom: 17px;
+    }
 
+    .chatbot-toggle {
+        width: 57px;
+        height: 57px;
+    }
+
+    .chatbot-window {
+        position: fixed;
+        right: 10px;
+        bottom: 85px;
+        width: calc(100vw - 20px);
+        max-width: 390px;
+        height: min(590px, calc(100dvh - 110px));
+        max-height: calc(100dvh - 110px);
+        border-radius: 17px;
+    }
 }
 
 @media (max-width: 360px) {
-
     .parent-notebook {
         padding-right: 14px;
     }
@@ -2915,5 +2557,46 @@
     .letter-footer {
         font-size: 6px;
     }
+}
 
+
+/* =========================================================
+   20. BACK TO TOP ROCKET
+========================================================= */
+
+@media (max-width: 600px) {
+    .rocket-back-top {
+        right: 15px;
+        bottom: 98px;
+        transform: scale(0.85);
+        transform-origin: bottom right;
+    }
+}
+
+
+/* =========================================================
+   21. ACCESSIBILITY — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .stat-card,
+    .stat-icon svg,
+    .culture-gallery-item,
+    .culture-gallery-item img,
+    .culture-image-content,
+    .culture-image-arrow {
+        transition: none !important;
+    }
+
+    .stat-card {
+        opacity: 1;
+        transform: none;
+    }
+
+    .rocket-illustration,
+    .rocket-back-top.launching,
+    .rocket-smoke span,
+    .rocket-flame {
+        animation: none !important;
+    }
 }
