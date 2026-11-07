@@ -938,3 +938,741 @@ if (parentLetters.length && letterDots.length) {
 
   showParentLetter(0);
 }
+
+
+
+/* ==========================================
+   AURELIA SMART SCHOOL CHATBOT
+   Vanilla JavaScript - No Backend
+========================================== */
+
+(function () {
+
+    const chatbotToggle = document.getElementById("chatbotToggle");
+    const chatbotWindow = document.getElementById("chatbotWindow");
+    const chatbotClose = document.getElementById("chatbotClose");
+    const chatbotRestart = document.getElementById("chatbotRestart");
+    const chatbotMessages = document.getElementById("chatbotMessages");
+    const chatbotForm = document.getElementById("chatbotForm");
+    const chatbotInput = document.getElementById("chatbotInput");
+    const chatbotSuggestions = document.getElementById("chatbotSuggestions");
+
+    if (
+        !chatbotToggle ||
+        !chatbotWindow ||
+        !chatbotMessages ||
+        !chatbotForm ||
+        !chatbotInput
+    ) {
+        return;
+    }
+
+
+    /* ==========================================
+       1. SCHOOL INFORMATION
+       Update these values with real information.
+    ========================================== */
+
+    const schoolInfo = {
+
+        name: "Aurelia International School",
+
+        admissionYear: "2027–28",
+
+        phone: "+91 00000 00000",
+
+        email: "hello@aurelia.edu",
+
+        address: "Your School Address, Your City, Your State, India",
+
+        officeHours: "Monday to Saturday, 9:00 AM to 4:00 PM",
+
+        grades: "Early Years, Primary Years, Middle Years and Senior Years",
+
+        ageCriteria: "Please contact our admissions team for the current age criteria.",
+
+        fees: "Our fee structure depends on the grade and applicable school charges. Please contact our admissions team for accurate and updated details.",
+
+        curriculum: "Aurelia focuses on meaningful learning, curiosity, creativity, communication and the overall development of every child. Please contact the school for the confirmed curriculum details.",
+
+        transport: "Please contact our school office to check transport availability, routes and related charges.",
+
+        timings: "Please contact the school office for the confirmed class-wise school timings."
+
+    };
+
+
+    /* ==========================================
+       2. CHATBOT STATE
+    ========================================== */
+
+    let isChatOpen = false;
+    let isReplying = false;
+
+
+    /* ==========================================
+       3. CHAT HELPERS
+    ========================================== */
+
+    function getCurrentTime() {
+
+        return new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+    }
+
+
+    function scrollChatToBottom() {
+
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+    }
+
+
+    function createChatMessage(message, sender, link = null) {
+
+        const messageRow = document.createElement("div");
+
+        messageRow.className = `chat-message ${sender}`;
+
+        if (sender === "bot") {
+
+            const avatar = document.createElement("div");
+
+            avatar.className = "chat-message-avatar";
+
+            const icon = document.createElement("i");
+
+            icon.setAttribute("data-lucide", "graduation-cap");
+
+            avatar.appendChild(icon);
+
+            messageRow.appendChild(avatar);
+
+        }
+
+        const content = document.createElement("div");
+
+        content.className = "chat-message-content";
+
+        const bubble = document.createElement("div");
+
+        bubble.className = "chat-message-bubble";
+
+        // Use textContent to prevent HTML injection.
+        bubble.textContent = message;
+
+        content.appendChild(bubble);
+
+
+        // Optional internal website link.
+        if (link && sender === "bot") {
+
+            const linkElement = document.createElement("a");
+
+            linkElement.className = "chatbot-link";
+
+            linkElement.href = link.url;
+
+            linkElement.textContent = link.label + " →";
+
+            content.appendChild(linkElement);
+
+        }
+
+
+        const time = document.createElement("span");
+
+        time.className = "chat-message-time";
+
+        time.textContent = getCurrentTime();
+
+        content.appendChild(time);
+
+        messageRow.appendChild(content);
+
+        chatbotMessages.appendChild(messageRow);
+
+        if (typeof lucide !== "undefined") {
+            lucide.createIcons();
+        }
+
+        scrollChatToBottom();
+
+    }
+
+
+    function showTypingIndicator() {
+
+        const typingRow = document.createElement("div");
+
+        typingRow.className = "chat-message bot";
+
+        typingRow.id = "chatbotTyping";
+
+        const avatar = document.createElement("div");
+
+        avatar.className = "chat-message-avatar";
+
+        const icon = document.createElement("i");
+
+        icon.setAttribute("data-lucide", "graduation-cap");
+
+        avatar.appendChild(icon);
+
+        const typing = document.createElement("div");
+
+        typing.className = "chat-typing";
+
+        typing.innerHTML = "<span></span><span></span><span></span>";
+
+        typingRow.appendChild(avatar);
+
+        typingRow.appendChild(typing);
+
+        chatbotMessages.appendChild(typingRow);
+
+        if (typeof lucide !== "undefined") {
+            lucide.createIcons();
+        }
+
+        scrollChatToBottom();
+
+    }
+
+
+    function removeTypingIndicator() {
+
+        const typing = document.getElementById("chatbotTyping");
+
+        if (typing) {
+            typing.remove();
+        }
+
+    }
+
+
+    /* ==========================================
+       4. SCHOOL QUESTION RESPONSE ENGINE
+    ========================================== */
+
+    function getBotResponse(rawMessage) {
+
+        const message = rawMessage
+            .toLowerCase()
+            .replace(/[^\w\s₹]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+
+
+        // Greetings
+        if (
+            /^(hi|hello|hey|hii|hiii|good morning|good afternoon|good evening|namaste|namaskar)$/.test(message)
+        ) {
+
+            return {
+                text: "Hello! 👋 Welcome to Aurelia International School! I'm your school assistant. I can help you with admissions, classes, facilities, school timings and much more. What would you like to know?"
+            };
+
+        }
+
+
+        // Thanks
+        if (
+            /\b(thank you|thanks|thank u|thx)\b/.test(message)
+        ) {
+
+            return {
+                text: "You're most welcome! 😊 We're always happy to help. Would you like to know anything else about Aurelia?"
+            };
+
+        }
+
+
+        // Goodbye
+        if (
+            /\b(bye|goodbye|see you|talk later)\b/.test(message)
+        ) {
+
+            return {
+                text: "Thank you for visiting Aurelia International School! Have a wonderful day. We hope to welcome you to our campus soon. 💚"
+            };
+
+        }
+
+
+        // Admissions
+        if (
+            /\b(admission|admissions|admit|enrol|enroll|enrollment|apply|application|joining|join school|new admission)\b/.test(message)
+        ) {
+
+            return {
+                text: `We're excited that you're considering Aurelia! 🎓 Admissions are open for the ${schoolInfo.admissionYear} academic year. You can begin by submitting an enquiry, visiting our campus and completing the application process. Our admissions team can guide you through the next steps.`,
+                link: {
+                    label: "Explore admissions",
+                    url: "#admissions"
+                }
+            };
+
+        }
+
+
+        // Admission year
+        if (
+            /\b(academic year|admission year|2027|2028)\b/.test(message)
+        ) {
+
+            return {
+                text: `Our displayed admission year is ${schoolInfo.admissionYear}. Please contact the school office to confirm current availability and application deadlines.`,
+                link: {
+                    label: "Contact our school",
+                    url: "#contact"
+                }
+            };
+
+        }
+
+
+        // Fees
+        if (
+            /\b(fee|fees|tuition|payment|charges|cost|price|scholarship)\b/.test(message)
+        ) {
+
+            return {
+                text: schoolInfo.fees,
+                link: {
+                    label: "Ask about school fees",
+                    url: "#contact"
+                }
+            };
+
+        }
+
+
+        // Age criteria
+        if (
+            /\b(age|ages|age limit|age criteria|minimum age|child age|how old)\b/.test(message)
+        ) {
+
+            return {
+                text: schoolInfo.ageCriteria,
+                link: {
+                    label: "Contact admissions",
+                    url: "#contact"
+                }
+            };
+
+        }
+
+
+        // Grades and classes
+        if (
+            /\b(classes|class|grade|grades|standard|standards|early years|primary|middle school|senior years|nursery|kindergarten|kg|pre primary)\b/.test(message)
+        ) {
+
+            return {
+                text: `We organise our learning journey into ${schoolInfo.grades}. Each stage supports children's learning and development at different ages.`,
+                link: {
+                    label: "Explore learning journey",
+                    url: "#learning-journey"
+                }
+            };
+
+        }
+
+
+        // Facilities
+        if (
+            /\b(facility|facilities|library|lab|laboratory|playground|ground|sports|music|dance|art|robotics|science|computer|technology|classroom)\b/.test(message)
+        ) {
+
+            return {
+                text: "Aurelia's planned learning experiences include Art & Craft, Music & Dance, Sports & Games, Robotics & STEM, Science, Reading, Nature and Technology. Explore the different activities and learning spaces on our website!",
+                link: {
+                    label: "Explore our facilities",
+                    url: "#facilities"
+                }
+            };
+
+        }
+
+
+        // Campus visit
+        if (
+            /\b(campus visit|visit|school visit|tour|school tour|see school|location visit)\b/.test(message)
+        ) {
+
+            return {
+                text: "We'd love to welcome you to our campus! 😊 You can send us an enquiry to arrange a visit. Our team can help you with a suitable time.",
+                link: {
+                    label: "Book a campus enquiry",
+                    url: "#contact"
+                }
+            };
+
+        }
+
+
+        // Location and address
+        if (
+            /\b(location|address|where is|where are|directions|map|reach school|school situated)\b/.test(message)
+        ) {
+
+            return {
+                text: `You can find our school at: ${schoolInfo.address}. Please confirm the address with the school office before travelling.`,
+                link: {
+                    label: "View contact details",
+                    url: "#contact"
+                }
+            };
+
+        }
+
+
+        // School timings
+        if (
+            /\b(timing|timings|school time|school hours|opening time|closing time|when does school start|when does school end)\b/.test(message)
+        ) {
+
+            return {
+                text: schoolInfo.timings,
+                link: {
+                    label: "Contact school office",
+                    url: "#contact"
+                }
+            };
+
+        }
+
+
+        // Office hours
+        if (
+            /\b(office hours|working hours|office timing|when is office open)\b/.test(message)
+        ) {
+
+            return {
+                text: `Our displayed office hours are ${schoolInfo.officeHours}. Please confirm the latest schedule with the school office.`
+            };
+
+        }
+
+
+        // Transport
+        if (
+            /\b(transport|bus|school bus|pickup|pick up|drop|van|bus route)\b/.test(message)
+        ) {
+
+            return {
+                text: schoolInfo.transport,
+                link: {
+                    label: "Ask about transport",
+                    url: "#contact"
+                }
+            };
+
+        }
+
+
+        // Curriculum
+        if (
+            /\b(curriculum|teaching|education|learning method|syllabus|subjects|academics)\b/.test(message)
+        ) {
+
+            return {
+                text: schoolInfo.curriculum,
+                link: {
+                    label: "Explore our school",
+                    url: "#about"
+                }
+            };
+
+        }
+
+
+        // Events and celebrations
+        if (
+            /\b(events|event|festival|celebration|annual day|competition|activities|function)\b/.test(message)
+        ) {
+
+            return {
+                text: "School life is full of opportunities to learn, participate and celebrate! Explore our events and cultural celebrations to discover more.",
+                link: {
+                    label: "Explore school events",
+                    url: "#events"
+                }
+            };
+
+        }
+
+
+        // Teachers and staff
+        if (
+            /\b(teacher|teachers|educator|educators|staff|principal|vice principal)\b/.test(message)
+        ) {
+
+            return {
+                text: "Our school values caring guidance, encouragement and individual attention. You can learn more about the people and values behind Aurelia through our school information.",
+                link: {
+                    label: "Discover Aurelia",
+                    url: "#about"
+                }
+            };
+
+        }
+
+
+        // Parents and testimonials
+        if (
+            /\b(parent|parents|review|reviews|testimonial|testimonials|feedback|experience)\b/.test(message)
+        ) {
+
+            return {
+                text: "We believe a strong school community grows through trust and shared experiences. Visit our parent letters section to read the stories shared by our school community.",
+                link: {
+                    label: "Read parent letters",
+                    url: "#parent-letters"
+                }
+            };
+
+        }
+
+
+        // Contact information
+        if (
+            /\b(contact|phone|mobile|number|email|mail|call|telephone)\b/.test(message)
+        ) {
+
+            return {
+                text: `You can reach our school office at ${schoolInfo.phone} or email ${schoolInfo.email}.`,
+                link: {
+                    label: "Contact us",
+                    url: "#contact"
+                }
+            };
+
+        }
+
+
+        // About the school
+        if (
+            /\b(about|aurelia|school|who are you|tell me about)\b/.test(message)
+        ) {
+
+            return {
+                text: "Aurelia International School is designed around a welcoming learning environment where children can discover their strengths, build confidence and explore new possibilities. What would you like to know about our school?",
+                link: {
+                    label: "Discover our school",
+                    url: "#about"
+                }
+            };
+
+        }
+
+
+        // Fallback
+        return {
+            text: "That's a good question! 😊 I don't have that specific information available right now. I can help with admissions, classes, fees, facilities, school timings, transport or campus visits. You can also contact our school team for more details.",
+            link: {
+                label: "Contact our school",
+                url: "#contact"
+            }
+        };
+
+    }
+
+
+    /* ==========================================
+       5. SEND AND RECEIVE MESSAGES
+    ========================================== */
+
+    function sendBotReply(message) {
+
+        const response = getBotResponse(message);
+
+        isReplying = true;
+
+        chatbotInput.disabled = true;
+
+        showTypingIndicator();
+
+        // Simulate a natural short response delay.
+        setTimeout(() => {
+
+            removeTypingIndicator();
+
+            createChatMessage(
+                response.text,
+                "bot",
+                response.link || null
+            );
+
+            isReplying = false;
+
+            chatbotInput.disabled = false;
+
+            chatbotInput.focus();
+
+        }, 650);
+
+    }
+
+
+    function sendUserMessage(message) {
+
+        const cleanMessage = message.trim();
+
+        if (!cleanMessage || isReplying) {
+            return;
+        }
+
+        createChatMessage(cleanMessage, "user");
+
+        chatbotInput.value = "";
+
+        sendBotReply(cleanMessage);
+
+    }
+
+
+    /* ==========================================
+       6. WELCOME MESSAGE
+    ========================================== */
+
+    function showWelcomeMessage() {
+
+        chatbotMessages.innerHTML = "";
+
+        createChatMessage(
+            "Hello! 👋 Welcome to Aurelia International School. I'm your school assistant. How can I help you today?",
+            "bot"
+        );
+
+    }
+
+
+    showWelcomeMessage();
+
+
+    /* ==========================================
+       7. OPEN AND CLOSE CHAT
+    ========================================== */
+
+    function openChatbot() {
+
+        isChatOpen = true;
+
+        chatbotWindow.classList.add("open");
+
+        chatbotToggle.classList.add("active");
+
+        chatbotToggle.setAttribute("aria-expanded", "true");
+
+        chatbotWindow.setAttribute("aria-hidden", "false");
+
+        chatbotInput.focus();
+
+    }
+
+
+    function closeChatbot() {
+
+        isChatOpen = false;
+
+        chatbotWindow.classList.remove("open");
+
+        chatbotToggle.classList.remove("active");
+
+        chatbotToggle.setAttribute("aria-expanded", "false");
+
+        chatbotWindow.setAttribute("aria-hidden", "true");
+
+    }
+
+
+    chatbotToggle.addEventListener("click", () => {
+
+        if (isChatOpen) {
+            closeChatbot();
+        } else {
+            openChatbot();
+        }
+
+    });
+
+
+    chatbotClose.addEventListener("click", closeChatbot);
+
+
+    // Close with Escape.
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape" && isChatOpen) {
+            closeChatbot();
+        }
+
+    });
+
+
+    /* ==========================================
+       8. FORM SUBMISSION
+    ========================================== */
+
+    chatbotForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        sendUserMessage(chatbotInput.value);
+
+    });
+
+
+    /* ==========================================
+       9. QUICK QUESTION BUTTONS
+    ========================================== */
+
+    if (chatbotSuggestions) {
+
+        chatbotSuggestions.querySelectorAll("[data-question]")
+            .forEach((button) => {
+
+                button.addEventListener("click", () => {
+
+                    if (!isChatOpen) {
+                        openChatbot();
+                    }
+
+                    sendUserMessage(button.dataset.question);
+
+                });
+
+            });
+
+    }
+
+
+    /* ==========================================
+       10. RESTART CONVERSATION
+    ========================================== */
+
+    if (chatbotRestart) {
+
+        chatbotRestart.addEventListener("click", () => {
+
+            if (isReplying) {
+                return;
+            }
+
+            showWelcomeMessage();
+
+            chatbotInput.value = "";
+
+            chatbotInput.focus();
+
+        });
+
+    }
+
+
+})();

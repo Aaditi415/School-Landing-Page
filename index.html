@@ -4084,17 +4084,76 @@
             <!-- Navigation -->
             <div class="letter-navigation">
               <div class="letter-dots" aria-label="Choose a parent letter">
-                 <button class="letter-dot active" type="button" data-go-to="0" aria-label="Show letter 1" aria-pressed="true"></button>
-    <button class="letter-dot" type="button" data-go-to="1" aria-label="Show letter 2" aria-pressed="false"></button>
-    <button class="letter-dot" type="button" data-go-to="2" aria-label="Show letter 3" aria-pressed="false"></button>
-    <button class="letter-dot" type="button" data-go-to="3" aria-label="Show letter 4" aria-pressed="false"></button>
-    <button class="letter-dot" type="button" data-go-to="4" aria-label="Show letter 5" aria-pressed="false"></button>
-    <button class="letter-dot" type="button" data-go-to="5" aria-label="Show letter 6" aria-pressed="false"></button>
-    <button class="letter-dot" type="button" data-go-to="6" aria-label="Show letter 7" aria-pressed="false"></button>
-    <button class="letter-dot" type="button" data-go-to="7" aria-label="Show letter 8" aria-pressed="false"></button>
-    <button class="letter-dot" type="button" data-go-to="8" aria-label="Show letter 9" aria-pressed="false"></button>
-    <button class="letter-dot" type="button" data-go-to="9" aria-label="Show letter 10" aria-pressed="false"></button>
-
+                <button
+                  class="letter-dot active"
+                  type="button"
+                  data-go-to="0"
+                  aria-label="Show letter 1"
+                  aria-pressed="true"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="1"
+                  aria-label="Show letter 2"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="2"
+                  aria-label="Show letter 3"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="3"
+                  aria-label="Show letter 4"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="4"
+                  aria-label="Show letter 5"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="5"
+                  aria-label="Show letter 6"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="6"
+                  aria-label="Show letter 7"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="7"
+                  aria-label="Show letter 8"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="8"
+                  aria-label="Show letter 9"
+                  aria-pressed="false"
+                ></button>
+                <button
+                  class="letter-dot"
+                  type="button"
+                  data-go-to="9"
+                  aria-label="Show letter 10"
+                  aria-pressed="false"
+                ></button>
               </div>
 
               <div class="letter-arrows">
@@ -5593,6 +5652,151 @@
         <h1>Contact Us</h1>
       </section> -->
     </main>
+
+
+    
+<!-- ==========================================
+     AURELIA SCHOOL CHATBOT
+========================================== -->
+
+<div class="aurelia-chatbot" id="aureliaChatbot">
+
+    <!-- Floating chatbot button -->
+    <button class="chatbot-toggle"
+            id="chatbotToggle"
+            type="button"
+            aria-label="Open Aurelia Assistant"
+            aria-expanded="false"
+            aria-controls="chatbotWindow">
+
+        <span class="chatbot-toggle-icon">
+            <i data-lucide="message-circle"></i>
+        </span>
+
+        <span class="chatbot-toggle-close">
+            <i data-lucide="x"></i>
+        </span>
+
+        <span class="chatbot-notification"></span>
+
+    </button>
+
+
+    <!-- Chat window -->
+    <div class="chatbot-window"
+         id="chatbotWindow"
+         aria-label="Aurelia Assistant"
+         aria-hidden="true">
+
+        <!-- Header -->
+        <div class="chatbot-header">
+
+            <div class="chatbot-header-profile">
+
+                <div class="chatbot-avatar">
+                    <i data-lucide="graduation-cap"></i>
+                    <span class="chatbot-online-dot"></span>
+                </div>
+
+                <div class="chatbot-header-info">
+                    <h3>Aurelia Assistant</h3>
+                    <span>Here to help you <span>●</span></span>
+                </div>
+
+            </div>
+
+            <div class="chatbot-header-actions">
+
+                <button type="button"
+                        id="chatbotRestart"
+                        aria-label="Restart conversation"
+                        title="Restart conversation">
+                    <i data-lucide="refresh-ccw"></i>
+                </button>
+
+                <button type="button"
+                        id="chatbotClose"
+                        aria-label="Close chat"
+                        title="Close chat">
+                    <i data-lucide="x"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Messages -->
+        <div class="chatbot-messages"
+             id="chatbotMessages"
+             role="log"
+             aria-live="polite"
+             aria-relevant="additions">
+
+            <!-- Welcome message is inserted by JavaScript -->
+
+        </div>
+
+
+        <!-- Quick suggestions -->
+        <div class="chatbot-suggestions"
+             id="chatbotSuggestions">
+
+            <span class="suggestions-heading">QUICK QUESTIONS</span>
+
+            <div class="suggestion-list">
+
+                <button type="button" data-question="Tell me about admissions">
+                    Admissions
+                </button>
+
+                <button type="button" data-question="What classes do you offer?">
+                    Classes
+                </button>
+
+                <button type="button" data-question="What facilities do you have?">
+                    Facilities
+                </button>
+
+                <button type="button" data-question="How can I visit the campus?">
+                    Campus visit
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Input -->
+        <form class="chatbot-input-area" id="chatbotForm">
+
+            <label class="visually-hidden" for="chatbotInput">
+                Type your message
+            </label>
+
+            <input type="text"
+                   id="chatbotInput"
+                   placeholder="Ask us anything..."
+                   autocomplete="off"
+                   maxlength="500"
+                   required>
+
+            <button type="submit"
+                    id="chatbotSend"
+                    aria-label="Send message">
+                <i data-lucide="send"></i>
+            </button>
+
+        </form>
+
+        <div class="chatbot-powered">
+            A little help from <strong>Aurelia Assistant</strong> ♡
+        </div>
+
+    </div>
+
+</div>
+
 
     <!-- JAVASCRIPT -->
     <script src="https://unpkg.com/lucide@latest"></script>
