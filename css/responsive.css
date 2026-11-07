@@ -2711,3 +2711,209 @@
     }
 
 }
+
+/* ==========================================
+   PARENT LETTERS RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .parent-letters-container {
+        width: 90%;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 35px;
+    }
+
+    .parent-notebook {
+        padding-right: 35px;
+        min-height: 590px;
+    }
+
+    .letter-message {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .parent-letters-section {
+        padding: 80px 0 65px;
+    }
+
+    .parent-letters-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .parent-letters-intro {
+        max-width: 570px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .parent-letters-intro h2 {
+        font-size: 43px;
+    }
+
+    .parent-letters-intro > p {
+        margin: 0 auto;
+    }
+
+    .letters-intro-note,
+    .letters-counter {
+        justify-content: center;
+    }
+
+    .letters-counter {
+        margin-top: 25px;
+    }
+
+    .parent-notebook-area {
+        max-width: 600px;
+    }
+
+    .parent-letters-bottom {
+        margin-top: 65px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .parent-letters-section {
+        padding: 65px 0 50px;
+    }
+
+    .parent-letters-container {
+        width: 91%;
+    }
+
+    .parent-letters-intro h2 {
+        font-size: 36px;
+        letter-spacing: -1.5px;
+    }
+
+    .parent-letters-intro > p {
+        font-size: 14px;
+    }
+
+    .parent-notebook-area {
+        padding: 17px 5px 0;
+    }
+
+    .parent-notebook {
+        min-height: 500px;
+        padding: 55px 20px 25px 52px;
+    }
+
+    .parent-notebook::before {
+        left: 39px;
+    }
+
+    .notebook-rings {
+        left: 12px;
+        right: 12px;
+    }
+
+    .notebook-rings span {
+        width: 10px;
+        height: 26px;
+        border-width: 2px;
+    }
+
+    .notebook-tape {
+        width: 75px;
+        height: 22px;
+    }
+
+    .letter-topline {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+        margin-bottom: 20px;
+    }
+
+    .letter-date {
+        font-size: 8px;
+        padding: 5px 7px;
+    }
+
+    .parent-letter h3 {
+        font-size: 14px;
+    }
+
+    .letter-message {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .letter-signature {
+        font-size: 12px;
+    }
+
+    .letter-signature strong {
+        font-size: 12px;
+    }
+
+    .letter-footer {
+        font-size: 7px;
+        letter-spacing: 0.6px;
+    }
+
+    .notebook-bottom {
+        left: 52px;
+        right: 17px;
+        font-size: 12px;
+    }
+
+    .notebook-flower {
+        right: -8px;
+        font-size: 30px;
+    }
+
+    .notebook-sparkle {
+        left: -9px;
+        font-size: 28px;
+    }
+
+    .letter-dots {
+        max-width: 180px;
+        gap: 9px;
+    }
+
+
+    .letter-arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .parent-letters-bottom {
+        margin-top: 55px;
+        gap: 8px;
+    }
+
+    .parent-letters-bottom p {
+        font-size: 21px;
+    }
+
+    .bottom-doodle {
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .parent-notebook {
+        padding-right: 14px;
+    }
+
+    .letter-message {
+        font-size: 12px;
+    }
+
+    .letter-footer {
+        font-size: 6px;
+    }
+
+}
