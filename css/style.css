@@ -7674,16 +7674,6 @@ a {
 
 /* Gallery Layout */
 
-.culture-large {
-    grid-column: span 7;
-    grid-row: span 5;
-}
-
-.culture-tall {
-    grid-column: span 5;
-    grid-row: span 6;
-}
-
 .culture-medium {
     grid-column: span 4;
     grid-row: span 4;
