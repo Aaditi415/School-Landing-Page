@@ -1951,19 +1951,6 @@
     .faq-question-text {
         font-size: 11px;
     }
-        .chatbot-window {
-        right: 7px;
-        width: calc(100vw - 14px);
-    }
-
-    .chatbot-header {
-        padding: 12px;
-    }
-
-    .chatbot-messages {
-        padding: 14px 10px;
-    }
-
 }
 
 
@@ -2523,26 +2510,6 @@
     .bottom-doodle {
         font-size: 17px;
     }
-    .aurelia-chatbot {
-        right: 16px;
-        bottom: 17px;
-    }
-
-    .chatbot-toggle {
-        width: 57px;
-        height: 57px;
-    }
-
-    .chatbot-window {
-        position: fixed;
-        right: 10px;
-        bottom: 85px;
-        width: calc(100vw - 20px);
-        max-width: 390px;
-        height: min(590px, calc(100dvh - 110px));
-        max-height: calc(100dvh - 110px);
-        border-radius: 17px;
-    }
 }
 
 @media (max-width: 360px) {
@@ -2567,7 +2534,7 @@
 @media (max-width: 600px) {
     .rocket-back-top {
         right: 15px;
-        bottom: 98px;
+        bottom: px;
         transform: scale(0.85);
         transform-origin: bottom right;
     }
