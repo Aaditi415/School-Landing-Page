@@ -1,0 +1,161 @@
+@media(max-width:1200px){
+  :root{--space:80px}
+  .container{width:calc(100% - 56px)}
+  .navbar{gap:12px}
+  .nav-link{padding-inline:7px;font-size:11px}
+  .nav-cta{padding:12px 13px;font-size:11px}
+  .brand-copy strong{font-size:20px}
+  .hero-grid{gap:30px}
+  .hero h1{font-size:clamp(55px,6.6vw,78px)}
+  .hero-photo{height:430px}
+  .stats-grid{grid-template-columns:repeat(4,1fr)}
+  .stats-intro{grid-column:1/-1;padding-bottom:5px}
+  .stats-intro h2 br{display:none}
+  .about-grid {gap:50px}
+  .facility-layout{grid-template-columns:.9fr 1.1fr}
+  .facility-feature{min-height:530px}
+  .admissions-grid,.faq-grid{gap:50px}
+}
+@media(max-width:560px){
+  :root{--space:65px}
+  .container{width:calc(100% - 36px)}
+  h2{font-size:clamp(34px,9vw,43px);letter-spacing:-1px}
+  .section-heading{margin-bottom:32px}
+  .section-heading p{font-size:14px}
+  .announcement-inner{width:calc(100% - 20px);min-height:42px;gap:6px}
+  .announcement-inner p{font-size:9px}
+  .announcement-inner>a{font-size:9px;margin-left:auto;white-space:nowrap}
+  .announcement-spark{font-size:14px}
+  .navbar{width:calc(100% - 36px);min-height:72px}
+  .brand-mark{width:41px;height:41px;font-size:26px}
+  .brand-copy strong{font-size:20px}
+  .brand-copy small{font-size:7px}
+  .menu-toggle{display:flex}
+  .nav-menu{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:3px;padding:12px 20px 20px;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:var(--shadow);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px);transition:all var(--ease)}
+  .nav-menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+  .nav-link{padding:12px 13px;font-size:13px;border-radius:10px}
+  .nav-link:hover,.nav-link.active{background:#ff705814}
+  .nav-link:after{display:none}
+  .nav-cta{justify-content:center;margin:8px 0 0;padding:14px}
+  .hero{min-height:auto;padding:52px 0 78px}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero h1{font-size:clamp(49px,12vw,65px);letter-spacing:-3px}
+  .hero-copy>.eyebrow{font-size:9px;margin-bottom:19px}
+  .hero-lead{font-size:14px;margin-top:20px}
+  .hero-actions{gap:14px;margin-top:25px}
+  .hero-actions .button{width:100%}
+  .hero-note{margin-top:27px}
+  .hero-art{padding:12px 8px 20px}
+  .hero-photo{height:350px;border-radius:48% 48% 22px 22px}
+  .orbit-one{width:360px;height:360px;right:-25px}.orbit-two{width:300px;height:300px;right:5px}
+  .sticker-star{font-size:54px;left:-3px;top:45px}
+  .sticker-note{right:-3px;bottom:45px;padding:11px 14px}
+  .sticker-smile{width:45px;height:45px;font-size:27px}
+  .photo-caption{left:27px;bottom:38px;font-size:8px}
+  .scroll-cue{bottom:15px;font-size:8px}
+  .stats-section{padding:35px 0}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .stats-intro{grid-column:1/-1}
+  .stats-intro h2{font-size:28px}
+  .stat-item{min-height:125px;padding:16px}
+  .stat-item strong{font-size:35px}
+  .stat-item span{font-size:11px}
+  .stat-item small{font-size:9px}
+  .about-grid,.admissions-grid,.faq-grid,.contact-wrap{grid-template-columns:1fr;gap:40px}
+  .about-visual{min-height:380px}
+  .about-photo-main{height:320px;width:72%;left:5%}
+  .about-photo-small{height:155px;width:43%;border-width:6px}
+  .about-sticker{font-size:14px;padding:14px 17px;bottom:20px}
+  .about-circle{width:85px;height:85px;font-size:7px;padding:10px}
+  .about-copy h2{margin:15px 0}
+  .vision-grid{grid-template-columns:1fr;gap:14px}
+  .vision-card{min-height:350px;padding:29px 24px}
+  .vision-card h3{font-size:32px}
+  .vision-art{font-size:75px}
+  .facility-layout{grid-template-columns:1fr;gap:18px}
+  .facility-feature{min-height:410px}
+  .facility-feature-copy{left:22px;right:22px;bottom:25px}
+  .facility-feature-copy h3{font-size:28px}
+  .facility-row{grid-template-columns:25px 44px 1fr 28px;gap:8px;min-height:76px}
+  .facility-emoji{width:40px;height:40px;font-size:20px}
+  .facility-row h3{font-size:15px}.facility-row p{font-size:10px}
+  .campus-explorer{grid-template-columns:1fr}
+  .campus-image{min-height:290px}
+  .campus-info{padding:27px 24px}
+  .campus-info-number{font-size:48px;margin-top:12px}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .why-item{min-height:210px;padding:19px 15px}
+  .why-item h3{font-size:16px;margin:16px 0 7px}
+  .why-item p{font-size:10px}
+  .why-icon{width:40px;height:40px;font-size:21px}
+  .journey-track{grid-template-columns:1fr 1fr;gap:10px}
+  .journey-stage{min-height:260px;padding:20px 16px}
+  .journey-stage:nth-child(even){transform:none}
+  .stage-number{font-size:48px}
+  .journey-stage h3{font-size:20px}
+  .journey-stage p{font-size:10px}
+  .journey .small-disclaimer{margin-top:22px}
+  .admissions-grid{gap:28px}
+  .admissions-doodle{font-size:65px;bottom:-25px}
+  .admission-steps{padding:8px 17px}
+  .admission-step{grid-template-columns:38px 1fr 18px;gap:10px;padding:18px 0}
+  .admission-step h3{font-size:16px}
+  .admission-step p{font-size:10px}
+  .gallery-heading{align-items:flex-start;flex-direction:column;gap:15px;margin-bottom:28px}
+  .gallery-heading>.text-link{margin:0}
+  .photo-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:190px 150px 150px;gap:9px}
+  .mosaic-large{grid-row:span 2}
+  .mosaic-item figcaption{left:11px;bottom:11px;font-size:10px}
+  .event-side-note{font-size:13px;padding:0}
+  .event-row{grid-template-columns:54px 1fr 30px;gap:12px;padding:17px 0}
+  .event-date{width:50px;height:55px}
+  .event-date strong{font-size:23px}
+  .event-main h3{font-size:16px}
+  .event-main p{font-size:10px}
+  .event-meta{grid-column:2;font-size:10px;margin-top:-8px}
+  .event-row>a{grid-column:3;grid-row:1/3;width:30px;height:30px}
+  .faq-grid{gap:30px}
+  .faq-scribble{font-size:90px;right:10px;bottom:-20px}
+  .faq-question{font-size:15px;padding:17px 0}
+  .faq-answer p{font-size:12px}
+  .contact-wrap{gap:35px}
+  .contact-form{padding:24px 18px}
+  .form-heading h3{font-size:22px}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .cta-section{padding:55px 0}
+  .cta-inner{align-items:flex-start;flex-direction:column;gap:25px}
+  .cta-inner h2{font-size:39px}
+  .cta-spark{right:5px;top:-22px;font-size:75px}
+  .culture-grid{columns:2 130px;column-gap:9px}
+  .culture-card{margin-bottom:9px;border-radius:12px}
+  .culture-card:nth-child(n){height:220px}
+  .culture-card:nth-child(3n+1){height:270px}
+  .culture-card>div{left:12px;bottom:12px}
+  .culture-card h3{font-size:15px}
+  .culture-card>div span{font-size:8px}
+  .culture-card small{font-size:9px}
+  .gallery-filters{gap:6px}
+  .filter-button{padding:8px 11px;font-size:9px}
+  .letter-grid{grid-template-columns:1fr;gap:17px}
+  .letter-card{min-height:240px;transform:none!important}
+  .letter-card p{font-size:17px;margin:23px 0 16px}
+  .day-sun{width:60px;height:60px;font-size:34px;flex-shrink:0}
+  .day-timeline{padding-left:25px}
+  .day-moment{grid-template-columns:65px 1fr 20px;gap:10px;padding:16px 0}
+  .day-moment time{font-size:14px}
+  .day-moment h3{font-size:16px}
+  .day-moment p{font-size:10px}
+  .day-moment>b{font-size:18px}
+  .day-dot{left:-34px;width:15px;height:15px}
+  .footer{padding-top:48px}
+  .footer-main{grid-template-columns:1fr 1fr;gap:32px 20px;padding-bottom:35px}
+  .footer-brand{grid-column:1/-1}
+  .footer-column h4{font-size:9px}
+  .footer-column a,.footer-column span{font-size:10px}
+  .footer-bottom{align-items:flex-start;flex-direction:column;gap:12px;font-size:9px}
+  .footer-bottom div{gap:15px}
+  .chatbot{right:14px;bottom:14px}
+  .chat-window{width:min(340px,calc(100vw - 28px));right:0;bottom:62px}
+  .chat-toggle{padding:10px 14px}
+  .rocket-button{right:16px;bottom:76px;width:42px;height:42px}
+}
