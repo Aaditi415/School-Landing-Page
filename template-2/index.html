@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aurelia International School — big dreams start with little questions."
+    />
+    <meta name="theme-color" content="#fff9ec" />
+    <title>Aurelia International School | Learn. Play. Discover.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="announcement-bar" id="announcementBar">
+      <div class="announcement-inner">
+        <span class="announcement-spark">✳</span>
+        <p id="announcementMessage">
+          Admissions open for Academic Year 2027–28
+        </p>
+        <a href="#admissions">Explore admissions <span>↗</span></a>
+        <div class="announcement-progress">
+          <span id="announcementProgress"></span>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container navbar">
+        <a class="brand" href="#hero" aria-label="Aurelia home">
+          <span class="brand-mark">a<span>✳</span></span>
+          <span class="brand-copy"
+            ><strong>AURELIA</strong><small>INTERNATIONAL SCHOOL</small></span
+          >
+        </a>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+          <a class="nav-link active" href="#hero">Home</a>
+          <a class="nav-link" href="#about">Our story</a>
+          <a class="nav-link" href="#facilities">Discover</a>
+          <a class="nav-link" href="#learning-journey">Academics</a>
+          <a class="nav-link" href="#school-gallery">School life</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-cta" href="#admissions"
+            >Join our school <span>↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero section" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">
+              <span class="eyebrow-icon">✳</span> A PLACE TO GROW, EXPLORE &
+              SHINE
+            </div>
+            <h1>
+              BIG DREAMS<br /><em>START HERE<span>✳</span></em>
+            </h1>
+            <p class="hero-lead">
+              Little questions. Big discoveries. Endless possibilities. At
+              Aurelia, every child gets the freedom to explore, create and
+              become something extraordinary.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-coral" href="#about"
+                >Discover Aurelia <span>↗</span></a
+              >
+              <a class="text-link" href="#admissions"
+                ><span class="round-arrow">→</span> Start your journey</a
+              >
+            </div>
+            <div class="hero-note">
+              <span class="note-icon">♡</span
+              ><span
+                ><strong>A little school with big possibilities.</strong
+                ><small>Every child matters. Every dream counts.</small></span
+              >
+            </div>
+          </div>
+          <div class="hero-art reveal">
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
+            <div class="hero-photo">
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85"
+                alt="Children learning together in a bright classroom"
+              />
+            </div>
+            <div class="hero-sticker sticker-star">✳</div>
+            <div class="hero-sticker sticker-note">
+              <span>✦</span><b>Dream big.</b><small>Start small.</small>
+            </div>
+            <div class="hero-sticker sticker-smile">☺</div>
+            <div class="photo-caption"><i></i> A WORLD FULL OF WONDER</div>
+            <div class="hero-dots"></div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#statistics"
+          ><span>SCROLL TO EXPLORE</span><b>↓</b></a
+        >
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-section" id="statistics">
+        <div class="container stats-grid">
+          <div class="stats-intro">
+            <span class="eyebrow">AURELIA IN NUMBERS</span>
+            <h2>Small steps.<br /><em>Big impact.</em></h2>
+          </div>
+          <div class="stat-item stat-coral">
+            <strong data-count="1200" data-suffix="+">0</strong
+            ><span>Happy learners</span
+            ><small>Curious minds, bright futures</small>
+          </div>
+          <div class="stat-item stat-yellow">
+            <strong data-count="85" data-suffix="+">0</strong
+            ><span>Dedicated educators</span><small>Guides who inspire</small>
+          </div>
+          <div class="stat-item stat-blue">
+            <strong data-count="25" data-suffix="+">0</strong
+            ><span>Years of learning</span><small>Growing together</small>
+          </div>
+          <div class="stat-item stat-green">
+            <strong data-count="30" data-suffix="+">0</strong
+            ><span>Learning spaces</span><small>Room to imagine</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about section" id="about">
+        <div class="container about-grid">
+          <div class="about-visual reveal">
+            <div class="about-photo-main">
+              <img
+                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1000&q=85"
+                alt="Young student smiling while learning"
+              />
+            </div>
+            <div class="about-photo-small">
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=85"
+                alt="Children creating artwork together"
+              />
+            </div>
+            <div class="about-sticker">
+              Curiosity<br />looks good<br />on you! <span>✳</span>
+            </div>
+            <div class="about-circle">
+              LEARN WITH JOY • GROW WITH CONFIDENCE •
+            </div>
+          </div>
+          <div class="about-copy reveal">
+            <span class="eyebrow"
+              ><span class="eyebrow-icon">✳</span> HELLO, WE'RE AURELIA</span
+            >
+            <h2>A place where every child's <em>potential blooms.</em></h2>
+            <p>
+              We believe education should do more than fill notebooks. It should
+              spark questions, build courage, nurture kindness and help every
+              learner discover what makes them wonderfully unique.
+            </p>
+            <p>
+              At Aurelia, meaningful learning happens through thoughtful
+              teaching, joyful exploration and a community that celebrates every
+              little breakthrough.
+            </p>
+            <div class="about-values">
+              <span>♡ Kindness</span><span>✦ Curiosity</span
+              ><span>✳ Creativity</span><span>☀ Confidence</span>
+            </div>
+            <a href="#vision-mission" class="button button-dark"
+              >Get to know us <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- VISION + MISSION -->
+      <section class="vision-section section" id="vision-mission">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow">WHAT GUIDES US</span>
+            <h2>Big-hearted ideas.<br /><em>Brighter tomorrows.</em></h2>
+            <p>
+              Our purpose is simple: help every child feel seen, supported and
+              excited about the world ahead.
+            </p>
+          </div>
+          <div class="vision-grid">
+            <article class="vision-card vision-card-yellow reveal">
+              <div class="vision-art art-sun">☀</div>
+              <span class="card-kicker">01 / OUR VISION</span>
+              <h3>Imagine a world<br />of possibilities.</h3>
+              <p>
+                To inspire confident, compassionate and curious individuals who
+                think independently, embrace possibilities and contribute
+                positively to the world.
+              </p>
+              <div class="keyword-row">
+                <span>Imagine</span><span>Explore</span><span>Inspire</span>
+              </div>
+            </article>
+            <article class="vision-card vision-card-lilac reveal">
+              <div class="vision-art art-plant">✿</div>
+              <span class="card-kicker">02 / OUR MISSION</span>
+              <h3>Nurture the spark.<br />Grow the future.</h3>
+              <p>
+                To create an engaging learning environment where every child
+                discovers their strengths and receives the guidance and
+                opportunities to reach their potential.
+              </p>
+              <div class="keyword-row">
+                <span>Nurture</span><span>Empower</span><span>Grow</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FACILITIES -->
+      <section class="facilities section" id="facilities">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">ROOM TO TRY EVERYTHING</span>
+            <h2>Find your thing.<br /><em>Then find another.</em></h2>
+            <p>
+              From paint-splattered fingers to big science questions, every
+              interest deserves a place to grow.
+            </p>
+          </div>
+          <div class="facility-layout">
+            <article class="facility-feature reveal">
+              <img
+                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1000&q=85"
+                alt="Art and craft activity"
+              />
+              <div class="facility-feature-copy">
+                <span>01 / MAKE SOMETHING</span>
+                <h3>Art & creative studio</h3>
+                <p>Ideas take shape through colour, texture and imagination.</p>
+              </div>
+              <span class="facility-arrow">↗</span>
+            </article>
+            <div class="facility-list">
+              <article class="facility-row reveal">
+                <span class="facility-number">02</span
+                ><span class="facility-emoji">♫</span>
+                <div>
+                  <h3>Music & dance</h3>
+                  <p>Find your rhythm and let it out.</p>
+                </div>
+                <span class="facility-arrow">↗</span>
+              </article>
+              <article class="facility-row reveal">
+                <span class="facility-number">03</span
+                ><span class="facility-emoji">⚽</span>
+                <div>
+                  <h3>Sports & games</h3>
+                  <p>Play fair, play hard, grow together.</p>
+                </div>
+                <span class="facility-arrow">↗</span>
+              </article>
+              <article class="facility-row reveal">
+                <span class="facility-number">04</span
+                ><span class="facility-emoji">⚙</span>
+                <div>
+                  <h3>Robotics & STEM</h3>
+                  <p>Build, test, wonder, repeat.</p>
+                </div>
+                <span class="facility-arrow">↗</span>
+              </article>
+              <article class="facility-row reveal">
+                <span class="facility-number">05</span
+                ><span class="facility-emoji">⚗</span>
+                <div>
+                  <h3>Science & discovery</h3>
+                  <p>Big questions welcome here.</p>
+                </div>
+                <span class="facility-arrow">↗</span>
+              </article>
+              <article class="facility-row reveal">
+                <span class="facility-number">06</span
+                ><span class="facility-emoji">📚</span>
+                <div>
+                  <h3>Reading & library</h3>
+                  <p>Whole new worlds, one page at a time.</p>
+                </div>
+                <span class="facility-arrow">↗</span>
+              </article>
+              <article class="facility-row reveal">
+                <span class="facility-number">07</span
+                ><span class="facility-emoji">🌱</span>
+                <div>
+                  <h3>Nature & gardening</h3>
+                  <p>Get curious about the living world.</p>
+                </div>
+                <span class="facility-arrow">↗</span>
+              </article>
+              <article class="facility-row reveal">
+                <span class="facility-number">08</span
+                ><span class="facility-emoji">⌘</span>
+                <div>
+                  <h3>Technology & coding</h3>
+                  <p>Turn curious ideas into real things.</p>
+                </div>
+                <span class="facility-arrow">↗</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAMPUS EXPLORER -->
+      <section class="campus section" id="campus">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow">TAKE A LITTLE LOOK AROUND</span>
+            <h2>So much to explore.<br /><em>All in one place.</em></h2>
+            <p>
+              Every corner has a story. Pick a spot on our campus map to
+              explore.
+            </p>
+          </div>
+          <div class="campus-explorer reveal">
+            <div class="campus-image">
+              <img
+                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=85"
+                alt="School campus building and green grounds"
+              />
+              <button
+                class="campus-pin pin-one active"
+                data-place="building"
+                aria-label="Academic building"
+              >
+                1
+              </button>
+              <button
+                class="campus-pin pin-two"
+                data-place="playground"
+                aria-label="Playground"
+              >
+                2
+              </button>
+              <button
+                class="campus-pin pin-three"
+                data-place="library"
+                aria-label="Library"
+              >
+                3
+              </button>
+              <button
+                class="campus-pin pin-four"
+                data-place="garden"
+                aria-label="Garden"
+              >
+                4
+              </button>
+              <span class="map-label">AURELIA CAMPUS MAP ✳</span>
+            </div>
+            <div class="campus-info">
+              <span class="card-kicker">EXPLORE THE CAMPUS</span>
+              <div class="campus-info-number" id="campusNumber">01</div>
+              <h3 id="campusTitle">A place to learn</h3>
+              <p id="campusDescription">
+                Bright, welcoming learning spaces designed to encourage
+                questions, collaboration and discovery.
+              </p>
+              <div class="campus-fact">
+                <span>✦</span
+                ><span id="campusFact"
+                  >Thoughtful spaces for curious minds</span
+                >
+              </div>
+              <div class="campus-controls">
+                <button id="campusPrev" aria-label="Previous location">←</button
+                ><button id="campusNext" aria-label="Next location">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY US -->
+      <section class="why-section section" id="why-us">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">THE AURELIA DIFFERENCE</span>
+            <h2>More than a classroom.<br /><em>A place to belong.</em></h2>
+          </div>
+          <div class="why-grid">
+            <article class="why-item why-a reveal">
+              <span class="why-index">01</span><span class="why-icon">♡</span>
+              <h3>Child-first, always</h3>
+              <p>
+                Every learner is different. We make room for every pace,
+                personality and possibility.
+              </p>
+            </article>
+            <article class="why-item why-b reveal">
+              <span class="why-index">02</span><span class="why-icon">✦</span>
+              <h3>Teachers who inspire</h3>
+              <p>
+                Encouraging educators turn everyday moments into meaningful
+                discoveries.
+              </p>
+            </article>
+            <article class="why-item why-c reveal">
+              <span class="why-index">03</span><span class="why-icon">☀</span>
+              <h3>Safe & caring spaces</h3>
+              <p>
+                Belonging, respect and wellbeing are part of the everyday
+                experience.
+              </p>
+            </article>
+            <article class="why-item why-d reveal">
+              <span class="why-index">04</span><span class="why-icon">↗</span>
+              <h3>Learning beyond books</h3>
+              <p>
+                Projects, play and practical experiences make ideas come alive.
+              </p>
+            </article>
+            <article class="why-item why-e reveal">
+              <span class="why-index">05</span><span class="why-icon">◎</span>
+              <h3>Room to be yourself</h3>
+              <p>
+                We celebrate individual strengths and encourage confidence to
+                grow.
+              </p>
+            </article>
+            <article class="why-item why-f reveal">
+              <span class="why-index">06</span><span class="why-icon">⌘</span>
+              <h3>Ready for what's next</h3>
+              <p>
+                Curiosity, collaboration and creativity help prepare learners
+                for tomorrow.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARNING JOURNEY -->
+      <section class="journey section" id="learning-journey">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow">EVERY AGE, A NEW ADVENTURE</span>
+            <h2>One journey.<br /><em>Many milestones.</em></h2>
+            <p>
+              Learning grows with your child. Here's a glimpse of the stages
+              along the way.
+            </p>
+          </div>
+          <div class="journey-track">
+            <article class="journey-stage stage-yellow reveal">
+              <span class="stage-number">01</span
+              ><span class="stage-age">AGES 3–5</span>
+              <h3>Early years</h3>
+              <p>
+                Wonder, play and first friendships. A joyful start to a lifelong
+                love of learning.
+              </p>
+              <span class="stage-doodle">✿</span>
+            </article>
+            <article class="journey-stage stage-coral reveal">
+              <span class="stage-number">02</span
+              ><span class="stage-age">AGES 6–10</span>
+              <h3>Primary years</h3>
+              <p>
+                Building foundations, asking questions and finding confidence in
+                new skills.
+              </p>
+              <span class="stage-doodle">✳</span>
+            </article>
+            <article class="journey-stage stage-blue reveal">
+              <span class="stage-number">03</span
+              ><span class="stage-age">AGES 11–13</span>
+              <h3>Middle years</h3>
+              <p>
+                Exploring interests, thinking deeper and learning to work
+                together.
+              </p>
+              <span class="stage-doodle">↗</span>
+            </article>
+            <article class="journey-stage stage-green reveal">
+              <span class="stage-number">04</span
+              ><span class="stage-age">AGES 14–17</span>
+              <h3>Senior years</h3>
+              <p>
+                Growing independence, discovering direction and preparing for
+                the wider world.
+              </p>
+              <span class="stage-doodle">☀</span>
+            </article>
+          </div>
+          <p class="small-disclaimer">
+            Age ranges and programme stages shown are illustrative. Please
+            confirm the school's actual grades and eligibility.
+          </p>
+        </div>
+      </section>
+
+      <!-- ADMISSIONS -->
+      <section class="admissions section" id="admissions">
+        <div class="container admissions-grid">
+          <div class="admissions-copy reveal">
+            <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+            <h2>Four little steps.<br /><em>One big beginning.</em></h2>
+            <p>
+              We'd love to meet your family, show you around and help you
+              understand whether Aurelia is the right place for your child.
+            </p>
+            <a href="#contact" class="button button-dark"
+              >Make an enquiry <span>↗</span></a
+            >
+            <div class="admissions-doodle">✳</div>
+          </div>
+          <div class="admission-steps">
+            <article class="admission-step reveal">
+              <span>01</span>
+              <div>
+                <h3>Say hello</h3>
+                <p>Share a few details so our team can guide you.</p>
+              </div>
+              <b>↗</b>
+            </article>
+            <article class="admission-step reveal">
+              <span>02</span>
+              <div>
+                <h3>Come explore</h3>
+                <p>Arrange a campus visit and experience school life.</p>
+              </div>
+              <b>↗</b>
+            </article>
+            <article class="admission-step reveal">
+              <span>03</span>
+              <div>
+                <h3>Apply together</h3>
+                <p>Our admissions team will explain the application process.</p>
+              </div>
+              <b>↗</b>
+            </article>
+            <article class="admission-step reveal">
+              <span>04</span>
+              <div>
+                <h3>Begin the adventure</h3>
+                <p>Get ready for a new world of learning and discovery.</p>
+              </div>
+              <b>✳</b>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CULTURAL GALLERY -->
+      <section class="culture section" id="cultural-gallery">
+        <div class="container">
+          <div class="gallery-heading reveal">
+            <div class="section-heading">
+              <span class="eyebrow">OUR TRADITIONS, OUR CELEBRATIONS</span>
+              <h2>A little culture.<br /><em>A lot of colour.</em></h2>
+              <p>
+                Celebrating the stories, traditions and creativity that bring
+                our community together.
+              </p>
+            </div>
+          </div>
+          <div
+            class="gallery-filters"
+            role="group"
+            aria-label="Filter cultural gallery"
+          >
+            <button class="filter-button active" data-filter="all">
+              All moments</button
+            ><button class="filter-button" data-filter="festivals">
+              Festivals</button
+            ><button class="filter-button" data-filter="arts">Arts</button
+            ><button class="filter-button" data-filter="performances">
+              Performances</button
+            ><button class="filter-button" data-filter="community">
+              Community
+            </button>
+          </div>
+          <div class="culture-grid">
+            <article
+              class="culture-card culture-tall"
+              data-category="festivals"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1604608672516-7d4b6c4a4c5a?auto=format&fit=crop&w=800&q=80"
+                alt="Colourful festive lights"
+              />
+              <div>
+                <span>FESTIVALS</span>
+                <h3>Lights, joy & togetherness</h3>
+                <small>Diwali celebrations</small>
+              </div>
+            </article>
+            <article class="culture-card" data-category="arts">
+              <img
+                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
+                alt="Art supplies and painting"
+              />
+              <div>
+                <span>ARTS</span>
+                <h3>Creativity in every colour</h3>
+                <small>Little artists at work</small>
+              </div>
+            </article>
+            <article class="culture-card" data-category="performances">
+              <img
+                src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80"
+                alt="Dance performance"
+              />
+              <div>
+                <span>PERFORMANCES</span>
+                <h3>Stories through dance</h3>
+                <small>Music & movement</small>
+              </div>
+            </article>
+            <article class="culture-card" data-category="community">
+              <img
+                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80"
+                alt="Community celebration"
+              />
+              <div>
+                <span>COMMUNITY</span>
+                <h3>Growing together</h3>
+                <small>Shared celebrations</small>
+              </div>
+            </article>
+            <article class="culture-card" data-category="festivals">
+              <img
+                src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80"
+                alt="Colourful event decorations"
+              />
+              <div>
+                <span>FESTIVALS</span>
+                <h3>A world of colour</h3>
+                <small>Festival moments</small>
+              </div>
+            </article>
+            <article class="culture-card" data-category="arts">
+              <img
+                src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80"
+                alt="Colourful student artwork"
+              />
+              <div>
+                <span>ARTS</span>
+                <h3>Made with little hands</h3>
+                <small>Art & heritage</small>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARENT LETTERS -->
+      <section class="letters section" id="parent-letters">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow">KIND WORDS, BIG FEELINGS</span>
+            <h2>Notes from our<br /><em>school community.</em></h2>
+            <p>
+              Every school journey is made of little moments worth remembering.
+            </p>
+          </div>
+          <div class="letter-grid">
+            <article class="letter-card letter-yellow reveal">
+              <span class="letter-stamp">♡</span
+              ><small>A NOTE OF APPRECIATION</small>
+              <p>
+                “The best part of a learning community is seeing a child come
+                home excited to share what they discovered today.”
+              </p>
+              <strong>— Sample parent note</strong><i>With gratitude ✿</i>
+            </article>
+            <article class="letter-card letter-pink reveal">
+              <span class="letter-stamp">✳</span
+              ><small>A LITTLE REFLECTION</small>
+              <p>
+                “A warm welcome, a listening ear and room to try again can make
+                all the difference in a child's day.”
+              </p>
+              <strong>— Sample parent note</strong><i>With thanks ♡</i>
+            </article>
+            <article class="letter-card letter-blue reveal">
+              <span class="letter-stamp">✦</span><small>A HAPPY THOUGHT</small>
+              <p>
+                “We love that learning can be full of questions, creativity,
+                friendships and joyful surprises.”
+              </p>
+              <strong>— Sample parent note</strong><i>Warmly ✿</i>
+            </article>
+          </div>
+          <p class="small-disclaimer">
+            These are illustrative sample notes, not verified parent
+            testimonials. Replace them with approved, authentic feedback before
+            publishing.
+          </p>
+        </div>
+      </section>
+
+      <!-- A DAY AT AURELIA -->
+      <section class="day-section section" id="school-day">
+        <div class="container">
+          <div class="gallery-heading reveal">
+            <div class="section-heading">
+              <span class="eyebrow">FROM FIRST HELLO TO SEE YOU TOMORROW</span>
+              <h2>A day full of<br /><em>little adventures.</em></h2>
+            </div>
+            <div class="day-sun">☀</div>
+          </div>
+          <div class="day-timeline">
+            <article class="day-moment reveal">
+              <time>08:00 <small>AM</small></time
+              ><span class="day-dot dot-coral"></span>
+              <div>
+                <span>GOOD MORNING</span>
+                <h3>A warm welcome</h3>
+                <p>Friendly faces and a fresh new day.</p>
+              </div>
+              <b>☀</b>
+            </article>
+            <article class="day-moment reveal">
+              <time>08:30 <small>AM</small></time
+              ><span class="day-dot dot-yellow"></span>
+              <div>
+                <span>TOGETHER TIME</span>
+                <h3>Morning gathering</h3>
+                <p>Connect, share and get ready to learn.</p>
+              </div>
+              <b>♡</b>
+            </article>
+            <article class="day-moment reveal">
+              <time>09:00 <small>AM</small></time
+              ><span class="day-dot dot-blue"></span>
+              <div>
+                <span>CURIOUS MINDS</span>
+                <h3>Discover something new</h3>
+                <p>Questions lead the way in every classroom.</p>
+              </div>
+              <b>✳</b>
+            </article>
+            <article class="day-moment reveal">
+              <time>11:00 <small>AM</small></time
+              ><span class="day-dot dot-green"></span>
+              <div>
+                <span>MOVE & PLAY</span>
+                <h3>Play and explore</h3>
+                <p>Fresh air, friendship and active fun.</p>
+              </div>
+              <b>↗</b>
+            </article>
+            <article class="day-moment reveal">
+              <time>12:30 <small>PM</small></time
+              ><span class="day-dot dot-pink"></span>
+              <div>
+                <span>SHARE A MOMENT</span>
+                <h3>Lunch together</h3>
+                <p>Good food and even better conversations.</p>
+              </div>
+              <b>♡</b>
+            </article>
+            <article class="day-moment reveal">
+              <time>02:00 <small>PM</small></time
+              ><span class="day-dot dot-purple"></span>
+              <div>
+                <span>UNTIL TOMORROW</span>
+                <h3>A day of achievement</h3>
+                <p>One more thing learned, one more reason to smile.</p>
+              </div>
+              <b>✦</b>
+            </article>
+          </div>
+          <p class="small-disclaimer">
+            Illustrative daily schedule. Actual school timings and activities
+            may differ.
+          </p>
+        </div>
+      </section>
+
+      <!-- SCHOOL GALLERY -->
+      <section class="gallery section" id="school-gallery">
+        <div class="container">
+          <div class="gallery-heading reveal">
+            <div class="section-heading">
+              <span class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</span>
+              <h2>Life at Aurelia.<br /><em>In full colour.</em></h2>
+            </div>
+            <a class="text-link" href="#cultural-gallery"
+              >Explore celebrations <span class="round-arrow">↗</span></a
+            >
+          </div>
+          <div class="photo-mosaic">
+            <figure class="mosaic-item mosaic-large reveal">
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85"
+                alt="Students learning in classroom"
+              />
+              <figcaption>Curious minds at work</figcaption>
+            </figure>
+            <figure class="mosaic-item reveal">
+              <img
+                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=85"
+                alt="Creative art activity"
+              />
+              <figcaption>Made by little hands</figcaption>
+            </figure>
+            <figure class="mosaic-item reveal">
+              <img
+                src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=700&q=85"
+                alt="Children playing outside"
+              />
+              <figcaption>Room to play</figcaption>
+            </figure>
+            <figure class="mosaic-item reveal">
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=85"
+                alt="Children reading together"
+              />
+              <figcaption>Stories take us places</figcaption>
+            </figure>
+            <figure class="mosaic-item reveal">
+              <img
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=700&q=85"
+                alt="Teacher helping a student"
+              />
+              <figcaption>Growing together</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENTS -->
+      <section class="events section" id="events">
+        <div class="container">
+          <div class="gallery-heading reveal">
+            <div class="section-heading">
+              <span class="eyebrow">SAVE A LITTLE SPACE FOR FUN</span>
+              <h2>What's happening<br /><em>around here?</em></h2>
+            </div>
+            <span class="event-side-note"
+              >A calendar full of<br />things to look forward to ✳</span
+            >
+          </div>
+          <div class="event-list">
+            <article class="event-row reveal">
+              <div class="event-date"><strong>12</strong><span>DEC</span></div>
+              <div class="event-main">
+                <span>PERFORMANCE</span>
+                <h3>Music & dance festival</h3>
+                <p>Celebrating expression, rhythm and the joy of performing.</p>
+              </div>
+              <div class="event-meta">
+                10:00 AM <span>School auditorium</span>
+              </div>
+              <a href="#contact" aria-label="Ask about Music and Dance Festival"
+                >↗</a
+              >
+            </article>
+            <article class="event-row reveal">
+              <div class="event-date date-blue">
+                <strong>18</strong><span>JAN</span>
+              </div>
+              <div class="event-main">
+                <span>SPORTS & GAMES</span>
+                <h3>Friendly games day</h3>
+                <p>Team spirit, cheerful competition and plenty of play.</p>
+              </div>
+              <div class="event-meta">
+                11:00 AM <span>Activity centre</span>
+              </div>
+              <a href="#contact" aria-label="Ask about Games Day">↗</a>
+            </article>
+            <article class="event-row reveal">
+              <div class="event-date date-green">
+                <strong>08</strong><span>FEB</span>
+              </div>
+              <div class="event-main">
+                <span>INNOVATION</span>
+                <h3>Young inventors expo</h3>
+                <p>Big ideas and clever creations from curious minds.</p>
+              </div>
+              <div class="event-meta">09:30 AM <span>Innovation lab</span></div>
+              <a href="#contact" aria-label="Ask about Young Inventors Expo"
+                >↗</a
+              >
+            </article>
+            <article class="event-row reveal">
+              <div class="event-date date-pink">
+                <strong>21</strong><span>MAR</span>
+              </div>
+              <div class="event-main">
+                <span>CREATIVITY</span>
+                <h3>Art & creativity carnival</h3>
+                <p>A colourful celebration of imagination and making.</p>
+              </div>
+              <div class="event-meta">
+                10:30 AM <span>Creative studio</span>
+              </div>
+              <a href="#contact" aria-label="Ask about Art Carnival">↗</a>
+            </article>
+          </div>
+          <p class="small-disclaimer">
+            Sample event names and dates for layout demonstration. Replace with
+            the school's confirmed calendar.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq section" id="faq">
+        <div class="container faq-grid">
+          <div class="faq-intro reveal">
+            <span class="eyebrow">GOOD QUESTIONS START HERE</span>
+            <h2>Wondering<br />about <em>something?</em></h2>
+            <p>
+              Here are a few helpful answers. If there's something else on your
+              mind, our team would be happy to help.
+            </p>
+            <a class="button button-coral" href="#contact"
+              >Ask us anything <span>↗</span></a
+            >
+            <div class="faq-scribble">?</div>
+          </div>
+          <div class="faq-list">
+            <article class="faq-item open">
+              <button class="faq-question" aria-expanded="true">
+                How do I apply for admission?<span>−</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Start by sending an enquiry through our contact form. Our
+                  admissions team can then explain the application steps,
+                  required documents and available places.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Which age groups and grades do you support?<span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Please contact the school for the current grades offered, age
+                  eligibility and any programme-specific requirements.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What curriculum and teaching approach do you follow?<span
+                  >+</span
+                >
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our educational approach is centred on meaningful learning,
+                  curiosity and individual growth. Contact the school for
+                  confirmed curriculum and board details.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Are extracurricular activities available?<span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Activities may include creative arts, music, sports,
+                  technology and nature-based exploration. Ask our team for the
+                  current programme.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can families visit the campus?<span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We'd love to welcome you. Send an enquiry to arrange a
+                  suitable campus visit.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is school transportation available?<span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Transportation routes and availability should be confirmed
+                  directly with the school office.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact section" id="contact">
+        <div class="container contact-wrap">
+          <div class="contact-info reveal">
+            <span class="eyebrow">LET'S START A CONVERSATION</span>
+            <h2>We'd love to<br /><em>hear from you.</em></h2>
+            <p>
+              Questions, campus visits or admission enquiries — we're just a
+              message away.
+            </p>
+            <div class="contact-detail">
+              <span>✉</span>
+              <div>
+                <small>EMAIL US</small><strong>hello@aurelia.edu</strong>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span>☎</span>
+              <div>
+                <small>CALL OUR OFFICE</small><strong>+91 00000 00000</strong>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span>⌖</span>
+              <div>
+                <small>COME SAY HELLO</small
+                ><strong>Your School Address, Your City, India</strong>
+              </div>
+            </div>
+            <div class="contact-hours">
+              OFFICE HOURS <b>Monday – Saturday · 9 AM – 4 PM</b>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-heading">
+              <span>✳ A QUICK HELLO</span>
+              <h3>Tell us a little about your family.</h3>
+            </div>
+            <div class="form-row">
+              <label
+                >Parent / guardian name<input
+                  name="name"
+                  type="text"
+                  placeholder="Your full name"
+                  required /></label
+              ><label
+                >Email address<input
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+              /></label>
+            </div>
+            <div class="form-row">
+              <label
+                >Phone number<input
+                  name="phone"
+                  type="tel"
+                  placeholder="+91"
+                  required /></label
+              ><label
+                >Interested grade<select name="grade" required>
+                  <option value="">Choose a grade</option>
+                  <option>Early Years</option>
+                  <option>Primary</option>
+                  <option>Middle Years</option>
+                  <option>Senior Years</option>
+                  <option>Not sure yet</option>
+                </select></label
+              >
+            </div>
+            <label
+              >How can we help?<textarea
+                name="message"
+                rows="4"
+                placeholder="Tell us what you'd like to know..."
+                required
+              ></textarea>
+            </label>
+            <label class="consent"
+              ><input type="checkbox" required /> I agree to be contacted by the
+              school regarding this enquiry.</label
+            >
+            <button class="button button-coral form-submit" type="submit">
+              Send my enquiry <span>↗</span>
+            </button>
+            <p class="form-message" id="formMessage" role="status"></p>
+            <small class="form-demo-note"
+              >Demo form only — connect a secure form service or backend before
+              accepting real enquiries.</small
+            >
+          </form>
+        </div>
+      </section>
+      
+      <!-- ADMISSIONS CTA -->
+      <section class="cta-section" id="admissions-cta">
+        <div class="container cta-inner reveal">
+          <div>
+            <span class="eyebrow">THE 2027–28 ADVENTURE AWAITS</span>
+            <h2>Ready for a little<br /><em>more wonder?</em></h2>
+            <p>Let's find out what your child can become.</p>
+          </div>
+          <a class="button button-dark" href="#contact"
+            >Let's talk admissions <span>↗</span></a
+          ><span class="cta-spark">✳</span>
+        </div>
+      </section>
+    </main>
+
+    <!--  FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="#hero"
+            ><span class="brand-mark">a<span>✳</span></span
+            ><span class="brand-copy"
+              ><strong>AURELIA</strong><small>INTERNATIONAL SCHOOL</small></span
+            ></a
+          >
+          <p>
+            Big dreams start with little questions. Here's to learning, playing,
+            discovering and becoming.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">ig</a
+            ><a href="#" aria-label="Facebook">f</a
+            ><a href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>EXPLORE</h4>
+          <a href="#about">Our story</a
+          ><a href="#vision-mission">Vision & mission</a
+          ><a href="#leadership">Leadership</a
+          ><a href="#campus">Explore campus</a>
+        </div>
+        <div class="footer-column">
+          <h4>DISCOVER</h4>
+          <a href="#facilities">Facilities</a
+          ><a href="#learning-journey">Learning journey</a
+          ><a href="#school-gallery">School life</a><a href="#events">Events</a>
+        </div>
+        <div class="footer-column">
+          <h4>LET'S CONNECT</h4>
+          <a href="mailto:hello@aurelia.edu">hello@aurelia.edu</a
+          ><a href="tel:+910000000000">+91 00000 00000</a
+          ><span>Your School Address,<br />Your City, India</span
+          ><a href="#contact">Send an enquiry ↗</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="currentYear"></span> Aurelia International School. All
+          rights reserved.</span
+        >
+        <div>
+          <a href="privacy-policy.html">Privacy policy</a
+          ><a href="terms-and-conditions.html">Terms & conditions</a>
+        </div>
+        <a href="#hero" class="back-top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <!--  CHATBOT -->
+    <div class="chatbot" id="aureliaChatbot">
+      <div class="chat-window" id="chatWindow" aria-hidden="true">
+        <div class="chat-head">
+          <div>
+            <strong>Hello from Aurelia! ✳</strong
+            ><small>How can we help today?</small>
+          </div>
+          <button id="chatClose" aria-label="Close chat">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="bot-message">
+            Hi there! 👋 I'm the Aurelia helper. Ask me about admissions,
+            learning stages, facilities or campus visits.
+          </div>
+        </div>
+        <div class="chat-suggestions">
+          <button data-question="How do admissions work?">Admissions</button
+          ><button data-question="What facilities do you have?">
+            Facilities</button
+          ><button data-question="Can I visit the campus?">Campus visit</button>
+        </div>
+        <form id="chatForm" class="chat-form">
+          <input
+            id="chatInput"
+            type="text"
+            placeholder="Type your question..."
+            autocomplete="off"
+            aria-label="Type your question"
+          /><button aria-label="Send message">➤</button>
+        </form>
+      </div>
+      <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+        <span>✳</span><small>Ask Aurelia</small>
+      </button>
+    </div>
+
+    <!-- ROCKET BACK TO TOP -->
+    <button class="rocket-button" id="rocketButton" aria-label="Back to top">
+      <span>↑</span>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
