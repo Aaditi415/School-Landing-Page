@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website Title -->
+    <title>Eduverse International School | Learn, Grow & Lead</title>
+
+    <!-- SEO Description -->
+    <meta
+      name="description"
+      content="Discover Eduverse International School, where academic excellence, creativity and innovation empower students to learn, grow and lead."
+    />
+
+    <!-- SEO Keywords -->
+    <meta
+      name="keywords"
+      content="international school, best school, quality education, modern education, student development, academic excellence"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="Eduverse International School" />
+
+    <!-- Search Engine Indexing -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#263B70" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eduverse International School" />
+    <meta
+      property="og:description"
+      content="Building knowledge, confidence and future-ready skills."
+    />
+    <meta property="og:image" content="assets/images/og-image.jpg" />
+
+    <!-- Twitter Sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eduverse International School" />
+    <meta
+      name="twitter:description"
+      content="Learn, grow and lead with Eduverse International School."
+    />
+    <meta name="twitter:image" content="assets/images/og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg" href="assets/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- =========================================
+     ANNOUNCEMENT BAR
+========================================= -->
+
+    <section class="announcement-bar" id="announcementBar">
+      <div class="announcement-container">
+        <!-- LEFT: Announcement content -->
+        <div class="announcement-content">
+          <span class="announcement-label" id="announcementLabel">
+            ADMISSIONS
+          </span>
+
+          <div class="announcement-slider">
+            <div class="announcement-track" id="announcementTrack">
+              <!-- Slides generated through JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: CTA -->
+        <a href="#" class="announcement-cta" id="announcementCta">
+          <span>Explore Now</span>
+
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M7 17L17 7M7 7H17V17"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- PROGRESS INDICATOR -->
+      <div class="announcement-progress">
+        <div class="announcement-progress-fill" id="announcementProgress"></div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     MAIN NAVBAR
+    ========================================= -->
+
+    <header class="main-header" id="mainHeader">
+      <nav class="navbar container" aria-label="Main navigation">
+        <!-- LOGO -->
+        <a href="#home" class="navbar-brand">
+          <span class="brand-icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <path
+                d="M24 5L5 14L24 23L43 14L24 5Z"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M12 18V29C12 29 17 35 24 35C31 35 36 29 36 29V18"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M43 14V27"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+
+          <span class="brand-text">
+            <strong>EDUVERSE</strong>
+            <small>LEARN · GROW · LEAD</small>
+          </span>
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <div class="navbar-menu" id="navbarMenu">
+          <ul class="navbar-links">
+            <li>
+              <a href="#home" class="nav-link active">Home</a>
+            </li>
+
+            <li>
+              <a href="#about" class="nav-link">About Us</a>
+            </li>
+
+            <li>
+              <a href="#academics" class="nav-link">Academics</a>
+            </li>
+
+            <li>
+              <a href="#student-life" class="nav-link">Student Life</a>
+            </li>
+
+            <li>
+              <a href="#facilities" class="nav-link">Facilities</a>
+            </li>
+
+            <li>
+              <a href="#admissions" class="nav-link">Admissions</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- RIGHT ACTIONS -->
+        <div class="navbar-actions">
+          <a href="#admissions" class="navbar-cta">
+            <span>Apply Now</span>
+
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M7 17L17 7M7 7H17V17"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button
+            class="navbar-toggle"
+            id="navbarToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navbarMenu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero-section" id="home">
+      <div class="hero-background">
+        <img
+          src="assets/hero-campus.jpeg"
+          alt="Students learning together in a modern school environment"
+          class="hero-background-image"
+        />
+
+        <div class="hero-image-blend"></div>
+      </div>
+
+      <div class="hero-container container">
+        <!-- LEFT CONTENT -->
+        <div class="hero-content">
+          <span class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            A PLACE TO DISCOVER YOUR POTENTIAL
+          </span>
+
+          <h1>
+            Where Bright Minds
+            <span>Build Brighter Futures.</span>
+          </h1>
+
+          <p class="hero-description">
+            More than just education, we create experiences that inspire
+            curiosity, encourage creativity and prepare students to shape the
+            world with confidence.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#admissions" class="btn btn-primary">
+              Explore Admissions
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a href="#about" class="hero-video-btn">
+              <span class="video-play-icon">
+                <i data-lucide="play"></i>
+              </span>
+              <span>Discover Our School</span>
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="graduation-cap"></i>
+              </span>
+              <span>Future-Ready<br />Education</span>
+            </div>
+
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="brain-circuit"></i>
+              </span>
+              <span>Critical Thinking<br />& Innovation</span>
+            </div>
+
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="medal"></i>
+              </span>
+              <span>Excellence Beyond<br />Academics</span>
+            </div>
+
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="heart-handshake"></i>
+              </span>
+              <span>Values & Character<br />Building</span>
+            </div>
+
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="globe"></i>
+              </span>
+              <span>Global Outlook<br />& Perspectives</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT FLOATING CONTENT -->
+
+        <div class="hero-visual">
+          <div class="hero-community">
+            <div class="community-avatars">
+              <img src="assets/profile-1.jpg" alt="School community member" />
+              <img src="assets/profile-2.jpg" alt="School community member" />
+              <img src="assets/profile-3.jpg" alt="School community member" />
+            </div>
+
+            <div class="community-info">
+              <strong>1,200+</strong>
+              <span>Happy Families & Growing Learners</span>
+            </div>
+          </div>
+
+          <div class="hero-image-caption">
+            <span class="caption-dot"></span>
+            A COMMUNITY THAT INSPIRES
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
