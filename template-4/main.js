@@ -501,3 +501,76 @@ if (document.readyState === "loading") {
     initNavbar();
 
 }
+
+
+
+function animateCounter(element) {
+    const target = Number(element.dataset.target);
+    const duration = 2000;
+    const startTime = performance.now();
+
+    const suffix = element.querySelector("span")?.textContent || "";
+
+    function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Smooth ease-out animation
+        const easedProgress = 1 - Math.pow(1 - progress, 4);
+
+        const currentValue = Math.floor(target * easedProgress);
+
+        element.innerHTML = `${currentValue.toLocaleString("en-IN")}<span>${suffix}</span>`;
+
+        if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.innerHTML = `${target.toLocaleString("en-IN")}<span>${suffix}</span>`;
+        }
+    }
+
+    requestAnimationFrame(updateCounter);
+}
+
+function initStatistics() {
+    const statsSection = document.querySelector(".stats-section");
+
+    if (!statsSection) return;
+
+    const counters = statsSection.querySelectorAll(".stat-number");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                counters.forEach((counter) => {
+                    animateCounter(counter);
+                });
+
+                observer.disconnect();
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
+
+    observer.observe(statsSection);
+}
+
+document.addEventListener("DOMContentLoaded", initStatistics);
+
+const statItems = document.querySelectorAll(".stat-item");
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+statItems.forEach((item) => {
+    statsObserver.observe(item);
+});

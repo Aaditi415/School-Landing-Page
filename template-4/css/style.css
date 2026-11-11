@@ -1280,3 +1280,156 @@ p {
 .hero-image-caption {
     display: none;
 }
+
+
+/* =========================================
+   STATISTICS SECTION
+========================================= */
+
+.stats-section {
+    position: relative;
+    width: 100%;
+    padding: 8px 6dvh;
+    background: #15213e;
+    overflow: hidden;
+}
+
+.stats-container {
+    display: grid;
+grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+    column-gap: 12px;
+    justify-content:space-around;
+    width: 100%;
+}
+
+/* Individual Statistic */
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    min-width: 0;
+    padding: 12px 25px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+
+    transition: var(--transition-normal);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+/* Icon */
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-white);
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 15px;
+
+    transition: var(--transition-normal);
+}
+
+.stat-icon svg {
+    width: 26px;
+    height: 26px;
+    stroke-width: 1.8;
+}
+
+/* Hover */
+
+.stat-item:hover .stat-icon {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-4px);
+}
+
+/* Number and Description */
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-content h3 {
+    margin: 0;
+    color: var(--text-white);
+
+    font-family: var(--font-heading);
+    font-size: 34px;
+    font-weight: var(--fw-extrabold);
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.stat-content h3 span {
+    color: var(--accent-orange);
+    font-size: 25px;
+}
+
+.stat-content p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+    font-weight: var(--fw-medium);
+    line-height: 1.5;
+}
+
+/* STATISTIC ENTRANCE ANIMATION */
+
+.stat-item {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 600ms ease,
+        transform 600ms ease;
+}
+
+.stat-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered entrance */
+
+.stat-item:nth-child(1) {
+    transition-delay: 0ms;
+}
+
+.stat-item:nth-child(2) {
+    transition-delay: 150ms;
+}
+
+.stat-item:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.stat-item:nth-child(4) {
+    transition-delay: 450ms;
+}
+
+.stat-item:nth-child(5) {
+    transition-delay: 600ms;
+}
+@media (prefers-reduced-motion: reduce) {
+    .stat-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
