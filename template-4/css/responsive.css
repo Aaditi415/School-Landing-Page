@@ -660,3 +660,369 @@
         gap: 12px;
     }
 }
+
+
+/* =========================================
+   LEARNING STAGES RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .learning-header {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 35px;
+    }
+
+    .learning-header-action {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+    }
+
+    .learning-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .learning-card-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .learning-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 35px;
+    }
+
+    .learning-heading {
+        max-width: 500px;
+    }
+
+    .learning-intro {
+        max-width: 550px;
+    }
+
+    .learning-header-action {
+        grid-column: auto;
+    }
+
+    .learning-card-image {
+        height: 220px;
+    }
+
+    .learning-card-content {
+        min-height: 175px;
+        padding: 20px 17px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .learning-card-image {
+        height: 230px;
+    }
+
+    .learning-card-content {
+        min-height: 150px;
+        padding: 21px 19px;
+    }
+
+    .learning-card-text h3 {
+        font-size: 20px;
+    }
+
+    .learning-card-text p {
+        max-width: 290px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .learning-card,
+    .learning-card-image img,
+    .learning-main-btn,
+    .learning-arrow-btn,
+    .learning-arrow-btn svg {
+        transition: none;
+    }
+}
+
+/* =========================================
+   CAMPUS SECTION RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .campus-container {
+        gap: 45px;
+    }
+
+    .campus-visual {
+        height: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .campus-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .campus-visual {
+        height: 500px;
+    }
+
+    .campus-content {
+        max-width: 700px;
+    }
+
+    .campus-image-wrapper::after {
+        background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 0.08),
+            transparent 35%
+        );
+    }
+}
+
+@media (max-width: 600px) {
+
+    .campus-container {
+        gap: 5px;
+    }
+
+    .campus-visual {
+        height: 380px;
+    }
+
+    .campus-image-wrapper {
+        border-radius: 18px;
+    }
+
+    .campus-image-label {
+        left: 12px;
+        bottom: 12px;
+        gap: 10px;
+        padding: 11px 13px;
+    }
+
+    .campus-label-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .campus-image-label strong {
+        font-size: 12px;
+    }
+
+    .campus-image-label div span {
+        font-size: 9px;
+    }
+
+    .campus-content h2 {
+        margin-bottom: 15px;
+    }
+
+    .campus-description {
+        font-size: 13px;
+        margin-bottom: 23px;
+    }
+
+    .campus-facilities {
+        gap: 17px;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0, 1fr))
+    }
+
+    .campus-facility {
+        gap: 12px;
+    }
+
+    .campus-facility-icon {
+        width: 41px;
+        height: 41px;
+    }
+
+    .campus-facility-info h4 {
+        font-size: 13px;
+    }
+
+    .campus-facility-info p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .campus-visual {
+        height: 320px;
+    }
+
+    .campus-image-label {
+        max-width: calc(100% - 24px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .campus-image,
+    .campus-facility-icon,
+    .campus-button,
+    .campus-button svg {
+        transition: none;
+    }
+}
+
+/* =========================================
+   FACILITIES SECTION RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .facilities-container {
+        grid-template-columns: 0.65fr 1.8fr;
+        gap: 30px;
+    }
+
+    .facilities-grid {
+        gap: 12px;
+    }
+
+    .facility-experience-card {
+        height: 350px;
+    }
+
+    .facility-card-content {
+        gap: 8px;
+        padding: 16px 10px;
+    }
+
+    .facility-card-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .facility-card-content h3 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .facilities-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .facilities-content {
+        max-width: 600px;
+    }
+
+    .facilities-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .facility-experience-card {
+        height: 340px;
+    }
+
+    .facility-card-content {
+        gap: 9px;
+        padding: 16px 12px;
+    }
+
+    .facility-card-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .facility-card-content h3 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .facilities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .facility-experience-card {
+        height: 320px;
+    }
+
+    .facility-card-content {
+        padding: 17px 13px;
+    }
+
+    .facility-card-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .facility-card-content h3 {
+        font-size: 14px;
+    }
+
+    .facility-card-arrow {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .facilities-grid {
+        gap: 11px;
+    }
+
+    .facility-experience-card {
+        height: 275px;
+    }
+
+    .facility-card-content {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 13px 10px;
+    }
+
+    .facility-card-icon {
+        width: 33px;
+        height: 33px;
+    }
+
+    .facility-card-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .facility-card-content h3 {
+        font-size: 12px;
+    }
+
+    .facility-card-label {
+        font-size: 7px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .facility-experience-card,
+    .facility-experience-card > img,
+    .facility-card-icon,
+    .facility-card-arrow,
+    .facilities-button {
+        transition: none;
+    }
+}
