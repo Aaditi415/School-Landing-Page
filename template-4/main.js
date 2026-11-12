@@ -726,3 +726,37 @@ function initBackToTop() {
 }
 
 document.addEventListener("DOMContentLoaded", initBackToTop);
+
+
+/* =====================================================
+   FAQ ACCORDION
+===================================================== */
+
+function initFaqAccordion() {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    if (!faqItems.length) return;
+
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
+
+            faqItems.forEach((faqItem) => {
+                faqItem.classList.remove("active");
+
+                const button = faqItem.querySelector(".faq-question");
+                button.setAttribute("aria-expanded", "false");
+            });
+
+            if (!isActive) {
+                item.classList.add("active");
+                question.setAttribute("aria-expanded", "true");
+            }
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initFaqAccordion);
+

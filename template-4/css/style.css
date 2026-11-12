@@ -4601,7 +4601,7 @@ p {
 ===================================================== */
 
 .contact-section {
-    background: var(--bg-white);
+    background: var(--bg-main);
     padding-block: var(--section-space);
     overflow: hidden;
 }
@@ -5378,14 +5378,26 @@ p {
     margin-bottom: 45px;
 }
 
-.leadership-eyebrow {
-    display: block;
+.leadership-subheading {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
     color: var(--secondary);
-    font-size: var(--fs-label);
+    font-size: 12px;
     font-weight: var(--fw-bold);
-    letter-spacing: 1.6px;
-    margin-bottom: 14px;
+    letter-spacing: 1.5px;
 }
+
+.leadership-subheading-line {
+    width: 27px;
+    height: 2px;
+    background: var(--accent-orange);
+    border-radius: 5px;
+}
+
 
 .leadership-header h2 {
     color: var(--text-heading);
@@ -5641,4 +5653,763 @@ p {
 .secondary-leader-author span {
     color: var(--text-muted);
     font-size: 11px;
+}
+
+
+/* =====================================================
+   ACHIEVEMENTS & RECOGNITION
+===================================================== */
+
+.achievements-section {
+    background: var(--bg-white);
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.achievements-header {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    align-items: end;
+    gap: 60px;
+    margin-bottom: 48px;
+}
+
+.achievements-heading h2 {
+    max-width: 600px;
+    font-size: var(--fs-h2);
+    line-height: var(--lh-heading);
+    margin-top: 16px;
+}
+
+.achievements-heading h2 span {
+    color: var(--secondary);
+}
+
+
+.achievements-subheading {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1.5px;
+}
+
+.achievements-subheading-line {
+    width: 27px;
+    height: 2px;
+    background: var(--accent-orange);
+    border-radius: 5px;
+}
+.achievements-intro p {
+    color: var(--text-body);
+    line-height: var(--lh-body);
+    margin-bottom: 18px;
+}
+
+.achievements-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--primary);
+    font-weight: var(--fw-bold);
+    transition: var(--transition-fast);
+}
+
+.achievements-link:hover {
+    color: var(--secondary);
+    gap: 14px;
+}
+
+.achievements-link i {
+    width: 18px;
+    height: 18px;
+}
+
+/* MAIN LAYOUT */
+
+.achievements-layout {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* FEATURED CARD */
+
+.achievement-featured {
+    position: relative;
+    min-height: 570px;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    isolation: isolate;
+    background: var(--primary);
+}
+
+.achievement-featured-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 700ms ease;
+}
+
+.achievement-featured:hover .achievement-featured-image {
+    transform: scale(1.05);
+}
+
+.achievement-featured-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        180deg,
+        rgba(15, 25, 48, 0.05) 15%,
+        rgba(15, 25, 48, 0.35) 48%,
+        rgba(15, 25, 48, 0.92) 100%
+    );
+}
+
+.achievement-featured-content {
+    position: absolute;
+    inset: auto 32px 32px;
+    color: var(--text-white);
+}
+
+.achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: var(--radius-full);
+    background: rgba(255,255,255,0.14);
+    backdrop-filter: blur(10px);
+    font-size: var(--fs-label);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.8px;
+}
+
+.achievement-badge i {
+    width: 16px;
+    height: 16px;
+}
+
+.achievement-year {
+    display: block;
+    color: var(--accent-orange);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    margin-bottom: 9px;
+}
+
+.achievement-featured-content h3 {
+    max-width: 470px;
+    color: var(--text-white);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: var(--lh-heading);
+    margin-bottom: 12px;
+}
+
+.achievement-featured-content p {
+    max-width: 420px;
+    color: rgba(255,255,255,0.82);
+    line-height: var(--lh-body);
+}
+
+.achievement-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    color: var(--primary);
+    background: var(--bg-white);
+    border-radius: 50%;
+    transition: var(--transition-normal);
+}
+
+.achievement-arrow:hover {
+    color: var(--text-white);
+    background: var(--secondary);
+    transform: rotate(45deg);
+}
+
+.achievement-arrow i {
+    width: 21px;
+    height: 21px;
+}
+
+/* RECOGNITION CARDS */
+
+.achievement-cards {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 175px;
+    padding: 25px 28px;
+    border-radius: var(--radius-lg);
+    transition: var(--transition-normal);
+}
+
+.achievement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.achievement-academic {
+    background: var(--pastel-lavender);
+}
+
+.achievement-sports {
+    background: var(--pastel-mint);
+}
+
+.achievement-creative {
+    background: var(--pastel-peach);
+}
+
+.achievement-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 17px;
+}
+
+.achievement-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    background: rgba(255,255,255,0.75);
+    color: var(--primary);
+}
+
+.achievement-icon i {
+    width: 22px;
+    height: 22px;
+}
+
+.achievement-card-year {
+    color: var(--text-muted);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+}
+
+.achievement-category {
+    display: block;
+    color: var(--text-body);
+    font-size: var(--fs-label);
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.achievement-card-content h3 {
+    color: var(--text-heading);
+    font-size: var(--fs-h3);
+    line-height: var(--lh-subheading);
+    margin-bottom: 7px;
+}
+
+.achievement-card-content p {
+    color: var(--text-body);
+    font-size: var(--fs-small);
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ADMISSION PROCESS
+===================================================== */
+
+.admission-section {
+    background: var(--bg-main);
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.admission-header {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    align-items: end;
+    gap: 60px;
+    margin-bottom: 58px;
+}
+.admission-heading h2 {
+    max-width: 600px;
+    margin-top: 16px;
+    font-size: var(--fs-h2);
+    line-height: var(--lh-heading);
+}
+
+.admission-heading h2 span {
+    color: var(--secondary);
+}
+
+.admission-intro {
+    padding-bottom: 5px;
+}
+
+.admission-subheading {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1.5px;
+}
+
+.admission-subheading-line {
+    width: 27px;
+    height: 2px;
+    background: var(--accent-orange);
+    border-radius: 5px;
+}
+
+.admission-intro p {
+    max-width: 520px;
+    color: var(--text-body);
+    line-height: var(--lh-body);
+}
+
+/* STEPS */
+
+.admission-steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Connecting line */
+
+.admission-steps::before {
+    content: "";
+    position: absolute;
+    top: 49px;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    border-top: 2px dashed var(--border-medium);
+}
+
+.admission-step {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    padding: 26px 23px 25px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    background: var(--bg-white);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-normal);
+}
+
+.admission-step:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-hover);
+}
+
+.admission-step-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.admission-step-number {
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: var(--fw-extrabold);
+    opacity: 0.55;
+}
+
+.admission-step-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    border: 6px solid var(--bg-white);
+    border-radius: 18px;
+    color: var(--primary);
+    box-shadow: var(--shadow-card);
+}
+
+.admission-step-icon i {
+    width: 23px;
+    height: 23px;
+}
+
+.admission-step-one .admission-step-icon {
+    background: var(--pastel-lavender);
+}
+
+.admission-step-two .admission-step-icon {
+    background: var(--pastel-peach);
+}
+
+.admission-step-three .admission-step-icon {
+    background: var(--pastel-mint);
+}
+
+.admission-step-four .admission-step-icon {
+    background: var(--pastel-blue);
+}
+
+.admission-step-label {
+    color: var(--secondary);
+    font-size: var(--fs-label);
+    font-weight: var(--fw-bold);
+    letter-spacing: 1.2px;
+}
+
+.admission-step h3 {
+    margin: 11px 0 10px;
+    font-size: var(--fs-h3);
+    line-height: var(--lh-subheading);
+}
+
+.admission-step > p {
+    min-height: 78px;
+    color: var(--text-body);
+    font-size: var(--fs-small);
+    line-height: 1.7;
+}
+
+.admission-step-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    color: var(--primary);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    transition: var(--transition-fast);
+}
+
+.admission-step-link:hover {
+    color: var(--secondary);
+    gap: 13px;
+}
+
+.admission-step-link i {
+    width: 17px;
+    height: 17px;
+}
+
+/* BOTTOM CONTACT STRIP */
+
+.admission-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 38px;
+    padding: 24px 30px;
+    border-radius: var(--radius-lg);
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+}
+
+.admission-bottom-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admission-bottom-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    color: var(--secondary);
+    background: var(--pastel-lavender);
+}
+
+.admission-bottom-icon i {
+    width: 23px;
+    height: 23px;
+}
+
+.admission-bottom-content h3 {
+    font-size: var(--fs-h4);
+    margin-bottom: 4px;
+}
+
+.admission-bottom-content p {
+    color: var(--text-muted);
+    font-size: var(--fs-small);
+}
+
+.admission-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+    padding: 14px 21px;
+    border-radius: var(--radius-full);
+    color: var(--text-white);
+    background: var(--gradient-brand);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    transition: var(--transition-normal);
+}
+
+.admission-contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.admission-contact-btn i {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =====================================================
+   FAQ SECTION
+===================================================== */
+
+.faq-section {
+    background: var(--bg-white);
+    overflow: hidden;
+}
+
+.faq-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+    align-items: start;
+}
+
+/* LEFT CONTENT */
+
+.faq-content {
+    position: sticky;
+    top: 120px;
+}
+
+
+.faq-subheading {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1.5px;
+}
+
+.faq-subheading-line {
+    width: 27px;
+    height: 2px;
+    background: var(--accent-orange);
+    border-radius: 5px;
+}
+.faq-content h2 {
+    max-width: 460px;
+    margin-top: 18px;
+    font-size: var(--fs-h2);
+    line-height: var(--lh-heading);
+}
+
+.faq-content h2 span {
+    color: var(--secondary);
+}
+
+.faq-content > p {
+    max-width: 430px;
+    margin-top: 18px;
+    color: var(--text-body);
+    line-height: var(--lh-body);
+}
+
+/* HELP CARD */
+
+.faq-help-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 38px;
+    padding: 18px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    background: var(--bg-main);
+}
+
+.faq-help-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    color: var(--secondary);
+    background: var(--pastel-lavender);
+}
+
+.faq-help-icon i {
+    width: 22px;
+    height: 22px;
+}
+
+.faq-help-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.faq-help-text h3 {
+    font-size: var(--fs-small);
+    margin-bottom: 4px;
+}
+
+.faq-help-text p {
+    color: var(--text-muted);
+    font-size: var(--fs-small);
+}
+
+.faq-help-card > a {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: var(--text-white);
+    background: var(--primary);
+    transition: var(--transition-normal);
+}
+
+.faq-help-card > a:hover {
+    background: var(--secondary);
+    transform: rotate(45deg);
+}
+
+.faq-help-card > a i {
+    width: 18px;
+    height: 18px;
+}
+
+/* ACCORDION */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.faq-item {
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    background: var(--bg-white);
+    transition: var(--transition-normal);
+}
+
+.faq-item:hover {
+    border-color: var(--border-medium);
+}
+
+.faq-item.active {
+    border-color: rgba(108, 99, 217, 0.35);
+    background: #FBFAFF;
+    box-shadow: var(--shadow-soft);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 21px 23px;
+    border: none;
+    background: transparent;
+    color: var(--text-heading);
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-subheading);
+    cursor: pointer;
+}
+
+.faq-toggle {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: var(--primary);
+    background: var(--bg-main);
+    transition: var(--transition-normal);
+}
+
+.faq-toggle i {
+    width: 18px;
+    height: 18px;
+    transition: var(--transition-normal);
+}
+
+.faq-item.active .faq-toggle {
+    color: var(--text-white);
+    background: var(--secondary);
+}
+
+.faq-item.active .faq-toggle i {
+    transform: rotate(45deg);
+}
+
+/* ANSWER ANIMATION */
+
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms ease;
+}
+
+.faq-item.active .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+    overflow: hidden;
+}
+
+.faq-answer-inner p {
+    padding: 0 23px 22px;
+    color: var(--text-body);
+    font-size: var(--fs-small);
+    line-height: var(--lh-body);
 }

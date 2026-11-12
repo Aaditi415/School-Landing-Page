@@ -269,6 +269,40 @@
     .footer-contact-column {
         grid-column: 2 / 4;
     }
+
+
+    .admission-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .admission-steps::before {
+        display: none;
+    }
+
+    .admission-step > p {
+        min-height: auto;
+    }
+
+
+    .leadership-header {
+        gap: 30px;
+    }
+
+    .leader-content {
+        padding: 35px 30px;
+    }
+
+    .secondary-leader {
+        grid-template-columns: 140px 1fr;
+        gap: 17px;
+        padding: 17px;
+    }
+
+    .secondary-leader-image {
+        height: 220px;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -461,8 +495,31 @@
     .why-feature-card:hover {
         transform: translateY(-4px);
     }
-}
 
+
+    .achievements-header {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .achievements-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-featured {
+        min-height: 480px;
+    }
+
+    .achievement-cards {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .achievement-card {
+        min-height: 220px;
+        padding: 22px;
+    }
+}
 @media (max-width: 768px) {
     :root {
         --container-padding: 20px;
@@ -695,6 +752,29 @@
     .footer-contact-column {
         grid-column: auto;
     }
+
+
+    .leadership-header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .principal-card {
+        grid-template-columns: 0.8fr 1.2fr;
+    }
+
+    .leader-image {
+        min-height: 420px;
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .secondary-leader {
+        grid-template-columns: 180px 1fr;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -969,7 +1049,66 @@
         flex-direction: column;
         gap: 16px;
     }
+
+
+    .achievements-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 32px;
+    }
+
+    .achievement-featured {
+        min-height: 430px;
+    }
+
+    .achievement-featured-content {
+        inset: auto 22px 24px;
+    }
+
+    .achievement-featured-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .achievement-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-card {
+        min-height: 185px;
+    }
+
+    .admission-header {
+        margin-bottom: 35px;
+    }
+
+    .admission-steps {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .admission-step {
+        padding: 23px;
+    }
+
+    .admission-step-top {
+        margin-bottom: 20px;
+    }
+
+    .admission-step-link {
+        margin-top: 15px;
+    }
+
+    .admission-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .admission-contact-btn {
+        width: 100%;
+    }
 }
+
 
 @media (max-width: 500px) {
     .about-image-wrapper {
@@ -1370,6 +1509,46 @@
     .footer-back-top {
         margin-left: auto;
     }
+
+
+    .principal-card {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-image {
+        min-height: 340px;
+    }
+
+    .leader-content {
+        padding: 28px 23px;
+    }
+
+    .leader-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .leadership-grid {
+        gap: 17px;
+    }
+
+    .secondary-leader {
+        grid-template-columns: 115px 1fr;
+        gap: 14px;
+        padding: 14px;
+    }
+
+    .secondary-leader-image {
+        height: 190px;
+    }
+
+    .secondary-leader-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .secondary-leader-content > p {
+        font-size: 11px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1621,6 +1800,49 @@
         width: 105px;
         height: 105px;
     }
+
+
+    .secondary-leader {
+        grid-template-columns: 1fr;
+    }
+
+    .secondary-leader-image {
+        height: 240px;
+    }
+
+    .leader-footer {
+        align-items: flex-start;
+    }
+
+    .leader-signature {
+        width: 85px;
+    }
+
+
+
+    .achievement-featured {
+        min-height: 390px;
+    }
+
+    .achievement-featured-content {
+        inset: auto 18px 20px;
+    }
+
+    .achievement-card {
+        padding: 20px;
+    }
+
+    .admission-step {
+        padding: 20px;
+    }
+
+    .admission-bottom-content {
+        align-items: flex-start;
+    }
+
+    .admission-bottom-content h3 {
+        font-size: 1rem;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1672,118 +1894,4 @@
     .spaces-main-btn {
         transition: none;
     }
-}
-
-
-/* =====================================================
-   LEADERSHIP RESPONSIVE
-===================================================== */
-
-@media (max-width: 1000px) {
-
-    .leadership-header {
-        gap: 30px;
-    }
-
-    .leader-content {
-        padding: 35px 30px;
-    }
-
-    .secondary-leader {
-        grid-template-columns: 140px 1fr;
-        gap: 17px;
-        padding: 17px;
-    }
-
-    .secondary-leader-image {
-        height: 220px;
-    }
-
-}
-
-@media (max-width: 800px) {
-
-    .leadership-header {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .principal-card {
-        grid-template-columns: 0.8fr 1.2fr;
-    }
-
-    .leader-image {
-        min-height: 420px;
-    }
-
-    .leadership-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .secondary-leader {
-        grid-template-columns: 180px 1fr;
-    }
-
-}
-
-@media (max-width: 550px) {
-
-    .principal-card {
-        grid-template-columns: 1fr;
-    }
-
-    .leader-image {
-        min-height: 340px;
-    }
-
-    .leader-content {
-        padding: 28px 23px;
-    }
-
-    .leader-content h3 {
-        font-size: 1.7rem;
-    }
-
-    .leadership-grid {
-        gap: 17px;
-    }
-
-    .secondary-leader {
-        grid-template-columns: 115px 1fr;
-        gap: 14px;
-        padding: 14px;
-    }
-
-    .secondary-leader-image {
-        height: 190px;
-    }
-
-    .secondary-leader-content h3 {
-        font-size: 1.1rem;
-    }
-
-    .secondary-leader-content > p {
-        font-size: 11px;
-    }
-
-}
-
-@media (max-width: 380px) {
-
-    .secondary-leader {
-        grid-template-columns: 1fr;
-    }
-
-    .secondary-leader-image {
-        height: 240px;
-    }
-
-    .leader-footer {
-        align-items: flex-start;
-    }
-
-    .leader-signature {
-        width: 85px;
-    }
-
 }
