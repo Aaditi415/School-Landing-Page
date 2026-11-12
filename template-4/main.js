@@ -690,3 +690,39 @@ if (document.readyState === "loading") {
 } else {
     initEventPreview();
 }
+
+// Update footer copyright year
+const footerYear = document.getElementById("footerYear");
+
+if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+}
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+function initBackToTop() {
+    const backToTop = document.getElementById("backToTop");
+
+    if (!backToTop) return;
+
+    function toggleBackToTop() {
+        backToTop.classList.toggle("show", window.scrollY > 400);
+    }
+
+    window.addEventListener("scroll", toggleBackToTop, {
+        passive: true
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    toggleBackToTop();
+}
+
+document.addEventListener("DOMContentLoaded", initBackToTop);
