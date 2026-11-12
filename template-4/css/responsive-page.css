@@ -1,0 +1,125 @@
+
+/* =========================================
+   COMING SOON & 404 RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+    .coming-soon-page,
+    .error-page {
+        min-height: 100svh;
+        padding: 30px 20px 20px;
+    }
+
+    .coming-soon-illustration {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        transform: scale(0.9);
+    }
+
+    .coming-soon-container h1,
+    .error-container h1 {
+        font-size: clamp(2.1rem, 8vw, 2.8rem);
+        letter-spacing: -1px;
+    }
+
+    .coming-soon-description,
+    .error-description {
+        font-size: 0.94rem;
+    }
+
+    .coming-soon-actions,
+    .error-actions {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .coming-primary-btn,
+    .coming-secondary-btn,
+    .error-primary-btn,
+    .error-secondary-btn {
+        width: 100%;
+    }
+
+    .coming-soon-footer,
+    .error-footer {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 45px;
+        text-align: center;
+    }
+
+    .error-illustration {
+        height: 190px;
+        margin-top: 35px;
+    }
+
+    .error-404-number {
+        height: 155px;
+        gap: 8px;
+        letter-spacing: -6px;
+    }
+
+    .error-planet {
+        width: 100px;
+        height: 100px;
+    }
+
+    .error-planet svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .error-floating-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .error-ground {
+        width: 210px;
+    }
+}
+
+@media (max-width: 380px) {
+    .coming-soon-page,
+    .error-page {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .coming-soon-logo,
+    .error-logo {
+        font-size: 1.15rem;
+    }
+
+    .coming-soon-illustration {
+        transform: scale(0.8);
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .coming-soon-container h1,
+    .error-container h1 {
+        font-size: 2rem;
+    }
+
+    .error-illustration {
+        transform: scale(0.88);
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .coming-soon-footer,
+    .error-footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .coming-main-icon,
+    .error-planet {
+        animation: none;
+    }
+}

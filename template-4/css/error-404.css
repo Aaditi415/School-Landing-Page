@@ -1,0 +1,294 @@
+
+/* =========================================
+   404 ERROR PAGE
+========================================= */
+
+.error-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 15px 24px 5px;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(255, 243, 201, 0.7), transparent 28%),
+        radial-gradient(circle at 12% 80%, rgba(227, 238, 255, 0.85), transparent 30%),
+        var(--bg-main);
+}
+
+.error-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    text-align: center;
+}
+
+.error-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: var(--fw-extrabold);
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+
+.error-logo-icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    color: var(--text-white);
+    background: var(--gradient-brand);
+    border-radius: 12px;
+}
+
+.error-logo-icon svg {
+    width: 21px;
+    height: 21px;
+}
+.error-illustration {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    height: 220px;
+    margin: 45px auto 20px;
+}
+
+.error-404-number {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 180px;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: clamp(7rem, 19vw, 11rem);
+    font-weight: var(--fw-extrabold);
+    line-height: 1;
+    letter-spacing: -10px;
+}
+
+.error-404-number > span:first-child {
+    transform: rotate(-8deg);
+}
+
+.error-404-number > span:last-child {
+    transform: rotate(8deg);
+}
+
+.error-container h1 {
+    margin: 22px 0 15px;
+    color: var(--text-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(2.3rem, 5vw, 3.6rem);
+    font-weight: var(--fw-extrabold);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.error-container h1 span {
+    color: var(--secondary);
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.error-primary-btn,
+.error-secondary-btn {
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 23px;
+    border-radius: var(--radius-full);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.error-primary-btn {
+    color: var(--text-white);
+    background: var(--gradient-brand);
+    box-shadow: 0 7px 18px rgba(38, 59, 112, 0.16);
+}
+
+.error-primary-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.error-primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.error-secondary-btn {
+    color: var(--primary);
+    background: var(--bg-white);
+    border: 1px solid var(--border-medium);
+}
+
+.error-secondary-btn:hover {
+    color: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+
+.error-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 5px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-muted);
+    font-size: var(--fs-label);
+}
+
+
+/* Globe in place of zero */
+
+.error-planet {
+    width: 125px;
+    height: 125px;
+    display: grid;
+    place-items: center;
+    color: var(--text-white);
+    background: var(--gradient-brand);
+    border: 9px solid var(--bg-white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-hover);
+    animation: error-float 4s ease-in-out infinite;
+}
+
+.error-planet svg {
+    width: 58px;
+    height: 58px;
+    stroke-width: 1.3;
+}
+
+.error-floating-icon {
+    position: absolute;
+    z-index: 3;
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    border: 4px solid var(--bg-white);
+    border-radius: 17px;
+    box-shadow: var(--shadow-card);
+}
+
+.error-floating-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.error-book {
+    top: 12px;
+    left: 10px;
+    color: #BC7937;
+    background: var(--pastel-peach);
+    transform: rotate(-12deg);
+}
+
+.error-compass {
+    right: 8px;
+    bottom: 30px;
+    color: var(--secondary);
+    background: var(--pastel-lavender);
+    transform: rotate(12deg);
+}
+
+.error-ground {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 270px;
+    height: 18px;
+    background: var(--pastel-blue);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.error-eyebrow {
+    display: inline-block;
+    padding: 9px 15px;
+    color: #BC7937;
+    background: var(--pastel-peach);
+    border-radius: var(--radius-full);
+    font-size: var(--fs-label);
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+}
+
+.error-container h1 {
+    margin-top: 20px;
+}
+
+.error-description {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--text-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+}
+
+/* Buttons */
+
+.error-actions {
+    margin-top: 28px;
+}
+
+
+/* Decorations */
+
+.error-decoration {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.error-decoration-one {
+    top: -110px;
+    left: -100px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(108, 99, 217, 0.15);
+}
+
+.error-decoration-two {
+    right: -90px;
+    bottom: -100px;
+    width: 220px;
+    height: 220px;
+    background: rgba(223, 245, 237, 0.65);
+}
+
+@keyframes error-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
