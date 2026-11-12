@@ -2,1234 +2,2915 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website Title -->
+    <title>Eduverse International School | Learn, Grow & Lead</title>
+
+    <!-- SEO Description -->
     <meta
       name="description"
-      content="Aurelia International School — big dreams start with little questions."
+      content="Discover Eduverse International School, where academic excellence, creativity and innovation empower students to learn, grow and lead."
     />
-    <meta name="theme-color" content="#fff9ec" />
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
 
-    <title>Aurelia International School | Learn. Play. Discover.</title>
+    <!-- SEO Keywords -->
+    <meta
+      name="keywords"
+      content="international school, best school, quality education, modern education, student development, academic excellence"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="Eduverse International School" />
+
+    <!-- Search Engine Indexing -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#263B70" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eduverse International School" />
+    <meta
+      property="og:description"
+      content="Building knowledge, confidence and future-ready skills."
+    />
+    <meta property="og:image" content="assets/og-image.jpg" />
+
+    <!-- Twitter Sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eduverse International School" />
+    <meta
+      name="twitter:description"
+      content="Learn, grow and lead with Eduverse International School."
+    />
+    <meta name="twitter:image" content="assets/og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg" href="assets/favicon.svg" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
-    />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  <body>
-    <div class="announcement-bar" id="announcementBar">
-      <div class="announcement-inner">
-        <span class="announcement-spark">✳</span>
-        <p id="announcementMessage">
-          Admissions open for Academic Year 2027–28
-        </p>
-        <a href="#admissions">Explore admissions <span>↗</span></a>
-        <div class="announcement-progress">
-          <span id="announcementProgress"></span>
-        </div>
-      </div>
-    </div>
 
-    <header class="site-header" id="siteHeader">
-      <div class="container navbar">
-        <a class="brand" href="#hero" aria-label="Aurelia home">
-          <span class="brand-mark">a<span>✳</span></span>
-          <span class="brand-copy"
-            ><strong>AURELIA</strong><small>INTERNATIONAL SCHOOL</small></span
-          >
+  <body>
+    <!-- =========================================
+     ANNOUNCEMENT BAR
+========================================= -->
+
+    <section class="announcement-bar" id="announcementBar">
+      <div class="announcement-container">
+        <!-- LEFT: Announcement content -->
+        <div class="announcement-content">
+          <span class="announcement-label" id="announcementLabel">
+            ADMISSIONS
+          </span>
+
+          <div class="announcement-slider">
+            <div class="announcement-track" id="announcementTrack">
+              <!-- Slides generated through JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: CTA -->
+        <a href="#" class="announcement-cta" id="announcementCta">
+          <span>Explore Now</span>
+
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M7 17L17 7M7 7H17V17"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </a>
-        <button
-          class="menu-toggle"
-          id="menuToggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <span></span><span></span>
-        </button>
-        <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
-          <a class="nav-link active" href="#hero">Home</a>
-          <a class="nav-link" href="#about">Our story</a>
-          <a class="nav-link" href="#facilities">Discover</a>
-          <a class="nav-link" href="#learning-journey">Academics</a>
-          <a class="nav-link" href="#school-gallery">School life</a>
-          <a class="nav-link" href="#contact">Contact</a>
-          <a class="nav-cta" href="#admissions"
-            >Join our school <span>↗</span></a
-          >
-        </nav>
       </div>
+
+      <!-- PROGRESS INDICATOR -->
+      <div class="announcement-progress">
+        <div class="announcement-progress-fill" id="announcementProgress"></div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     MAIN NAVBAR
+    ========================================= -->
+
+    <header class="main-header" id="mainHeader">
+      <nav class="navbar container" aria-label="Main navigation">
+        <!-- LOGO -->
+        <a href="#home" class="navbar-brand">
+          <span class="brand-icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <path
+                d="M24 5L5 14L24 23L43 14L24 5Z"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M12 18V29C12 29 17 35 24 35C31 35 36 29 36 29V18"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M43 14V27"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+
+          <span class="brand-text">
+            <strong>EDUVERSE</strong>
+            <small>LEARN · GROW · LEAD</small>
+          </span>
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <div class="navbar-menu" id="navbarMenu">
+          <ul class="navbar-links">
+            <li>
+              <a href="#home" class="nav-link active">Home</a>
+            </li>
+
+            <li>
+              <a href="#about" class="nav-link">About Us</a>
+            </li>
+
+            <li>
+              <a href="#academics" class="nav-link">Academics</a>
+            </li>
+
+            <li>
+              <a href="#student-life" class="nav-link">Student Life</a>
+            </li>
+
+            <li>
+              <a href="#facilities" class="nav-link">Facilities</a>
+            </li>
+
+            <li>
+              <a href="#admissions" class="nav-link">Admissions</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- RIGHT ACTIONS -->
+        <div class="navbar-actions">
+          <a href="#admissions" class="navbar-cta">
+            <span>Apply Now</span>
+
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M7 17L17 7M7 7H17V17"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button
+            class="navbar-toggle"
+            id="navbarToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navbarMenu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="hero section" id="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <div class="eyebrow">
-              <span class="eyebrow-icon">✳</span> A PLACE TO GROW, EXPLORE &
-              SHINE
-            </div>
-            <h1>
-              BIG DREAMS<br /><em>START HERE<span>✳</span></em>
-            </h1>
-            <p class="hero-lead">
-              Little questions. Big discoveries. Endless possibilities. At
-              Aurelia, every child gets the freedom to explore, create and
-              become something extraordinary.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-coral" href="#about"
-                >Discover Aurelia <span>↗</span></a
-              >
-              <a class="text-link" href="#admissions"
-                ><span class="round-arrow">→</span> Start your journey</a
-              >
-            </div>
-            <div class="hero-note">
-              <span class="note-icon">♡</span
-              ><span
-                ><strong>A little school with big possibilities.</strong
-                ><small>Every child matters. Every dream counts.</small></span
-              >
-            </div>
-          </div>
-          <div class="hero-art reveal">
-            <div class="hero-orbit orbit-one"></div>
-            <div class="hero-orbit orbit-two"></div>
-            <div class="hero-photo">
-              <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85"
-                alt="Children learning together in a bright classroom"
-              />
-            </div>
-            <div class="hero-sticker sticker-star">✳</div>
-            <div class="hero-sticker sticker-note">
-              <span>✦</span><b>Dream big.</b><small>Start small.</small>
-            </div>
-            <div class="hero-sticker sticker-smile">☺</div>
-            <div class="photo-caption"><i></i> A WORLD FULL OF WONDER</div>
-            <div class="hero-dots"></div>
-          </div>
-        </div>
-        <a class="scroll-cue" href="#statistics"
-          ><span>SCROLL TO EXPLORE</span><b>↓</b></a
-        >
-      </section>
+    <!-- ================= HERO SECTION ================= -->
 
-      <!-- STATS -->
-      <section class="stats-section" id="statistics">
-        <div class="container stats-grid">
-          <div class="stats-intro">
-            <span class="eyebrow">AURELIA IN NUMBERS</span>
-            <h2>Small steps.<br /><em>Big impact.</em></h2>
-          </div>
-          <div class="stat-item stat-coral">
-            <strong data-count="1200" data-suffix="+">0</strong
-            ><span>Happy learners</span
-            ><small>Curious minds, bright futures</small>
-          </div>
-          <div class="stat-item stat-yellow">
-            <strong data-count="85" data-suffix="+">0</strong
-            ><span>Dedicated educators</span><small>Guides who inspire</small>
-          </div>
-          <div class="stat-item stat-blue">
-            <strong data-count="25" data-suffix="+">0</strong
-            ><span>Years of learning</span><small>Growing together</small>
-          </div>
-          <div class="stat-item stat-green">
-            <strong data-count="30" data-suffix="+">0</strong
-            ><span>Learning spaces</span><small>Room to imagine</small>
-          </div>
-        </div>
-      </section>
+    <section class="hero hero-section" id="home">
+      <div class="hero-background">
+        <img
+          src="assets/hero-campus.jpeg"
+          alt="Students learning together in a modern school environment"
+          class="hero-background-image"
+        />
 
-      <!-- ABOUT -->
-      <section class="about section" id="about">
-        <div class="container about-grid">
-          <div class="about-visual reveal">
-            <div class="about-photo-main">
-              <img
-                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1000&q=85"
-                alt="Young student smiling while learning"
-              />
-            </div>
-            <div class="about-photo-small">
-              <img
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=85"
-                alt="Children creating artwork together"
-              />
-            </div>
-            <div class="about-sticker">
-              Curiosity<br />looks good<br />on you! <span>✳</span>
-            </div>
-            <div class="about-circle">
-              LEARN WITH JOY • GROW WITH CONFIDENCE •
-            </div>
-          </div>
-          <div class="about-copy reveal">
-            <span class="eyebrow"
-              ><span class="eyebrow-icon">✳</span> HELLO, WE'RE AURELIA</span
-            >
-            <h2>A place where every child's <em>potential blooms.</em></h2>
-            <p>
-              We believe education should do more than fill notebooks. It should
-              spark questions, build courage, nurture kindness and help every
-              learner discover what makes them wonderfully unique.
-            </p>
-            <p>
-              At Aurelia, meaningful learning happens through thoughtful
-              teaching, joyful exploration and a community that celebrates every
-              little breakthrough.
-            </p>
-            <div class="about-values">
-              <span>♡ Kindness</span><span>✦ Curiosity</span
-              ><span>✳ Creativity</span><span>☀ Confidence</span>
-            </div>
-            <a href="#vision-mission" class="button button-dark"
-              >Get to know us <span>↗</span></a
-            >
-          </div>
-        </div>
-      </section>
+        <div class="hero-image-blend"></div>
+      </div>
 
-      <!-- VISION + MISSION -->
-      <section class="vision-section section" id="vision-mission">
-        <div class="container">
-          <div class="section-heading center reveal">
-            <span class="eyebrow">WHAT GUIDES US</span>
-            <h2>Big-hearted ideas.<br /><em>Brighter tomorrows.</em></h2>
-            <p>
-              Our purpose is simple: help every child feel seen, supported and
-              excited about the world ahead.
-            </p>
-          </div>
-          <div class="vision-grid">
-            <article class="vision-card vision-card-yellow reveal">
-              <div class="vision-art art-sun">☀</div>
-              <span class="card-kicker">01 / OUR VISION</span>
-              <h3>Imagine a world<br />of possibilities.</h3>
-              <p>
-                To inspire confident, compassionate and curious individuals who
-                think independently, embrace possibilities and contribute
-                positively to the world.
-              </p>
-              <div class="keyword-row">
-                <span>Imagine</span><span>Explore</span><span>Inspire</span>
-              </div>
-            </article>
-            <article class="vision-card vision-card-lilac reveal">
-              <div class="vision-art art-plant">✿</div>
-              <span class="card-kicker">02 / OUR MISSION</span>
-              <h3>Nurture the spark.<br />Grow the future.</h3>
-              <p>
-                To create an engaging learning environment where every child
-                discovers their strengths and receives the guidance and
-                opportunities to reach their potential.
-              </p>
-              <div class="keyword-row">
-                <span>Nurture</span><span>Empower</span><span>Grow</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      <div class="hero-container container">
+        <!-- LEFT CONTENT -->
+        <div class="hero-content">
+          <span class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            A PLACE TO DISCOVER YOUR POTENTIAL
+          </span>
 
-      <!-- FACILITIES -->
-      <section class="facilities section" id="facilities">
-        <div class="container">
-          <div class="section-heading reveal">
-            <span class="eyebrow">ROOM TO TRY EVERYTHING</span>
-            <h2>Find your thing.<br /><em>Then find another.</em></h2>
-            <p>
-              From paint-splattered fingers to big science questions, every
-              interest deserves a place to grow.
-            </p>
-          </div>
-          <div class="facility-layout">
-            <article class="facility-feature reveal">
-              <img
-                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1000&q=85"
-                alt="Art and craft activity"
-              />
-              <div class="facility-feature-copy">
-                <span>01 / MAKE SOMETHING</span>
-                <h3>Art & creative studio</h3>
-                <p>Ideas take shape through colour, texture and imagination.</p>
-              </div>
-              <span class="facility-arrow">↗</span>
-            </article>
-            <div class="facility-list">
-              <article class="facility-row reveal">
-                <span class="facility-number">02</span
-                ><span class="facility-emoji">♫</span>
-                <div>
-                  <h3>Music & dance</h3>
-                  <p>Find your rhythm and let it out.</p>
-                </div>
-                <span class="facility-arrow">↗</span>
-              </article>
-              <article class="facility-row reveal">
-                <span class="facility-number">03</span
-                ><span class="facility-emoji">⚽</span>
-                <div>
-                  <h3>Sports & games</h3>
-                  <p>Play fair, play hard, grow together.</p>
-                </div>
-                <span class="facility-arrow">↗</span>
-              </article>
-              <article class="facility-row reveal">
-                <span class="facility-number">04</span
-                ><span class="facility-emoji">⚙</span>
-                <div>
-                  <h3>Robotics & STEM</h3>
-                  <p>Build, test, wonder, repeat.</p>
-                </div>
-                <span class="facility-arrow">↗</span>
-              </article>
-              <article class="facility-row reveal">
-                <span class="facility-number">05</span
-                ><span class="facility-emoji">⚗</span>
-                <div>
-                  <h3>Science & discovery</h3>
-                  <p>Big questions welcome here.</p>
-                </div>
-                <span class="facility-arrow">↗</span>
-              </article>
-              <article class="facility-row reveal">
-                <span class="facility-number">06</span
-                ><span class="facility-emoji">📚</span>
-                <div>
-                  <h3>Reading & library</h3>
-                  <p>Whole new worlds, one page at a time.</p>
-                </div>
-                <span class="facility-arrow">↗</span>
-              </article>
-              <article class="facility-row reveal">
-                <span class="facility-number">07</span
-                ><span class="facility-emoji">🌱</span>
-                <div>
-                  <h3>Nature & gardening</h3>
-                  <p>Get curious about the living world.</p>
-                </div>
-                <span class="facility-arrow">↗</span>
-              </article>
-              <article class="facility-row reveal">
-                <span class="facility-number">08</span
-                ><span class="facility-emoji">⌘</span>
-                <div>
-                  <h3>Technology & coding</h3>
-                  <p>Turn curious ideas into real things.</p>
-                </div>
-                <span class="facility-arrow">↗</span>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
+          <h1>
+            Where Bright Minds
+            <span>Build Brighter Futures.</span>
+          </h1>
 
-      <!-- CAMPUS EXPLORER -->
-      <section class="campus section" id="campus">
-        <div class="container">
-          <div class="section-heading center reveal">
-            <span class="eyebrow">TAKE A LITTLE LOOK AROUND</span>
-            <h2>So much to explore.<br /><em>All in one place.</em></h2>
-            <p>
-              Every corner has a story. Pick a spot on our campus map to
-              explore.
-            </p>
-          </div>
-          <div class="campus-explorer reveal">
-            <div class="campus-image">
-              <img
-                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=85"
-                alt="School campus building and green grounds"
-              />
-              <button
-                class="campus-pin pin-one active"
-                data-place="building"
-                aria-label="Academic building"
-              >
-                1
-              </button>
-              <button
-                class="campus-pin pin-two"
-                data-place="playground"
-                aria-label="Playground"
-              >
-                2
-              </button>
-              <button
-                class="campus-pin pin-three"
-                data-place="library"
-                aria-label="Library"
-              >
-                3
-              </button>
-              <button
-                class="campus-pin pin-four"
-                data-place="garden"
-                aria-label="Garden"
-              >
-                4
-              </button>
-              <span class="map-label">AURELIA CAMPUS MAP ✳</span>
-            </div>
-            <div class="campus-info">
-              <span class="card-kicker">EXPLORE THE CAMPUS</span>
-              <div class="campus-info-number" id="campusNumber">01</div>
-              <h3 id="campusTitle">A place to learn</h3>
-              <p id="campusDescription">
-                Bright, welcoming learning spaces designed to encourage
-                questions, collaboration and discovery.
-              </p>
-              <div class="campus-fact">
-                <span>✦</span
-                ><span id="campusFact"
-                  >Thoughtful spaces for curious minds</span
-                >
-              </div>
-              <div class="campus-controls">
-                <button id="campusPrev" aria-label="Previous location">←</button
-                ><button id="campusNext" aria-label="Next location">→</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHY US -->
-      <section class="why-section section" id="why-us">
-        <div class="container">
-          <div class="section-heading reveal">
-            <span class="eyebrow">THE AURELIA DIFFERENCE</span>
-            <h2>More than a classroom.<br /><em>A place to belong.</em></h2>
-          </div>
-          <div class="why-grid">
-            <article class="why-item why-a reveal">
-              <span class="why-index">01</span><span class="why-icon">♡</span>
-              <h3>Child-first, always</h3>
-              <p>
-                Every learner is different. We make room for every pace,
-                personality and possibility.
-              </p>
-            </article>
-            <article class="why-item why-b reveal">
-              <span class="why-index">02</span><span class="why-icon">✦</span>
-              <h3>Teachers who inspire</h3>
-              <p>
-                Encouraging educators turn everyday moments into meaningful
-                discoveries.
-              </p>
-            </article>
-            <article class="why-item why-c reveal">
-              <span class="why-index">03</span><span class="why-icon">☀</span>
-              <h3>Safe & caring spaces</h3>
-              <p>
-                Belonging, respect and wellbeing are part of the everyday
-                experience.
-              </p>
-            </article>
-            <article class="why-item why-d reveal">
-              <span class="why-index">04</span><span class="why-icon">↗</span>
-              <h3>Learning beyond books</h3>
-              <p>
-                Projects, play and practical experiences make ideas come alive.
-              </p>
-            </article>
-            <article class="why-item why-e reveal">
-              <span class="why-index">05</span><span class="why-icon">◎</span>
-              <h3>Room to be yourself</h3>
-              <p>
-                We celebrate individual strengths and encourage confidence to
-                grow.
-              </p>
-            </article>
-            <article class="why-item why-f reveal">
-              <span class="why-index">06</span><span class="why-icon">⌘</span>
-              <h3>Ready for what's next</h3>
-              <p>
-                Curiosity, collaboration and creativity help prepare learners
-                for tomorrow.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- LEARNING JOURNEY -->
-      <section class="journey section" id="learning-journey">
-        <div class="container">
-          <div class="section-heading center reveal">
-            <span class="eyebrow">EVERY AGE, A NEW ADVENTURE</span>
-            <h2>One journey.<br /><em>Many milestones.</em></h2>
-            <p>
-              Learning grows with your child. Here's a glimpse of the stages
-              along the way.
-            </p>
-          </div>
-          <div class="journey-track">
-            <article class="journey-stage stage-yellow reveal">
-              <span class="stage-number">01</span
-              ><span class="stage-age">AGES 3–5</span>
-              <h3>Early years</h3>
-              <p>
-                Wonder, play and first friendships. A joyful start to a lifelong
-                love of learning.
-              </p>
-              <span class="stage-doodle">✿</span>
-            </article>
-            <article class="journey-stage stage-coral reveal">
-              <span class="stage-number">02</span
-              ><span class="stage-age">AGES 6–10</span>
-              <h3>Primary years</h3>
-              <p>
-                Building foundations, asking questions and finding confidence in
-                new skills.
-              </p>
-              <span class="stage-doodle">✳</span>
-            </article>
-            <article class="journey-stage stage-blue reveal">
-              <span class="stage-number">03</span
-              ><span class="stage-age">AGES 11–13</span>
-              <h3>Middle years</h3>
-              <p>
-                Exploring interests, thinking deeper and learning to work
-                together.
-              </p>
-              <span class="stage-doodle">↗</span>
-            </article>
-            <article class="journey-stage stage-green reveal">
-              <span class="stage-number">04</span
-              ><span class="stage-age">AGES 14–17</span>
-              <h3>Senior years</h3>
-              <p>
-                Growing independence, discovering direction and preparing for
-                the wider world.
-              </p>
-              <span class="stage-doodle">☀</span>
-            </article>
-          </div>
-          <p class="small-disclaimer">
-            Age ranges and programme stages shown are illustrative. Please
-            confirm the school's actual grades and eligibility.
+          <p class="hero-description">
+            More than just education, we create experiences that inspire
+            curiosity, encourage creativity and prepare students to shape the
+            world with confidence.
           </p>
-        </div>
-      </section>
 
-      <!-- ADMISSIONS -->
-      <section class="admissions section" id="admissions">
-        <div class="container admissions-grid">
-          <div class="admissions-copy reveal">
-            <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
-            <h2>Four little steps.<br /><em>One big beginning.</em></h2>
-            <p>
-              We'd love to meet your family, show you around and help you
-              understand whether Aurelia is the right place for your child.
-            </p>
-            <a href="#contact" class="button button-dark"
-              >Make an enquiry <span>↗</span></a
-            >
-            <div class="admissions-doodle">✳</div>
-          </div>
-          <div class="admission-steps">
-            <article class="admission-step reveal">
-              <span>01</span>
-              <div>
-                <h3>Say hello</h3>
-                <p>Share a few details so our team can guide you.</p>
-              </div>
-              <b>↗</b>
-            </article>
-            <article class="admission-step reveal">
-              <span>02</span>
-              <div>
-                <h3>Come explore</h3>
-                <p>Arrange a campus visit and experience school life.</p>
-              </div>
-              <b>↗</b>
-            </article>
-            <article class="admission-step reveal">
-              <span>03</span>
-              <div>
-                <h3>Apply together</h3>
-                <p>Our admissions team will explain the application process.</p>
-              </div>
-              <b>↗</b>
-            </article>
-            <article class="admission-step reveal">
-              <span>04</span>
-              <div>
-                <h3>Begin the adventure</h3>
-                <p>Get ready for a new world of learning and discovery.</p>
-              </div>
-              <b>✳</b>
-            </article>
-          </div>
-        </div>
-      </section>
+          <div class="hero-buttons">
+            <a href="#admissions" class="btn btn-primary">
+              Explore Admissions
+              <i data-lucide="arrow-up-right"></i>
+            </a>
 
-      <!-- CULTURAL GALLERY -->
-      <section class="culture section" id="cultural-gallery">
-        <div class="container">
-          <div class="gallery-heading reveal">
-            <div class="section-heading">
-              <span class="eyebrow">OUR TRADITIONS, OUR CELEBRATIONS</span>
-              <h2>A little culture.<br /><em>A lot of colour.</em></h2>
-              <p>
-                Celebrating the stories, traditions and creativity that bring
-                our community together.
-              </p>
-            </div>
+            <a href="#about" class="hero-video-btn">
+              <span class="video-play-icon">
+                <i data-lucide="play"></i>
+              </span>
+              <span>Discover Our School</span>
+            </a>
           </div>
-          <div
-            class="gallery-filters"
-            role="group"
-            aria-label="Filter cultural gallery"
-          >
-            <button class="filter-button active" data-filter="all">
-              All moments</button
-            ><button class="filter-button" data-filter="festivals">
-              Festivals</button
-            ><button class="filter-button" data-filter="arts">Arts</button
-            ><button class="filter-button" data-filter="performances">
-              Performances</button
-            ><button class="filter-button" data-filter="community">
-              Community
-            </button>
-          </div>
-          <div class="culture-grid">
-            <article
-              class="culture-card culture-tall"
-              data-category="festivals"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1680459520309-189cf5b22212?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                alt="Beautiful Diwali celebration with colourful festive lights"
-              />
-              <div>
-                <span>FESTIVALS</span>
-                <h3>Lights, joy & togetherness</h3>
-                <small>Diwali celebrations</small>
-              </div>
-            </article>
-            <article class="culture-card" data-category="arts">
-              <img
-                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80"
-                alt="Art supplies and painting"
-              />
-              <div>
-                <span>ARTS</span>
-                <h3>Creativity in every colour</h3>
-                <small>Little artists at work</small>
-              </div>
-            </article>
-            <article class="culture-card" data-category="performances">
-              <img
-                src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80"
-                alt="Dance performance"
-              />
-              <div>
-                <span>PERFORMANCES</span>
-                <h3>Stories through dance</h3>
-                <small>Music & movement</small>
-              </div>
-            </article>
-            <article class="culture-card" data-category="community">
-              <img
-                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80"
-                alt="Community celebration"
-              />
-              <div>
-                <span>COMMUNITY</span>
-                <h3>Growing together</h3>
-                <small>Shared celebrations</small>
-              </div>
-            </article>
-            <article class="culture-card" data-category="festivals">
-              <img
-                src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80"
-                alt="Colourful event decorations"
-              />
-              <div>
-                <span>FESTIVALS</span>
-                <h3>A world of colour</h3>
-                <small>Festival moments</small>
-              </div>
-            </article>
-            <article class="culture-card" data-category="arts">
-              <img
-                src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80"
-                alt="Colourful student artwork"
-              />
-              <div>
-                <span>ARTS</span>
-                <h3>Made with little hands</h3>
-                <small>Art & heritage</small>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <!-- PARENT LETTERS -->
-      <section class="letters section" id="parent-letters">
-        <div class="container">
-          <div class="section-heading center reveal">
-            <span class="eyebrow">KIND WORDS, BIG FEELINGS</span>
-            <h2>Notes from our<br /><em>school community.</em></h2>
-            <p>
-              Every school journey is made of little moments worth remembering.
-            </p>
-          </div>
-          <div class="letter-grid">
-            <article class="letter-card letter-yellow reveal">
-              <span class="letter-stamp">♡</span
-              ><small>A NOTE OF APPRECIATION</small>
-              <p>
-                “The best part of a learning community is seeing a child come
-                home excited to share what they discovered today.”
-              </p>
-              <strong>— Sample parent note</strong><i>With gratitude ✿</i>
-            </article>
-            <article class="letter-card letter-pink reveal">
-              <span class="letter-stamp">✳</span
-              ><small>A LITTLE REFLECTION</small>
-              <p>
-                “A warm welcome, a listening ear and room to try again can make
-                all the difference in a child's day.”
-              </p>
-              <strong>— Sample parent note</strong><i>With thanks ♡</i>
-            </article>
-            <article class="letter-card letter-blue reveal">
-              <span class="letter-stamp">✦</span><small>A HAPPY THOUGHT</small>
-              <p>
-                “We love that learning can be full of questions, creativity,
-                friendships and joyful surprises.”
-              </p>
-              <strong>— Sample parent note</strong><i>Warmly ✿</i>
-            </article>
-          </div>
-          <p class="small-disclaimer">
-            These are illustrative sample notes, not verified parent
-            testimonials. Replace them with approved, authentic feedback before
-            publishing.
-          </p>
-        </div>
-      </section>
+          <div class="hero-highlights">
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="graduation-cap"></i>
+              </span>
+              <span>Future-Ready<br />Education</span>
+            </div>
 
-      <!-- A DAY AT AURELIA -->
-      <section class="day-section section" id="school-day">
-        <div class="container">
-          <div class="gallery-heading reveal">
-            <div class="section-heading">
-              <span class="eyebrow">FROM FIRST HELLO TO SEE YOU TOMORROW</span>
-              <h2>A day full of<br /><em>little adventures.</em></h2>
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="brain-circuit"></i>
+              </span>
+              <span>Critical Thinking<br />& Innovation</span>
             </div>
-            <div class="day-sun">☀</div>
-          </div>
-          <div class="day-timeline">
-            <article class="day-moment reveal">
-              <time>08:00 <small>AM</small></time
-              ><span class="day-dot dot-coral"></span>
-              <div>
-                <span>GOOD MORNING</span>
-                <h3>A warm welcome</h3>
-                <p>Friendly faces and a fresh new day.</p>
-              </div>
-              <b>☀</b>
-            </article>
-            <article class="day-moment reveal">
-              <time>08:30 <small>AM</small></time
-              ><span class="day-dot dot-yellow"></span>
-              <div>
-                <span>TOGETHER TIME</span>
-                <h3>Morning gathering</h3>
-                <p>Connect, share and get ready to learn.</p>
-              </div>
-              <b>♡</b>
-            </article>
-            <article class="day-moment reveal">
-              <time>09:00 <small>AM</small></time
-              ><span class="day-dot dot-blue"></span>
-              <div>
-                <span>CURIOUS MINDS</span>
-                <h3>Discover something new</h3>
-                <p>Questions lead the way in every classroom.</p>
-              </div>
-              <b>✳</b>
-            </article>
-            <article class="day-moment reveal">
-              <time>11:00 <small>AM</small></time
-              ><span class="day-dot dot-green"></span>
-              <div>
-                <span>MOVE & PLAY</span>
-                <h3>Play and explore</h3>
-                <p>Fresh air, friendship and active fun.</p>
-              </div>
-              <b>↗</b>
-            </article>
-            <article class="day-moment reveal">
-              <time>12:30 <small>PM</small></time
-              ><span class="day-dot dot-pink"></span>
-              <div>
-                <span>SHARE A MOMENT</span>
-                <h3>Lunch together</h3>
-                <p>Good food and even better conversations.</p>
-              </div>
-              <b>♡</b>
-            </article>
-            <article class="day-moment reveal">
-              <time>02:00 <small>PM</small></time
-              ><span class="day-dot dot-purple"></span>
-              <div>
-                <span>UNTIL TOMORROW</span>
-                <h3>A day of achievement</h3>
-                <p>One more thing learned, one more reason to smile.</p>
-              </div>
-              <b>✦</b>
-            </article>
-          </div>
-          <p class="small-disclaimer">
-            Illustrative daily schedule. Actual school timings and activities
-            may differ.
-          </p>
-        </div>
-      </section>
 
-      <!-- SCHOOL GALLERY -->
-      <section class="gallery section" id="school-gallery">
-        <div class="container">
-          <div class="gallery-heading reveal">
-            <div class="section-heading">
-              <span class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</span>
-              <h2>Life at Aurelia.<br /><em>In full colour.</em></h2>
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="medal"></i>
+              </span>
+              <span>Excellence Beyond<br />Academics</span>
             </div>
-            <a class="text-link" href="#cultural-gallery"
-              >Explore celebrations <span class="round-arrow">↗</span></a
-            >
-          </div>
-          <div class="photo-mosaic">
-            <figure class="mosaic-item mosaic-large reveal">
-              <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85"
-                alt="Students learning in classroom"
-              />
-              <figcaption>Curious minds at work</figcaption>
-            </figure>
-            <figure class="mosaic-item reveal">
-              <img
-                src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=85"
-                alt="Creative art activity"
-              />
-              <figcaption>Made by little hands</figcaption>
-            </figure>
-            <figure class="mosaic-item reveal">
-              <img
-                src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=700&q=85"
-                alt="Children playing outside"
-              />
-              <figcaption>Room to play</figcaption>
-            </figure>
-            <figure class="mosaic-item reveal">
-              <img
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=85"
-                alt="Children reading together"
-              />
-              <figcaption>Stories take us places</figcaption>
-            </figure>
-            <figure class="mosaic-item reveal">
-              <img
-                src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=700&q=85"
-                alt="Teacher helping a student"
-              />
-              <figcaption>Growing together</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
 
-      <!-- EVENTS -->
-      <section class="events section" id="events">
-        <div class="container">
-          <div class="gallery-heading reveal">
-            <div class="section-heading">
-              <span class="eyebrow">SAVE A LITTLE SPACE FOR FUN</span>
-              <h2>What's happening<br /><em>around here?</em></h2>
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="heart-handshake"></i>
+              </span>
+              <span>Values & Character<br />Building</span>
             </div>
-            <span class="event-side-note"
-              >A calendar full of<br />things to look forward to ✳</span
-            >
-          </div>
-          <div class="event-list">
-            <article class="event-row reveal">
-              <div class="event-date"><strong>12</strong><span>DEC</span></div>
-              <div class="event-main">
-                <span>PERFORMANCE</span>
-                <h3>Music & dance festival</h3>
-                <p>Celebrating expression, rhythm and the joy of performing.</p>
-              </div>
-              <div class="event-meta">
-                10:00 AM <span>School auditorium</span>
-              </div>
-              <a href="#contact" aria-label="Ask about Music and Dance Festival"
-                >↗</a
-              >
-            </article>
-            <article class="event-row reveal">
-              <div class="event-date date-blue">
-                <strong>18</strong><span>JAN</span>
-              </div>
-              <div class="event-main">
-                <span>SPORTS & GAMES</span>
-                <h3>Friendly games day</h3>
-                <p>Team spirit, cheerful competition and plenty of play.</p>
-              </div>
-              <div class="event-meta">
-                11:00 AM <span>Activity centre</span>
-              </div>
-              <a href="#contact" aria-label="Ask about Games Day">↗</a>
-            </article>
-            <article class="event-row reveal">
-              <div class="event-date date-green">
-                <strong>08</strong><span>FEB</span>
-              </div>
-              <div class="event-main">
-                <span>INNOVATION</span>
-                <h3>Young inventors expo</h3>
-                <p>Big ideas and clever creations from curious minds.</p>
-              </div>
-              <div class="event-meta">09:30 AM <span>Innovation lab</span></div>
-              <a href="#contact" aria-label="Ask about Young Inventors Expo"
-                >↗</a
-              >
-            </article>
-            <article class="event-row reveal">
-              <div class="event-date date-pink">
-                <strong>21</strong><span>MAR</span>
-              </div>
-              <div class="event-main">
-                <span>CREATIVITY</span>
-                <h3>Art & creativity carnival</h3>
-                <p>A colourful celebration of imagination and making.</p>
-              </div>
-              <div class="event-meta">
-                10:30 AM <span>Creative studio</span>
-              </div>
-              <a href="#contact" aria-label="Ask about Art Carnival">↗</a>
-            </article>
-          </div>
-          <p class="small-disclaimer">
-            Sample event names and dates for layout demonstration. Replace with
-            the school's confirmed calendar.
-          </p>
-        </div>
-      </section>
 
-      <!-- FAQ -->
-      <section class="faq section" id="faq">
-        <div class="container faq-grid">
-          <div class="faq-intro reveal">
-            <span class="eyebrow">GOOD QUESTIONS START HERE</span>
-            <h2>Wondering<br />about <em>something?</em></h2>
-            <p>
-              Here are a few helpful answers. If there's something else on your
-              mind, our team would be happy to help.
-            </p>
-            <a class="button button-coral" href="#contact"
-              >Ask us anything <span>↗</span></a
-            >
-            <div class="faq-scribble">?</div>
-          </div>
-          <div class="faq-list">
-            <article class="faq-item open">
-              <button class="faq-question" aria-expanded="true">
-                How do I apply for admission?<span>−</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Start by sending an enquiry through our contact form. Our
-                  admissions team can then explain the application steps,
-                  required documents and available places.
-                </p>
-              </div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                Which age groups and grades do you support?<span>+</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Please contact the school for the current grades offered, age
-                  eligibility and any programme-specific requirements.
-                </p>
-              </div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                What curriculum and teaching approach do you follow?<span
-                  >+</span
-                >
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Our educational approach is centred on meaningful learning,
-                  curiosity and individual growth. Contact the school for
-                  confirmed curriculum and board details.
-                </p>
-              </div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                Are extracurricular activities available?<span>+</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Activities may include creative arts, music, sports,
-                  technology and nature-based exploration. Ask our team for the
-                  current programme.
-                </p>
-              </div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                Can families visit the campus?<span>+</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  We'd love to welcome you. Send an enquiry to arrange a
-                  suitable campus visit.
-                </p>
-              </div>
-            </article>
-            <article class="faq-item">
-              <button class="faq-question" aria-expanded="false">
-                Is school transportation available?<span>+</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Transportation routes and availability should be confirmed
-                  directly with the school office.
-                </p>
-              </div>
-            </article>
+            <div class="hero-highlight">
+              <span class="highlight-icon">
+                <i data-lucide="globe"></i>
+              </span>
+              <span>Global Outlook<br />& Perspectives</span>
+            </div>
           </div>
         </div>
-      </section>
 
-      <!-- CONTACT -->
-      <section class="contact section" id="contact">
-        <div class="container contact-wrap">
-          <div class="contact-info reveal">
-            <span class="eyebrow">LET'S START A CONVERSATION</span>
-            <h2>We'd love to<br /><em>hear from you.</em></h2>
-            <p>
-              Questions, campus visits or admission enquiries — we're just a
-              message away.
-            </p>
-            <div class="contact-detail">
-              <span>✉</span>
-              <div>
-                <small>EMAIL US</small><strong>hello@aurelia.edu</strong>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <span>☎</span>
-              <div>
-                <small>CALL OUR OFFICE</small><strong>+91 00000 00000</strong>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <span>⌖</span>
-              <div>
-                <small>COME SAY HELLO</small
-                ><strong>Your School Address, Your City, India</strong>
-              </div>
-            </div>
-            <div class="contact-hours">
-              OFFICE HOURS <b>Monday – Saturday · 9 AM – 4 PM</b>
-            </div>
-          </div>
-          <form class="contact-form reveal" id="contactForm">
-            <div class="form-heading">
-              <span>✳ A QUICK HELLO</span>
-              <h3>Tell us a little about your family.</h3>
-            </div>
-            <div class="form-row">
-              <label
-                >Parent / guardian name<input
-                  name="name"
-                  type="text"
-                  placeholder="Your full name"
-                  required /></label
-              ><label
-                >Email address<input
-                  name="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  required
-              /></label>
-            </div>
-            <div class="form-row">
-              <label
-                >Phone number<input
-                  name="phone"
-                  type="tel"
-                  placeholder="+91"
-                  required /></label
-              ><label
-                >Interested grade<select name="grade" required>
-                  <option value="">Choose a grade</option>
-                  <option>Early Years</option>
-                  <option>Primary</option>
-                  <option>Middle Years</option>
-                  <option>Senior Years</option>
-                  <option>Not sure yet</option>
-                </select></label
-              >
-            </div>
-            <label
-              >How can we help?<textarea
-                name="message"
-                rows="4"
-                placeholder="Tell us what you'd like to know..."
-                required
-              ></textarea>
-            </label>
-            <label class="consent"
-              ><input type="checkbox" required /> I agree to be contacted by the
-              school regarding this enquiry.</label
-            >
-            <button class="button button-coral form-submit" type="submit">
-              Send my enquiry <span>↗</span>
-            </button>
-            <p class="form-message" id="formMessage" role="status"></p>
-            <small class="form-demo-note"
-              >Demo form only — connect a secure form service or backend before
-              accepting real enquiries.</small
-            >
-          </form>
-        </div>
-      </section>
+        <!-- RIGHT FLOATING CONTENT -->
 
-      <!-- ADMISSIONS CTA -->
-      <section class="cta-section" id="admissions-cta">
-        <div class="container cta-inner reveal">
-          <div>
-            <span class="eyebrow">THE 2027–28 ADVENTURE AWAITS</span>
-            <h2>Ready for a little<br /><em>more wonder?</em></h2>
-            <p>Let's find out what your child can become.</p>
-          </div>
-          <a class="button button-dark" href="#contact"
-            >Let's talk admissions <span>↗</span></a
-          ><span class="cta-spark">✳</span>
-        </div>
-      </section>
-    </main>
+        <div class="hero-visual">
+          <div class="hero-community">
+            <div class="community-avatars">
+              <img src="assets/profile-1.jpg" alt="School community member" />
+              <img src="assets/profile-2.jpg" alt="School community member" />
+              <img src="assets/profile-3.jpg" alt="School community member" />
+            </div>
 
-    <!--  FOOTER -->
-    <footer class="footer" id="footer">
-      <div class="container footer-main">
-        <div class="footer-brand">
-          <a class="brand brand-light" href="#hero"
-            ><span class="brand-mark">a<span>✳</span></span
-            ><span class="brand-copy"
-              ><strong>AURELIA</strong><small>INTERNATIONAL SCHOOL</small></span
-            ></a
-          >
-          <p>
-            Big dreams start with little questions. Here's to learning, playing,
-            discovering and becoming.
-          </p>
-          <div class="social-links">
-            <a href="#" aria-label="Instagram">ig</a
-            ><a href="#" aria-label="Facebook">f</a
-            ><a href="#" aria-label="YouTube">▶</a>
+            <div class="community-info">
+              <strong>1,200+</strong>
+              <span>Happy Families & Growing Learners</span>
+            </div>
           </div>
-        </div>
-        <div class="footer-column">
-          <h4>EXPLORE</h4>
-          <a href="#about">Our story</a
-          ><a href="#vision-mission">Vision & mission</a
-          ><a href="#leadership">Leadership</a
-          ><a href="#campus">Explore campus</a>
-        </div>
-        <div class="footer-column">
-          <h4>DISCOVER</h4>
-          <a href="#facilities">Facilities</a
-          ><a href="#learning-journey">Learning journey</a
-          ><a href="#school-gallery">School life</a><a href="#events">Events</a>
-        </div>
-        <div class="footer-column">
-          <h4>LET'S CONNECT</h4>
-          <a href="mailto:hello@aurelia.edu">hello@aurelia.edu</a
-          ><a href="tel:+910000000000">+91 00000 00000</a
-          ><span>Your School Address,<br />Your City, India</span
-          ><a href="#contact">Send an enquiry ↗</a>
+
+          <div class="hero-image-caption">
+            <span class="caption-dot"></span>
+            A COMMUNITY THAT INSPIRES
+          </div>
         </div>
       </div>
-      <div class="container footer-bottom">
-        <span
-          >© <span id="currentYear"></span> Aurelia International School. All
-          rights reserved.</span
-        >
-        <div>
-          <a href="privacy-policy.html">Privacy policy</a
-          ><a href="terms-and-conditions.html">Terms & conditions</a>
+    </section>
+
+    <!-- ================= STASTS SECTION ================= -->
+
+    <section class="stats-section" id="statistics">
+      <div class="stats-container container">
+        <!-- Statistic 1 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="graduation-cap"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number" data-target="25">0<span>+</span></h3>
+            <p>Years of Excellence</p>
+          </div>
         </div>
-        <a href="#hero" class="back-top">Back to top ↑</a>
+
+        <!-- Statistic 2 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="users-round"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number" data-target="1200">1150<span>+</span></h3>
+            <p>Happy Students</p>
+          </div>
+        </div>
+
+        <!-- Statistic 3 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="user-round-check"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number" data-target="80">40<span>+</span></h3>
+            <p>Expert Educators</p>
+          </div>
+        </div>
+
+        <!-- Statistic 4 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="book-open"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number" data-target="15">0<span>+</span></h3>
+            <p>Learning Programs</p>
+          </div>
+        </div>
+
+        <!-- Statistic 5 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="chart-no-axes-combined"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-number" data-target="95">50<span>%</span></h3>
+            <p>Student Success Rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about-section section" id="about">
+      <div class="about-container container">
+        <!-- Left Image -->
+
+        <div class="about-visual">
+          <!-- Main Image -->
+          <div class="about-image-wrapper">
+            <img
+              src="assets/about-image.jpg"
+              alt="Students enjoying a creative learning experience"
+              class="about-image"
+            />
+          </div>
+
+          <!-- Small Overlapping Image -->
+          <div class="about-small-image">
+            <img
+              src="assets/about-image-small.png"
+              alt="Students learning together"
+            />
+          </div>
+
+          <div class="about-image-decoration"></div>
+
+          <!-- Floating Label -->
+          <div class="about-image-tag">
+            <span class="about-tag-icon">
+              <i data-lucide="heart"></i>
+            </span>
+
+            <div>
+              <strong>Learning with Purpose</strong>
+              <span>Growing with Confidence</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="about-content">
+          <span class="about-subheading">
+            <span class="about-subheading-line"></span>
+            ABOUT OUR SCHOOL
+          </span>
+
+          <h2>
+            Inspiring Young Minds
+            <span>To Shape a Better Tomorrow.</span>
+          </h2>
+
+          <p class="about-description">
+            We believe every child has the potential to achieve something
+            extraordinary. Our school provides a nurturing environment where
+            curiosity is encouraged, creativity is celebrated, and every student
+            is inspired to discover their unique strengths.
+          </p>
+
+          <p class="about-description">
+            Through meaningful learning experiences, dedicated educators, and
+            opportunities beyond the classroom, we help students build the
+            knowledge, confidence, and character they need for a brighter
+            future.
+          </p>
+
+          <div class="about-highlight">
+            <div class="about-highlight-icon">
+              <i data-lucide="lightbulb"></i>
+            </div>
+
+            <div class="about-highlight-content">
+              <h4>Every Child Has a Unique Potential</h4>
+              <p>
+                We create opportunities for every learner to explore, express,
+                and grow into their best self.
+              </p>
+            </div>
+          </div>
+
+          <a href="#admissions" class="section-button">
+            Discover Our Story
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VISION SECTION ================= -->
+
+    <section class="vision-section section" id="vision">
+      <div class="vision-container container">
+        <!-- LEFT CONTENT -->
+        <div class="vision-content">
+          <span class="vision-subheading">
+            <span class="vision-subheading-line"></span>
+            OUR VISION & MISSION
+          </span>
+
+          <h2>
+            Shaping Tomorrow,
+            <span>One Young Mind at a Time.</span>
+          </h2>
+
+          <p class="vision-intro">
+            We envision a world where every child has the confidence, knowledge
+            and creativity to make a meaningful difference. Our purpose is to
+            make that future possible through thoughtful education and
+            meaningful experiences.
+          </p>
+
+          <!-- Vision -->
+          <div class="vision-point">
+            <div class="vision-point-icon vision-icon-purple">
+              <i data-lucide="telescope"></i>
+            </div>
+
+            <div class="vision-point-content">
+              <h3>Our Vision</h3>
+              <p>
+                To nurture curious, compassionate and confident individuals who
+                are ready to shape a brighter future.
+              </p>
+            </div>
+          </div>
+
+          <!-- Mission -->
+          <div class="vision-point">
+            <div class="vision-point-icon vision-icon-orange">
+              <i data-lucide="target"></i>
+            </div>
+
+            <div class="vision-point-content">
+              <h3>Our Mission</h3>
+              <p>
+                To provide an inspiring learning environment that encourages
+                exploration, creativity, knowledge and lifelong growth.
+              </p>
+            </div>
+          </div>
+
+          <a href="#admissions" class="section-button">
+            Be Part of Our Journey
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- RIGHT IMAGE COLLAGE -->
+        <div class="vision-collage">
+          <!-- Top Left Small Image -->
+          <div class="vision-image vision-image-one">
+            <img
+              src="assets/vision-learning.jpg"
+              alt="Students exploring new ideas"
+            />
+          </div>
+
+          <!-- Bottom Left Image -->
+          <div class="vision-image vision-image-two">
+            <img
+              src="assets/vision-creativity.jpg"
+              alt="Students participating in creative activities"
+            />
+          </div>
+
+          <!-- Top Right Floating Card -->
+          <div class="vision-floating-card">
+            <div class="vision-card-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+
+            <span>OUR BELIEF</span>
+            <h3>Every Child Can Shine.</h3>
+            <p>
+              Every talent deserves an opportunity to grow. We believe every
+              child is unique, with their own strengths, dreams, and endless
+              possibilities.
+            </p>
+          </div>
+
+          <!-- Bottom Right Large Image -->
+          <div class="vision-image vision-image-three">
+            <img
+              src="assets/vision-teamwork.jpg"
+              alt="Students learning and growing together"
+            />
+
+            <div class="vision-image-tag">
+              <span class="vision-tag-dot"></span>
+              LEARNING BEYOND LIMITS
+            </div>
+          </div>
+
+          <!-- CENTER DECORATIVE STAMP -->
+          <div class="vision-center-stamp">
+            <div class="stamp-outer-ring">
+              <div class="stamp-inner">
+                <i data-lucide="graduation-cap"></i>
+                <span>LEARN</span>
+                <span class="stamp-star">✦</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================  LEADERSHIP MESSAGES SECTION ================= -->
+
+    <section class="leadership-section section" id="leadership">
+      <div class="container">
+        <!-- SECTION HEADER -->
+        <div class="leadership-header">
+          <div>
+            <span class="leadership-subheading">
+              <span class="leadership-subheading-line"></span>
+              WORDS FROM OUR LEADERS</span
+            >
+            <h2>Guided by Vision.<br />Inspired by Possibilities.</h2>
+          </div>
+
+          <p>
+            Behind every thriving learning community is a team of passionate
+            educators who believe in the power of every child. Get to know the
+            people guiding our journey.
+          </p>
+        </div>
+
+        <!-- PRINCIPAL MESSAGE -->
+        <article class="leader-card principal-card">
+          <div class="leader-image">
+            <img
+              src="assets/principal.png"
+              alt="Principal of EDUVERSE School"
+            />
+
+            <span class="leader-image-label">
+              <i data-lucide="graduation-cap"></i>
+              SCHOOL LEADERSHIP
+            </span>
+          </div>
+
+          <div class="leader-content">
+            <span class="leader-designation">PRINCIPAL'S MESSAGE</span>
+
+            <h3>Every Child Has a Story Worth Inspiring.</h3>
+
+            <div class="leader-quote">
+              <i data-lucide="quote"></i>
+              <p>
+                Education is not simply about preparing children for the future;
+                it is about helping them discover who they are today. We strive
+                to create an environment where curiosity is encouraged,
+                individuality is celebrated, and every learner feels valued.
+              </p>
+            </div>
+
+            <p class="leader-description">
+              At EDUVERSE, our commitment is to nurture confident,
+              compassionate, and capable individuals. Together with our
+              dedicated educators and supportive parents, we aim to make every
+              learning experience meaningful.
+            </p>
+
+            <div class="leader-footer">
+              <div class="leader-author">
+                <strong>Dr. Ananya Sharma</strong>
+                <span>Principal, EDUVERSE School</span>
+              </div>
+
+              <div class="leader-signature">
+                <img src="assets/sign1.png" alt="Principal's signature" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- OTHER LEADERS -->
+        <div class="leadership-grid">
+          <!-- VICE PRINCIPAL -->
+          <article class="leader-card secondary-leader leader-peach">
+            <div class="secondary-leader-image">
+              <img
+                src="assets/vice-principal.png"
+                alt="Vice Principal of EDUVERSE School"
+              />
+            </div>
+
+            <div class="secondary-leader-content">
+              <span class="leader-designation">VICE PRINCIPAL</span>
+
+              <h3>Growing Together, Every Day.</h3>
+
+              <p>
+                Every small achievement is a step towards something
+                extraordinary. We focus on building a supportive environment
+                where students feel confident to explore, learn, and grow.
+              </p>
+
+              <div class="secondary-leader-author">
+                <strong>Ms. Meera Kapoor</strong>
+                <span>Vice Principal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ACADEMIC DIRECTOR -->
+          <article class="leader-card secondary-leader leader-lavender">
+            <div class="secondary-leader-image">
+              <img
+                src="assets/academic-director.jpg"
+                alt="Academic Director of EDUVERSE School"
+              />
+            </div>
+
+            <div class="secondary-leader-content">
+              <span class="leader-designation">ACADEMIC DIRECTOR</span>
+
+              <h3>Learning Beyond the Classroom.</h3>
+
+              <p>
+                True learning happens when children are encouraged to question,
+                experiment, create, and think independently. We make learning
+                engaging, relevant, and full of discovery.
+              </p>
+
+              <div class="secondary-leader-author">
+                <strong>Mr. Arjun Mehta</strong>
+                <span>Academic Director</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================  LEARNING STAGES SECTION ================= -->
+
+    <section class="learning-section" id="academics">
+      <div class="container">
+        <!-- Section Heading -->
+        <div class="learning-header">
+          <div class="learning-heading">
+            <span class="learning-subheading">
+              <span class="learning-subheading-line"></span>OUR ACADEMIC
+              PROGRAMS</span
+            >
+            <h2>Learning for Every <span>Stage of Growth</span></h2>
+          </div>
+
+          <div class="learning-intro">
+            <p>
+              Every stage of childhood brings new discoveries. Our learning
+              programs nurture curiosity, build confidence, and help students
+              grow at their own pace.
+            </p>
+          </div>
+
+          <div class="learning-header-action">
+            <a href="#admissions" class="section-button">
+              Explore Academics
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Learning Cards -->
+        <div class="learning-grid">
+          <!-- Pre-Primary -->
+          <article class="learning-card">
+            <div class="learning-card-image">
+              <img
+                src="assets/pre-primary.jpg"
+                alt="Young children enjoying pre-primary activities"
+              />
+              <span class="learning-card-number">01</span>
+            </div>
+
+            <div class="learning-card-content">
+              <div class="learning-card-text">
+                <span class="learning-card-label">AGES 3–5 YEARS</span>
+                <h3>Pre-Primary</h3>
+                <p>
+                  A joyful beginning through play, discovery, creativity, and
+                  exploration.
+                </p>
+              </div>
+
+              <a
+                href="#admissions"
+                class="learning-arrow-btn"
+                aria-label="Explore Pre-Primary"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Primary -->
+          <article class="learning-card">
+            <div class="learning-card-image">
+              <img
+                src="assets/primary.jpg"
+                alt="Primary school students learning together"
+              />
+              <span class="learning-card-number">02</span>
+            </div>
+
+            <div class="learning-card-content">
+              <div class="learning-card-text">
+                <span class="learning-card-label">AGES 6–10 YEARS</span>
+                <h3>Primary School</h3>
+                <p>
+                  Building strong foundations through meaningful learning and
+                  imagination.
+                </p>
+              </div>
+
+              <a
+                href="#admissions"
+                class="learning-arrow-btn"
+                aria-label="Explore Primary School"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Middle School -->
+          <article class="learning-card">
+            <div class="learning-card-image">
+              <img
+                src="assets/middle-school.jpg"
+                alt="Middle school students working on a classroom project"
+              />
+              <span class="learning-card-number">03</span>
+            </div>
+
+            <div class="learning-card-content">
+              <div class="learning-card-text">
+                <span class="learning-card-label">AGES 11–13 YEARS</span>
+                <h3>Middle School</h3>
+                <p>
+                  Encouraging independent thinking, collaboration, and new
+                  perspectives.
+                </p>
+              </div>
+
+              <a
+                href="#admissions"
+                class="learning-arrow-btn"
+                aria-label="Explore Middle School"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Secondary -->
+          <article class="learning-card">
+            <div class="learning-card-image">
+              <img
+                src="assets/secondary.jpg"
+                alt="Secondary school students preparing for their future"
+              />
+              <span class="learning-card-number">04</span>
+            </div>
+
+            <div class="learning-card-content">
+              <div class="learning-card-text">
+                <span class="learning-card-label">AGES 14–17 YEARS</span>
+                <h3>Secondary School</h3>
+                <p>
+                  Preparing confident learners for future opportunities and
+                  success.
+                </p>
+              </div>
+
+              <a
+                href="#admissions"
+                class="learning-arrow-btn"
+                aria-label="Explore Secondary School"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================  ACHIEVEMENTS SECTION ================= -->
+    <section class="achievements-section section" id="achievements">
+      <div class="container">
+        <div class="achievements-header">
+          <div class="achievements-heading">
+            <span class="achievements-subheading">
+              <span class="achievements-subheading-line"></span>
+              OUR ACHIEVEMENTS
+            </span>
+
+            <h2>
+              Celebrating Every
+              <span>Milestone of Success.</span>
+            </h2>
+          </div>
+
+          <div class="achievements-intro">
+            <p>
+              Every achievement tells a story of curiosity, dedication and the
+              courage to do something extraordinary. We celebrate every step
+              forward.
+            </p>
+
+            <a href="#contact" class="section-button">
+              Explore Our Achievements
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="achievements-layout">
+          <!-- FEATURED ACHIEVEMENT -->
+          <article class="achievement-featured">
+            <img
+              src="assets/achievement-featured.jpg"
+              alt="Students celebrating a school achievement"
+              class="achievement-featured-image"
+            />
+
+            <div class="achievement-featured-overlay"></div>
+
+            <div class="achievement-featured-content">
+              <span class="achievement-badge">
+                <i data-lucide="trophy"></i>
+                FEATURED ACHIEVEMENT
+              </span>
+
+              <span class="achievement-year">2026</span>
+
+              <h3>Excellence Beyond Expectations</h3>
+
+              <p>
+                Celebrating the dedication, creativity and outstanding efforts
+                of our young achievers.
+              </p>
+
+              <a href="#contact" class="achievement-arrow">
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- RECOGNITION CARDS -->
+          <div class="achievement-cards">
+            <article class="achievement-card achievement-academic">
+              <div class="achievement-card-top">
+                <div class="achievement-icon">
+                  <i data-lucide="graduation-cap"></i>
+                </div>
+
+                <span class="achievement-card-year">2026</span>
+              </div>
+
+              <div class="achievement-card-content">
+                <span class="achievement-category"> ACADEMIC EXCELLENCE </span>
+
+                <h3>Learning That Leads to Greatness.</h3>
+
+                <p>
+                  Recognising outstanding academic performance and dedication to
+                  learning.
+                </p>
+              </div>
+            </article>
+
+            <article class="achievement-card achievement-sports">
+              <div class="achievement-card-top">
+                <div class="achievement-icon">
+                  <i data-lucide="medal"></i>
+                </div>
+
+                <span class="achievement-card-year">2026</span>
+              </div>
+
+              <div class="achievement-card-content">
+                <span class="achievement-category"> SPORTS & FITNESS </span>
+
+                <h3>Strength, Spirit & Sportsmanship.</h3>
+
+                <p>
+                  Celebrating teamwork, determination and sporting achievements.
+                </p>
+              </div>
+            </article>
+
+            <article class="achievement-card achievement-creative">
+              <div class="achievement-card-top">
+                <div class="achievement-icon">
+                  <i data-lucide="lightbulb"></i>
+                </div>
+
+                <span class="achievement-card-year">2026</span>
+              </div>
+
+              <div class="achievement-card-content">
+                <span class="achievement-category"> CREATIVE INNOVATION </span>
+
+                <h3>Ideas That Inspire Tomorrow.</h3>
+
+                <p>
+                  Appreciating imagination, innovation and creative
+                  problem-solving.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================  WHY CHOOSE US SECTION ================= -->
+
+    <section class="why-us-section" id="why-us">
+      <div class="why-us-container container">
+        <!-- Left Content -->
+        <div class="why-us-content">
+          <span class="why-us-eyebrow">
+            <span></span>
+            WHY FAMILIES CHOOSE US
+          </span>
+
+          <h2>
+            Helping Every Child
+            <span>Become Their Best.</span>
+          </h2>
+
+          <p>
+            Every child deserves an environment where they feel valued,
+            inspired, and encouraged to grow. We bring together meaningful
+            learning, caring guidance, and opportunities that prepare students
+            for life.
+          </p>
+
+          <a href="#admissions" class="section-button">
+            Discover Our Difference
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <div class="why-us-note">
+            <i data-lucide="heart-handshake"></i>
+            <span>Growing together, every step of the way.</span>
+          </div>
+        </div>
+
+        <!-- Center Image -->
+        <div class="why-us-visual">
+          <div class="why-us-image-wrapper">
+            <img
+              src="assets/campus-main.jpg"
+              alt="Happy student enjoying a positive school experience"
+              class="why-us-image"
+            />
+          </div>
+
+          <div class="why-us-image-decoration"></div>
+
+          <div class="why-us-image-tag">
+            <div class="why-us-tag-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+
+            <div>
+              <strong>Learn. Grow. Shine.</strong>
+              <span>Every child has a story to tell.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Features -->
+        <div class="why-us-features">
+          <!-- Feature 1 -->
+          <article class="why-feature-card">
+            <div class="why-feature-icon why-icon-purple">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <div class="why-feature-content">
+              <h3>Learning That Inspires</h3>
+
+              <p>Inspiring Curiosity Every Day</p>
+            </div>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="why-feature-card">
+            <div class="why-feature-icon why-icon-orange">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+            <div class="why-feature-content">
+              <h3>Individual Attention</h3>
+
+              <p>Personalized Care for Every Student</p>
+            </div>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="why-feature-card">
+            <div class="why-feature-icon why-icon-mint">
+              <i data-lucide="shield-check"></i>
+            </div>
+
+            <div class="why-feature-content">
+              <h3>Safe Environment</h3>
+
+              <p>Safe, Secure Learning Environment</p>
+            </div>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="why-feature-card">
+            <div class="why-feature-icon why-icon-blue">
+              <i data-lucide="rocket"></i>
+            </div>
+            <div class="why-feature-content">
+              <h3>Future-Ready Skills</h3>
+
+              <p>Skills for Tomorrow's World</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STUDENT LIFE SECTION ================= -->
+
+    <section class="student-life-section section" id="student-life">
+      <div class="container">
+        <!-- HEADER -->
+        <div class="student-life-header">
+          <div class="student-life-heading">
+            <span class="student-life-subheading">
+              <span class="student-life-subheading-line"></span>
+              LIFE BEYOND CLASSROOMS
+            </span>
+
+            <h2>
+              Growing Together,
+              <span>Creating Memories.</span>
+            </h2>
+          </div>
+
+          <div class="student-life-intro">
+            <p>
+              Every school day brings something new. From friendships and
+              creative discoveries to teamwork and joyful experiences, student
+              life is where unforgettable memories begin.
+            </p>
+
+            <a href="#gallery" class="section-button">
+              Explore School Life
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- FEATURED IMAGE -->
+        <div class="student-life-featured">
+          <img
+            src="assets/gallery-2.jpg"
+            alt="Students enjoying their school life together"
+            class="student-life-main-image"
+          />
+
+          <div class="student-life-image-overlay"></div>
+
+          <div class="student-life-featured-content">
+            <span class="student-life-image-label">
+              EVERY DAY IS AN ADVENTURE
+            </span>
+
+            <h3>Learn. Laugh. Explore. Repeat.</h3>
+
+            <p>
+              A place where every child finds their interests, builds
+              friendships and discovers new possibilities.
+            </p>
+          </div>
+
+          <div class="student-life-floating-note">
+            <div class="student-life-note-icon">
+              <i data-lucide="heart"></i>
+            </div>
+
+            <div>
+              <strong>Moments That Matter</strong>
+              <span>Memories for a lifetime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVITY CARDS -->
+        <div class="student-life-activities">
+          <article class="student-life-card life-creative">
+            <div class="student-life-card-icon">
+              <i data-lucide="palette"></i>
+            </div>
+
+            <span>01 / CREATE</span>
+            <h3>Creative Expression</h3>
+            <p>
+              Art, music and imagination come together to help every child
+              express themselves.
+            </p>
+
+            <a href="#gallery" aria-label="Explore creative activities">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <article class="student-life-card life-active">
+            <div class="student-life-card-icon">
+              <i data-lucide="volleyball"></i>
+            </div>
+
+            <span>02 / PLAY</span>
+            <h3>Sports & Teamwork</h3>
+            <p>
+              Building confidence, friendships and healthy habits through active
+              play.
+            </p>
+
+            <a href="#campus-spaces" aria-label="Explore sports activities">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <article class="student-life-card life-curious">
+            <div class="student-life-card-icon">
+              <i data-lucide="flask-conical"></i>
+            </div>
+
+            <span>03 / DISCOVER</span>
+            <h3>Curiosity & Discovery</h3>
+            <p>
+              Asking questions, experimenting and turning exciting ideas into
+              discoveries.
+            </p>
+
+            <a href="#academics" aria-label="Explore learning activities">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <article class="student-life-card life-together">
+            <div class="student-life-card-icon">
+              <i data-lucide="users"></i>
+            </div>
+
+            <span>04 / CONNECT</span>
+            <h3>Friendship & Community</h3>
+            <p>
+              Learning kindness, sharing experiences and growing stronger
+              together.
+            </p>
+
+            <a href="#events" aria-label="Explore school community events">
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+        </div>
+
+        <!-- BOTTOM HIGHLIGHTS -->
+        <div class="student-life-highlights">
+          <div class="student-life-highlight">
+            <i data-lucide="sparkles"></i>
+            <span>Discover New Interests</span>
+          </div>
+
+          <div class="student-life-highlight">
+            <i data-lucide="handshake"></i>
+            <span>Build Meaningful Friendships</span>
+          </div>
+
+          <div class="student-life-highlight">
+            <i data-lucide="sprout"></i>
+            <span>Grow With Confidence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAMPUS SECTION ================= -->
+
+    <section class="campus-section" id="campus">
+      <div class="campus-container container">
+        <!-- Campus Image -->
+        <div class="campus-visual">
+          <div class="campus-image-wrapper">
+            <img
+              src="assets/campus-main.jpg"
+              alt="Beautiful and welcoming school campus"
+              class="campus-image"
+            />
+          </div>
+
+          <div class="campus-image-label">
+            <span class="campus-label-icon">
+              <i data-lucide="map-pin"></i>
+            </span>
+
+            <div>
+              <strong>A Place to Belong</strong>
+              <span>Discover our learning environment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campus Content -->
+        <div class="campus-content">
+          <span class="campus-eyebrow">
+            <span></span>
+            LIFE ON CAMPUS
+          </span>
+
+          <h2>
+            More Than Classrooms,
+            <span>A Place to Discover.</span>
+          </h2>
+
+          <p class="campus-description">
+            Our campus is thoughtfully designed to inspire learning, creativity,
+            friendship, and personal growth. Every space gives students the
+            freedom to explore their interests and discover something new every
+            day.
+          </p>
+
+          <!-- Facilities List -->
+          <div class="campus-facilities">
+            <div class="campus-facility">
+              <div class="campus-facility-icon facility-lavender">
+                <i data-lucide="book-open"></i>
+              </div>
+
+              <div class="campus-facility-info">
+                <h4>Modern Library</h4>
+              </div>
+            </div>
+
+            <div class="campus-facility">
+              <div class="campus-facility-icon facility-mint">
+                <i data-lucide="volleyball"></i>
+              </div>
+
+              <div class="campus-facility-info">
+                <h4>Sports Ground</h4>
+              </div>
+            </div>
+
+            <div class="campus-facility">
+              <div class="campus-facility-icon facility-peach">
+                <i data-lucide="microscope"></i>
+              </div>
+
+              <div class="campus-facility-info">
+                <h4>Science Lab</h4>
+              </div>
+            </div>
+
+            <div class="campus-facility">
+              <div class="campus-facility-icon facility-mint">
+                <i data-lucide="music"></i>
+              </div>
+              <div class="campus-facility-info">
+                <h4>Music Studio</h4>
+              </div>
+            </div>
+
+            <div class="campus-facility">
+              <div class="campus-facility-icon facility-blue">
+                <i data-lucide="monitor"></i>
+              </div>
+              <div class="campus-facility-info">
+                <h4>Digital Labs</h4>
+              </div>
+            </div>
+
+            <div class="campus-facility">
+              <div class="campus-facility-icon facility-blue">
+                <i data-lucide="palette"></i>
+              </div>
+
+              <div class="campus-facility-info">
+                <h4>Creative Spaces</h4>
+              </div>
+            </div>
+          </div>
+
+          <a href="#facilities" class="section-button">
+            Explore Our Campus
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FACILITIES & EXPERIENCES SECTION ================= -->
+
+    <section class="facilities-section" id="facilities">
+      <div class="facilities-container container">
+        <!-- Left Content -->
+        <div class="facilities-content">
+          <span class="facilities-eyebrow">
+            <span></span>
+            BEYOND THE CLASSROOM
+          </span>
+
+          <h2>
+            Spaces That Bring
+            <span>Talents to Life.</span>
+          </h2>
+
+          <p>
+            Learning goes beyond textbooks. We provide enriching experiences
+            that help students discover their passions, develop new skills, and
+            express themselves with confidence.
+          </p>
+
+          <a href="#admissions" class="section-button">
+            Discover All Facilities
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- Right Cards -->
+        <div class="facilities-grid">
+          <!-- Music -->
+          <article class="facility-experience-card">
+            <img
+              src="assets/facility-music.jpg"
+              alt="Students enjoying music and instruments"
+            />
+
+            <div class="facility-card-overlay"></div>
+
+            <div class="facility-card-content">
+              <div class="facility-card-icon">
+                <i data-lucide="music-2"></i>
+              </div>
+
+              <div>
+                <span class="facility-card-label">EXPRESS YOURSELF</span>
+                <h3>Music & Dance</h3>
+              </div>
+
+              <i class="facility-card-arrow" data-lucide="arrow-up-right"></i>
+            </div>
+          </article>
+
+          <!-- Sports -->
+          <article class="facility-experience-card">
+            <img
+              src="assets/facility-sports.jpg"
+              alt="Students participating in outdoor sports"
+            />
+
+            <div class="facility-card-overlay"></div>
+
+            <div class="facility-card-content">
+              <div class="facility-card-icon">
+                <i data-lucide="trophy"></i>
+              </div>
+
+              <div>
+                <span class="facility-card-label">MOVE & ACHIEVE</span>
+                <h3>Sports & Fitness</h3>
+              </div>
+
+              <i class="facility-card-arrow" data-lucide="arrow-up-right"></i>
+            </div>
+          </article>
+
+          <!-- Art -->
+          <article class="facility-experience-card">
+            <img
+              src="assets/facility-art.jpg"
+              alt="Children creating colourful art and craft"
+            />
+
+            <div class="facility-card-overlay"></div>
+
+            <div class="facility-card-content">
+              <div class="facility-card-icon">
+                <i data-lucide="palette"></i>
+              </div>
+
+              <div>
+                <span class="facility-card-label">CREATE & IMAGINE</span>
+                <h3>Art & Craft</h3>
+              </div>
+
+              <i class="facility-card-arrow" data-lucide="arrow-up-right"></i>
+            </div>
+          </article>
+
+          <!-- Robotics -->
+          <article class="facility-experience-card">
+            <img
+              src="assets/facility-robotics.jpg"
+              alt="Students building and exploring robotics"
+            />
+
+            <div class="facility-card-overlay"></div>
+
+            <div class="facility-card-content">
+              <div class="facility-card-icon">
+                <i data-lucide="bot"></i>
+              </div>
+
+              <div>
+                <span class="facility-card-label">THINK & INNOVATE</span>
+                <h3>Robotics & STEM</h3>
+              </div>
+
+              <i class="facility-card-arrow" data-lucide="arrow-up-right"></i>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA SECTION ================= -->
+
+    <section class="cta-section" id="admissions">
+      <div class="cta-container container">
+        <!-- Left Content -->
+        <div class="cta-content">
+          <span class="cta-eyebrow"> YOUR JOURNEY STARTS HERE </span>
+
+          <h2>
+            Give Your Child
+            <span>A Brighter Tomorrow.</span>
+          </h2>
+
+          <p>
+            Every great journey begins with one step. Join a learning community
+            where curiosity, confidence, and possibilities grow together.
+          </p>
+
+          <a href="#contact" class="cta-button">
+            Begin Your Admission Journey
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- Center Image -->
+        <div class="cta-visual">
+          <div class="cta-image-wrapper">
+            <img
+              src="assets/cta-student.png"
+              alt="Happy student looking forward to a bright future"
+              class="cta-image"
+            />
+          </div>
+        </div>
+
+        <!-- Right Benefits -->
+        <div class="cta-benefits">
+          <div class="cta-benefit">
+            <div class="cta-benefit-icon">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+
+            <span>Learning That Builds Bright Futures</span>
+          </div>
+
+          <div class="cta-benefit">
+            <div class="cta-benefit-icon">
+              <i data-lucide="heart-handshake"></i>
+            </div>
+
+            <span>A Community That Cares</span>
+          </div>
+
+          <div class="cta-benefit">
+            <div class="cta-benefit-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+
+            <span>Opportunities to Discover and Grow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAMPUS FACILITIES SECTION ================= -->
+
+    <section class="campus-spaces-section" id="campus-spaces">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="spaces-header">
+          <div class="spaces-heading">
+            <span class="spaces-subheading">
+              <span class="spaces-subheading-line"></span>EXPLORE OUR
+              CAMPUS</span
+            >
+
+            <h2>
+              Spaces Made for
+              <span>Learning & Living.</span>
+            </h2>
+          </div>
+
+          <div class="spaces-intro">
+            <p>
+              From energetic playgrounds to creative studios, our campus offers
+              thoughtfully designed spaces where students can learn, play,
+              create, and thrive.
+            </p>
+          </div>
+
+          <div class="spaces-header-action">
+            <a href="#contact" class="section-button">
+              Explore Our Campus
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Campus Spaces Grid -->
+        <div class="spaces-grid">
+          <!-- 01 Playground -->
+          <article class="space-card">
+            <img
+              src="assets/space-playground.jpg"
+              alt="School outdoor playground"
+            />
+
+            <div class="space-card-overlay"></div>
+
+            <div class="space-card-content">
+              <div class="space-card-info">
+                <div class="space-card-icon">
+                  <i data-lucide="trees"></i>
+                </div>
+
+                <div>
+                  <span>PLAY & EXPLORE</span>
+                  <h3>Playground</h3>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="space-arrow-btn"
+                aria-label="Explore Playground"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 02 Music Room -->
+          <article class="space-card">
+            <img
+              src="assets/space-music.jpg"
+              alt="School music room with instruments"
+            />
+
+            <div class="space-card-overlay"></div>
+
+            <div class="space-card-content">
+              <div class="space-card-info">
+                <div class="space-card-icon">
+                  <i data-lucide="music-2"></i>
+                </div>
+
+                <div>
+                  <span>CREATE & PERFORM</span>
+                  <h3>Music Room</h3>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="space-arrow-btn"
+                aria-label="Explore Music Room"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 03 Swimming Pool -->
+          <article class="space-card">
+            <img src="assets/space-swimming.jpg" alt="School swimming pool" />
+
+            <div class="space-card-overlay"></div>
+
+            <div class="space-card-content">
+              <div class="space-card-info">
+                <div class="space-card-icon">
+                  <i data-lucide="waves"></i>
+                </div>
+
+                <div>
+                  <span>SWIM & REFRESH</span>
+                  <h3>Swimming Pool</h3>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="space-arrow-btn"
+                aria-label="Explore Swimming Pool"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 04 Science Lab -->
+          <article class="space-card">
+            <img
+              src="assets/space-science.jpg"
+              alt="Modern school science laboratory"
+            />
+
+            <div class="space-card-overlay"></div>
+
+            <div class="space-card-content">
+              <div class="space-card-info">
+                <div class="space-card-icon">
+                  <i data-lucide="microscope"></i>
+                </div>
+
+                <div>
+                  <span>DISCOVER & EXPERIMENT</span>
+                  <h3>Science Lab</h3>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="space-arrow-btn"
+                aria-label="Explore Science Lab"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 05 Library -->
+          <article class="space-card">
+            <img
+              src="assets/space-library.jpg"
+              alt="Beautiful school library"
+            />
+
+            <div class="space-card-overlay"></div>
+
+            <div class="space-card-content">
+              <div class="space-card-info">
+                <div class="space-card-icon">
+                  <i data-lucide="book-open"></i>
+                </div>
+
+                <div>
+                  <span>READ & IMAGINE</span>
+                  <h3>Library</h3>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="space-arrow-btn"
+                aria-label="Explore Library"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 06 Art Studio -->
+          <article class="space-card">
+            <img src="assets/space-art.jpg" alt="Creative school art studio" />
+
+            <div class="space-card-overlay"></div>
+
+            <div class="space-card-content">
+              <div class="space-card-info">
+                <div class="space-card-icon">
+                  <i data-lucide="palette"></i>
+                </div>
+
+                <div>
+                  <span>IMAGINE & CREATE</span>
+                  <h3>Art Studio</h3>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="space-arrow-btn"
+                aria-label="Explore Art Studio"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 07 Computer Lab -->
+          <article class="space-card">
+            <img
+              src="assets/space-computer.jpg"
+              alt="School computer and technology lab"
+            />
+
+            <div class="space-card-overlay"></div>
+
+            <div class="space-card-content">
+              <div class="space-card-info">
+                <div class="space-card-icon">
+                  <i data-lucide="monitor"></i>
+                </div>
+
+                <div>
+                  <span>CODE & INNOVATE</span>
+                  <h3>Computer Lab</h3>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="space-arrow-btn"
+                aria-label="Explore Computer Lab"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 08 Sports Court -->
+          <article class="space-card">
+            <img
+              src="assets/space-sports.jpg"
+              alt="School outdoor sports court"
+            />
+
+            <div class="space-card-overlay"></div>
+
+            <div class="space-card-content">
+              <div class="space-card-info">
+                <div class="space-card-icon">
+                  <i data-lucide="trophy"></i>
+                </div>
+
+                <div>
+                  <span>PLAY & ACHIEVE</span>
+                  <h3>Sports Court</h3>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="space-arrow-btn"
+                aria-label="Explore Sports Court"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAMPUS FACILITIES SECTION ================= -->
+    
+    <section class="gallery-section section" id="gallery">
+      <div class="container gallery-container">
+        <!-- Left Content -->
+        <div class="gallery-content">
+          <span class="gallery-subheading">
+            <span class="gallery-subheading-line"></span>
+            OUR MOMENTS
+          </span>
+
+          <h2>
+            Little Moments,<br />
+            <span>Big Memories.</span>
+          </h2>
+
+          <p>
+            Every corner of our campus has a story to tell. Explore the moments,
+            experiences and everyday discoveries that make school life special.
+          </p>
+
+          <a href="#contact" class="section-button">
+            Explore Full Gallery
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <div class="gallery-highlight">
+            <div class="gallery-highlight-icon">
+              <i data-lucide="camera"></i>
+            </div>
+            <div>
+              <strong>Every picture tells a story</strong>
+              <span>Discover life beyond the classroom</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-masonry">
+          <a href="#" class="gallery-item gallery-item-tall">
+            <img
+              src="assets/gallery-1.jpg"
+              alt="Students enjoying outdoor activities"
+            />
+            <div class="gallery-item-overlay">
+              <span>Campus Life</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </a>
+
+          <a href="#" class="gallery-item gallery-item-short">
+            <img src="assets/gallery-2.jpg" alt="Students learning together" />
+            <div class="gallery-item-overlay">
+              <span>Learning Together</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </a>
+
+          <a href="#" class="gallery-item gallery-item-medium">
+            <img src="assets/gallery-3.jpg" alt="Creative art activities" />
+            <div class="gallery-item-overlay">
+              <span>Creative Minds</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </a>
+
+          <a href="#" class="gallery-item gallery-item-short">
+            <img src="assets/gallery-4.jpg" alt="School sports activities" />
+            <div class="gallery-item-overlay">
+              <span>Sports & Fun</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </a>
+
+          <a href="#" class="gallery-item gallery-item-tall">
+            <img src="assets/gallery-5.jpg" alt="Students exploring science" />
+            <div class="gallery-item-overlay">
+              <span>Explore & Discover</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </a>
+
+          <a href="#" class="gallery-item gallery-item-medium">
+            <img src="assets/gallery-6.jpg" alt="School music activities" />
+            <div class="gallery-item-overlay">
+              <span>Music & Dance</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </a>
+
+          <a href="#" class="gallery-item gallery-item-short">
+            <img
+              src="assets/gallery-7.jpg"
+              alt="Students celebrating together"
+            />
+            <div class="gallery-item-overlay">
+              <span>Happy Moments</span>
+              <i data-lucide="arrow-up-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENTS SECTION ================= -->
+
+    <section class="events-section section" id="events">
+      <div class="container">
+        <!-- Section Heading -->
+        <div class="events-header">
+          <div class="events-heading">
+            <span class="events-subheading">
+              <span class="events-subheading-line"></span>
+              SCHOOL HAPPENINGS
+            </span>
+
+            <h2>Moments Worth <span>Celebrating.</span></h2>
+          </div>
+
+          <div class="events-header-right">
+            <p>
+              From exciting competitions to creative celebrations, there's
+              always something happening in our school.
+            </p>
+
+            <a href="#contact" class="section-button">
+              View All Events
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Events Layout -->
+        <div class="events-layout">
+          <!-- Featured Event -->
+          <article
+            class="featured-event"
+            id="featuredEvent"
+            data-default-image="assets/gallery-7.jpg"
+          >
+            <img
+              src="assets/gallery-7.jpg"
+              alt="Annual Day Celebration"
+              class="featured-event-image"
+              id="featuredEventImage"
+            />
+
+            <div class="featured-event-overlay"></div>
+
+            <div class="featured-event-top">
+              <span class="featured-event-label">
+                <i data-lucide="star"></i>
+                FEATURED EVENT
+              </span>
+
+              <span class="featured-event-category" id="featuredEventCategory">
+                Cultural
+              </span>
+            </div>
+
+            <div class="featured-event-content">
+              <div class="featured-event-date">
+                <i data-lucide="calendar-days"></i>
+                <span id="featuredEventDate">December 12, 2026</span>
+              </div>
+
+              <h3 id="featuredEventTitle">Annual Day Celebration</h3>
+
+              <p id="featuredEventDescription">
+                An unforgettable celebration of talent, creativity and the
+                wonderful spirit of our students.
+              </p>
+
+              <a
+                href="#contact"
+                class="featured-event-link"
+                id="featuredEventLink"
+              >
+                Discover Event
+                <span class="featured-event-arrow">
+                  <i data-lucide="arrow-up-right"></i>
+                </span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Upcoming Events -->
+          <div class="upcoming-events">
+            <div class="upcoming-events-heading">
+              <div>
+                <span class="events-mini-label">SAVE THE DATE</span>
+                <h3>Upcoming Events</h3>
+              </div>
+
+              <span class="upcoming-events-icon">
+                <i data-lucide="calendar-check"></i>
+              </span>
+            </div>
+
+            <!-- Event 1 -->
+            <article
+              class="upcoming-event"
+              data-image="assets/gallery-5.jpg"
+              data-category="Academic"
+              data-date="December 18, 2026"
+              data-title="Young Innovators Science Expo"
+              data-description="A celebration of curiosity, creative thinking and exciting scientific discoveries made by our young innovators."
+            >
+              <div class="event-date-box event-date-lavender">
+                <span>18</span>
+                <small>DEC</small>
+              </div>
+
+              <div class="upcoming-event-info">
+                <span class="upcoming-event-type">ACADEMIC</span>
+                <h4>Young Innovators Science Expo</h4>
+                <p>
+                  <i data-lucide="clock-3"></i>
+                  10:00 AM – 2:00 PM
+                </p>
+              </div>
+
+              <a
+                href="#contact"
+                class="upcoming-event-arrow"
+                aria-label="Explore Science Expo"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </article>
+
+            <!-- Event 2 -->
+            <article
+              class="upcoming-event"
+              data-image="assets/gallery-4.jpg"
+              data-category="Sports"
+              data-date="December 22, 2026"
+              data-title="Inter-House Sports Carnival"
+              data-description="An exciting day filled with teamwork, friendly competition and unforgettable sporting moments."
+            >
+              <div class="event-date-box event-date-peach">
+                <span>22</span>
+                <small>DEC</small>
+              </div>
+
+              <div class="upcoming-event-info">
+                <span class="upcoming-event-type">SPORTS</span>
+                <h4>Inter-House Sports Carnival</h4>
+                <p>
+                  <i data-lucide="clock-3"></i>
+                  9:00 AM – 1:00 PM
+                </p>
+              </div>
+
+              <a
+                href="#contact"
+                class="upcoming-event-arrow"
+                aria-label="Explore Sports Carnival"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </article>
+
+            <!-- Event 3 -->
+            <article
+              class="upcoming-event"
+              data-image="assets/gallery-3.jpg"
+              data-category="Creativity"
+              data-date="December 27, 2026"
+              data-title="Colours of Imagination"
+              data-description="Explore the imagination of our students through beautiful artwork, creative projects and artistic expression."
+            >
+              <div class="event-date-box event-date-mint">
+                <span>27</span>
+                <small>DEC</small>
+              </div>
+
+              <div class="upcoming-event-info">
+                <span class="upcoming-event-type">CREATIVITY</span>
+                <h4>Colours of Imagination</h4>
+                <p>
+                  <i data-lucide="clock-3"></i>
+                  11:00 AM – 3:00 PM
+                </p>
+              </div>
+
+              <a
+                href="#contact"
+                class="upcoming-event-arrow"
+                aria-label="Explore Art Exhibition"
+              >
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </article>
+
+            <!-- Bottom Note -->
+            <div class="events-footer-note">
+              <span class="events-live-dot"></span>
+              <span>More experiences. More memories. More to come.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS SECTION ================= -->
+    <section class="reviews-section section" id="reviews">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="reviews-header">
+          <div class="reviews-heading">
+            <span class="reviews-subheading">
+              <span class="reviews-subheading-line"></span>
+              VOICES OF OUR COMMUNITY
+            </span>
+
+            <h2>Stories That Speak <span>From The Heart.</span></h2>
+          </div>
+
+          <div class="reviews-header-right">
+            <p>
+              Every smile, every achievement and every little milestone makes
+              our school community special.
+            </p>
+
+            <div class="reviews-rating">
+              <div class="review-stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+              </div>
+              <span><strong>5.0</strong> Community love</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Masonry Reviews -->
+        <div class="reviews-masonry">
+          <!-- Review 1 -->
+          <article class="review-card review-lavender review-large">
+            <div class="review-card-top">
+              <span class="review-quote-icon">
+                <i data-lucide="quote"></i>
+              </span>
+              <span class="review-type">PARENT VOICE</span>
+            </div>
+
+            <div class="review-stars">
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+            </div>
+
+            <h3>A Place Where Every Child Truly Matters.</h3>
+
+            <p class="review-text">
+              What we appreciate most is the personal attention our child
+              receives. The teachers understand individual strengths and
+              encourage children to discover their own potential. We have seen a
+              beautiful change in our child's confidence.
+            </p>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card review-peach">
+            <div class="review-card-top">
+              <span class="review-quote-icon">
+                <i data-lucide="quote"></i>
+              </span>
+              <span class="review-type">STUDENT VOICE</span>
+            </div>
+
+            <p class="review-text">
+              I love my school! My favourite things are art, sports and spending
+              time with my friends. Every day brings something exciting.
+            </p>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card review-mint">
+            <div class="review-card-top">
+              <span class="review-quote-icon">
+                <i data-lucide="quote"></i>
+              </span>
+              <span class="review-type">PARENT VOICE</span>
+            </div>
+
+            <p class="review-text">
+              The balance between academics and extracurricular activities is
+              wonderful. Our child looks forward to coming to school every
+              morning.
+            </p>
+          </article>
+
+          <!-- Review 4 -->
+          <article class="review-card review-white review-tall">
+            <div class="review-card-top">
+              <span class="review-quote-icon">
+                <i data-lucide="quote"></i>
+              </span>
+              <span class="review-type">PARENT VOICE</span>
+            </div>
+
+            <div class="review-stars">
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+            </div>
+
+            <h3>More Than Education, A Beautiful Journey.</h3>
+
+            <p class="review-text">
+              The supportive environment and the opportunities offered here have
+              made this journey truly meaningful for us.
+            </p>
+          </article>
+
+          <!-- Review 5 -->
+          <article class="review-card review-blue">
+            <div class="review-card-top">
+              <span class="review-quote-icon">
+                <i data-lucide="quote"></i>
+              </span>
+              <span class="review-type">STUDENT VOICE</span>
+            </div>
+
+            <p class="review-text">
+              My teachers always encourage me to ask questions and try new
+              things. I feel happy and confident when I learn something new!
+            </p>
+          </article>
+
+          <!-- Review 6 -->
+          <article class="review-card review-rose">
+            <div class="review-card-top">
+              <span class="review-quote-icon">
+                <i data-lucide="quote"></i>
+              </span>
+              <span class="review-type">PARENT VOICE</span>
+            </div>
+
+            <p class="review-text">
+              The teachers are approachable, caring and genuinely interested in
+              each child's development. It gives us great peace of mind as
+              parents.
+            </p>
+          </article>
+        </div>
+
+        <!-- Bottom Note -->
+        <div class="reviews-bottom">
+          <p>
+            <i data-lucide="heart"></i>
+            Every story makes our community stronger.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ADMISSION PROCESS SECTION ================= -->
+    
+    <section class="admission-section section" id="admissions">
+      <div class="container">
+        <div class="admission-header">
+          <div class="admission-heading">
+            <span class="admission-subheading">
+              <span class="admission-subheading-line"></span>
+
+              YOUR ADMISSION JOURNEY
+            </span>
+
+            <h2>
+              Four Simple Steps to
+              <span>Begin Something Great.</span>
+            </h2>
+          </div>
+
+          <div class="admission-intro">
+            <p>
+              Starting a new learning journey should feel exciting. Our simple
+              admission process helps families take the next step with
+              confidence.
+            </p>
+          </div>
+        </div>
+
+        <div class="admission-steps">
+          <!-- STEP 1 -->
+          <article class="admission-step admission-step-one">
+            <div class="admission-step-top">
+              <span class="admission-step-number">01</span>
+              <div class="admission-step-icon">
+                <i data-lucide="message-circle"></i>
+              </div>
+            </div>
+
+            <span class="admission-step-label">STEP ONE</span>
+
+            <h3>Make an Enquiry</h3>
+
+            <p>
+              Tell us a little about your child and the learning experience
+              you're looking for.
+            </p>
+
+            <a href="#contact" class="admission-step-link">
+              Get in touch
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- STEP 2 -->
+          <article class="admission-step admission-step-two">
+            <div class="admission-step-top">
+              <span class="admission-step-number">02</span>
+              <div class="admission-step-icon">
+                <i data-lucide="school"></i>
+              </div>
+            </div>
+
+            <span class="admission-step-label">STEP TWO</span>
+
+            <h3>Visit Our Campus</h3>
+
+            <p>
+              Discover our classrooms, facilities and learning environment with
+              a guided visit.
+            </p>
+
+            <a href="#contact" class="admission-step-link">
+              Plan a visit
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- STEP 3 -->
+          <article class="admission-step admission-step-three">
+            <div class="admission-step-top">
+              <span class="admission-step-number">03</span>
+              <div class="admission-step-icon">
+                <i data-lucide="file-pen-line"></i>
+              </div>
+            </div>
+
+            <span class="admission-step-label">STEP THREE</span>
+
+            <h3>Submit Application</h3>
+
+            <p>
+              Complete the application form and share the required documents
+              with our team.
+            </p>
+
+            <a href="#contact" class="admission-step-link">
+              Know more
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- STEP 4 -->
+          <article class="admission-step admission-step-four">
+            <div class="admission-step-top">
+              <span class="admission-step-number">04</span>
+              <div class="admission-step-icon">
+                <i data-lucide="party-popper"></i>
+              </div>
+            </div>
+
+            <span class="admission-step-label">STEP FOUR</span>
+
+            <h3>Welcome Aboard!</h3>
+
+            <p>
+              Once admission is confirmed, our team will guide you through the
+              next steps.
+            </p>
+
+            <a href="#contact" class="admission-step-link">
+              Contact admissions
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </article>
+        </div>
+
+        <div class="admission-bottom">
+          <div class="admission-bottom-content">
+            <div class="admission-bottom-icon">
+              <i data-lucide="help-circle"></i>
+            </div>
+
+            <div>
+              <h3>Have questions about admissions?</h3>
+              <p>Our admissions team is happy to help you.</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="section-button">
+            Talk to Our Team
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ SECTION ================= -->
+   
+    <section class="faq-section section" id="faq">
+      <div class="container">
+        <div class="faq-layout">
+          <!-- LEFT CONTENT -->
+          <div class="faq-content">
+            <span class="faq-subheading">
+              <span class="faq-subheading-line"></span>
+              GOT QUESTIONS?
+            </span>
+
+            <h2>
+              Everything You
+              <span>Need to Know.</span>
+            </h2>
+
+            <p>
+              Choosing the right school is an important decision. Find answers
+              to common questions and learn more about our learning environment.
+            </p>
+
+            <div class="faq-help-card">
+              <div class="faq-help-icon">
+                <i data-lucide="headset"></i>
+              </div>
+
+              <div class="faq-help-text">
+                <h3>Still have questions?</h3>
+                <p>Our team is here to help you.</p>
+              </div>
+
+              <a href="#contact" aria-label="Contact our team">
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT ACCORDION -->
+          <div class="faq-list">
+            <article class="faq-item active">
+              <button class="faq-question" type="button" aria-expanded="true">
+                <span>What age groups can apply for admission?</span>
+                <span class="faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  <p>
+                    We welcome applications across our different learning
+                    stages, from Pre-Primary to Secondary School. Please contact
+                    our admissions team to confirm the age eligibility for your
+                    child's grade.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>How can I apply for admission?</span>
+                <span class="faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  <p>
+                    You can begin by submitting an enquiry through our contact
+                    form. Our admissions team will guide you through the campus
+                    visit, application and next steps.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>What documents are required for admission?</span>
+                <span class="faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  <p>
+                    Required documents may include the child's birth
+                    certificate, previous school records, photographs and parent
+                    or guardian details. Please confirm the current checklist
+                    with our admissions team.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>Does the school provide transport facilities?</span>
+                <span class="faq-toggle">
+                  <i data-lucide="plus"></i>
+                </span>
+              </button>
+
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  <p>
+                    Please contact the school to check transport availability,
+                    routes, timings and applicable charges for your location.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section section" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="contact-header">
+          <span class="contact-eyebrow">GET IN TOUCH</span>
+          <h2>Let's Start a Conversation.</h2>
+          <p>
+            Have questions about admissions, academics, or campus life? We're
+            here to help you find the answers.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div class="contact-info-content">
+              <span class="contact-info-label">WE'RE HERE FOR YOU</span>
+              <h3>We'd Love to Hear From You.</h3>
+              <p>
+                Every great journey begins with a conversation. Reach out to our
+                team and let's explore the possibilities for your child's bright
+                future.
+              </p>
+            </div>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <div class="contact-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div>
+                  <span>VISIT OUR CAMPUS</span>
+                  <h4>Our School Address</h4>
+                  <p>123 Education Avenue, Pune, Maharashtra, India</p>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div>
+                  <span>CALL OUR TEAM</span>
+                  <h4>Phone Number</h4>
+                  <a href="tel:+919876543210">+91 98765 43210</a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div>
+                  <span>DROP US AN EMAIL</span>
+                  <h4>Email Address</h4>
+                  <a href="mailto:hello@eduverse.edu.in">
+                    hello@eduverse.edu.in
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon">
+                  <i data-lucide="clock"></i>
+                </div>
+                <div>
+                  <span>WHEN TO REACH US</span>
+                  <h4>Office Hours</h4>
+                  <p>Monday – Saturday, 9:00 AM – 5:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-decoration contact-decoration-one"></div>
+            <div class="contact-decoration contact-decoration-two"></div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <div class="contact-form-heading">
+              <span>LET'S CONNECT</span>
+              <h3>Send Us a Message</h3>
+              <p>Fill in the details below and we'll get back to you.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <div class="contact-form-row">
+                <div class="form-group">
+                  <label for="contactName">Full Name</label>
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail">Email Address</label>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-form-row">
+                <div class="form-group">
+                  <label for="contactPhone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="contactPhone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject">I'm Enquiring About</label>
+                  <select id="contactSubject" name="subject" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Admissions">Admissions</option>
+                    <option value="Academics">Academics</option>
+                    <option value="Campus Visit">Campus Visit</option>
+                    <option value="Facilities">Facilities</option>
+                    <option value="General Enquiry">General Enquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Your Message</label>
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us how we can help you..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="contact-submit-btn">
+                <span>Send Message</span>
+                <i data-lucide="arrow-up-right"></i>
+              </button>
+
+              <p class="contact-form-note">
+                <i data-lucide="shield-check"></i>
+                Your information will be kept private and secure.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA SECTION ================= -->
+
+    <section class="final-cta-section">
+      <div class="final-cta-strip container">
+        <div class="final-cta-content">
+          <span>YOUR JOURNEY STARTS HERE</span>
+          <h2>Give Your Child a Brighter Future.</h2>
+          <p>Let's make their next chapter extraordinary.</p>
+        </div>
+
+        <div class="final-cta-actions">
+          <a href="#contact" class="final-cta-primary">
+            Enquire Now
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <a href="#campus" class="final-cta-secondary">
+            Visit Our Campus
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="final-cta-image">
+          <img src="assets/final-cta-image.png" alt="Happy student" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER SECTION ================= -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo">
+              <span class="footer-logo-icon">
+                <i data-lucide="graduation-cap"></i>
+              </span>
+              <span>EDUVERSE</span>
+            </a>
+
+            <p>
+              Inspiring young minds to explore, create, and grow. We believe
+              every child deserves the opportunity to discover their unique
+              potential.
+            </p>
+
+            <div class="footer-social-links">
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm11.5 1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M13.5 22v-8.7h2.9l.4-3.4h-3.3V7.7c0-1 .3-1.7 1.7-1.7H17V3c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.6v2.5H7v3.4h2.8V22h3.7z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.4 2H3.6C2.7 2 2 2.7 2 3.6v16.8c0 .9.7 1.6 1.6 1.6h16.8c.9 0 1.6-.7 1.6-1.6V3.6c0-.9-.7-1.6-1.6-1.6zM8 19H5V9h3v10zM6.5 7.6A1.7 1.7 0 1 1 6.5 4a1.7 1.7 0 0 1 0 3.6zM19 19h-3v-4.9c0-1.2 0-2.7-1.7-2.7s-2 1.3-2 2.6V19h-3V9h2.9v1.4h.1A3.2 3.2 0 0 1 15.2 9c3 0 3.8 2 3.8 4.6V19z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Our School</a></li>
+              <li><a href="#academics">Academics</a></li>
+              <li><a href="#campus">Campus Life</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#events">Events</a></li>
+            </ul>
+          </div>
+
+          <!-- Academics -->
+          <div class="footer-column">
+            <h4>Academics</h4>
+            <ul>
+              <li><a href="#academics">Pre-Primary</a></li>
+              <li><a href="#academics">Primary School</a></li>
+              <li><a href="#academics">Middle School</a></li>
+              <li><a href="#academics">Secondary School</a></li>
+              <li><a href="#facilities">Facilities</a></li>
+              <li><a href="#why-us">Why Choose Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column footer-contact-column">
+            <h4>Get In Touch</h4>
+
+            <a href="tel:+919876543210" class="footer-contact-item">
+              <i data-lucide="phone"></i>
+              <span>+91 98765 43210</span>
+            </a>
+
+            <a href="mailto:hello@eduverse.edu.in" class="footer-contact-item">
+              <i data-lucide="mail"></i>
+              <span>hello@eduverse.edu.in</span>
+            </a>
+
+            <div class="footer-contact-item">
+              <i data-lucide="map-pin"></i>
+              <span>123 Education Avenue, Pune, Maharashtra, India</span>
+            </div>
+
+            <a href="#contact" class="footer-contact-cta">
+              Contact Our Team
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>
+            © <span id="footerYear">2026</span> EDUVERSE School. All rights
+            reserved.
+          </p>
+
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="coming-soon.html">Coming Soon</a>
+            <a href="404.html">404</a>
+          </div>
+        </div>
       </div>
     </footer>
-
-    <!--  CHATBOT -->
-    <div class="chatbot" id="aureliaChatbot">
-      <div class="chat-window" id="chatWindow" aria-hidden="true">
-        <div class="chat-head">
-          <div>
-            <strong>Hello from Aurelia! ✳</strong
-            ><small>How can we help today?</small>
-          </div>
-          <button id="chatClose" aria-label="Close chat">×</button>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-          <div class="bot-message">
-            Hi there! 👋 I'm the Aurelia helper. Ask me about admissions,
-            learning stages, facilities or campus visits.
-          </div>
-        </div>
-        <div class="chat-suggestions">
-          <button data-question="How do admissions work?">Admissions</button
-          ><button data-question="What facilities do you have?">
-            Facilities</button
-          ><button data-question="Can I visit the campus?">Campus visit</button>
-        </div>
-        <form id="chatForm" class="chat-form">
-          <input
-            id="chatInput"
-            type="text"
-            placeholder="Type your question..."
-            autocomplete="off"
-            aria-label="Type your question"
-          /><button aria-label="Send message">➤</button>
-        </form>
-      </div>
-      <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
-        <span>✳</span><small>Ask Aurelia</small>
-      </button>
-    </div>
-
-    <!-- ROCKET BACK TO TOP -->
-    <button class="rocket-button" id="rocketButton" aria-label="Back to top">
-      <span>↑</span>
+    
+    <!-- =================  BACK TO TOP BUTTON ================= -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i data-lucide="arrow-up"></i>
     </button>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-icons@v14.15.0/index.min.js"></script>
   </body>
 </html>

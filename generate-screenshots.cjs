@@ -10,13 +10,18 @@ const templates = [
   },
   {
     id: "template-2",
-    name: "Aurelia Modern",
+    name: "Aurelia Inspire",
     url: "http://127.0.0.1:5500/template-2/index.html",
   },
   {
     id: "template-3",
-    name: "Aurelia Creative",
+    name: "Aurelia Modern",
     url: "http://127.0.0.1:5500/template-3/index.html",
+  },
+  {
+    id: "template-4",
+    name: "Aurelia Creative",
+    url: "http://127.0.0.1:5500/template-4/index.html",
   },
 ];
 

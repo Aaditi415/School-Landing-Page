@@ -1,918 +1,916 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Aurelia University website designs.">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Aurelia University website designs."
+    />
+
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
     <title>Aurelia — Choose Your Experience</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-
-:root {
-    --purple: #6555e8;
-    --purple-dark: #5141ce;
-    --coral: #ff765e;
-    --yellow: #ffd166;
-    --green: #65c9a5;
-
-    --ink: #28283a;
-    --muted: #737386;
-    --paper: #fbfaf7;
-    --white: #ffffff;
-    --line: #e9e7e2;
-
-    --heading: "Space Grotesk", sans-serif;
-    --body: "DM Sans", sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--body);
-    background: var(--paper);
-    color: var(--ink);
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    font: inherit;
-}
-
-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* NAVBAR */
-
-.navbar {
-    height: 82px;
-    padding: 0 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--line);
-    background: rgba(251, 250, 247, .92);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(15px);
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    font-family: var(--heading);
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: .7px;
-}
-
-.brand-icon {
-    width: 34px;
-    height: 34px;
-    display: grid;
-    place-items: center;
-    background: var(--purple);
-    color: white;
-    border-radius: 10px 10px 10px 3px;
-    font-size: 19px;
-}
-
-.brand-light {
-    font-weight: 400;
-    color: var(--muted);
-}
-
-.nav-status {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 9px;
-}
-
-.status-dot {
-    width: 7px;
-    height: 7px;
-    background: var(--green);
-    border-radius: 50%;
-}
-
-.nav-link {
-    font-size: 13px;
-    font-weight: 700;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.nav-link span {
-    width: 30px;
-    height: 30px;
-    background: var(--ink);
-    color: white;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    transition: .3s;
-}
-
-.nav-link:hover span {
-    background: var(--purple);
-    transform: rotate(45deg);
-}
-
-
-/* HERO */
-
-.hero {
-    padding: 55px 10% 42px;
-    min-height: 390px;
-    background:
-        radial-gradient(ellipse at 90% 20%, rgba(101, 85, 232, .09), transparent 35%),
-        var(--paper);
-}
-
-.hero-topline {
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.7px;
-    color: var(--muted);
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--line);
-}
-
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 50px;
-    padding: 48px 0 40px;
-}
-
-.eyebrow {
-    font-size: 10px;
-    letter-spacing: 1.7px;
-    font-weight: 700;
-    color: var(--purple);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
-}
-
-.eyebrow-line {
-    width: 25px;
-    height: 2px;
-    background: var(--coral);
-}
-
-.hero-heading h1 {
-    font-family: var(--heading);
-    font-size: clamp(46px, 6.3vw, 82px);
-    line-height: .99;
-    letter-spacing: -5px;
-    font-weight: 700;
-}
-
-.hero-heading h1 span {
-    color: var(--purple);
-}
-
-.hero-description {
-    max-width: 350px;
-    padding-bottom: 5px;
-}
-
-.hero-description p {
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-.explore-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 25px;
-    margin-top: 24px;
-    font-size: 12px;
-    font-weight: 700;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--ink);
-}
-
-.explore-link span {
-    color: var(--purple);
-    font-size: 18px;
-    transition: .3s;
-}
-
-.explore-link:hover span {
-    transform: translateY(4px);
-}
-
-.hero-decoration {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #9896a3;
-}
-
-.decoration-line {
-    width: 60px;
-    height: 1px;
-    background: var(--line);
-}
-
-
-/* TEMPLATE SECTION */
-
-.templates-section {
-    padding: 70px 10% 100px;
-    background: white;
-}
-
-.section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 30px;
-    margin-bottom: 35px;
-}
-
-.section-label {
-    font-size: 10px;
-    color: var(--purple);
-    font-weight: 700;
-    letter-spacing: 1.7px;
-}
-
-.section-heading h2 {
-    font-family: var(--heading);
-    font-size: clamp(28px, 3.5vw, 43px);
-    letter-spacing: -1.7px;
-    margin-top: 10px;
-}
-
-.section-heading h2 span {
-    color: var(--coral);
-}
-
-.section-heading p {
-    max-width: 260px;
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.8;
-}
-
-
-/* TEMPLATE GRID */
-
-.template-preview img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.template-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-}
-
-.template-card {
-    min-width: 0;
-    background: white;
-    border: 1px solid var(--line);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform .35s, box-shadow .35s, border-color .35s;
-}
-
-.template-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 22px 50px rgba(40, 40, 58, .10);
-    border-color: #d9d4fa;
-}
-
-.template-preview {
-    height: 245px;
-    position: relative;
-    overflow: hidden;
-    background: #eeedf5;
-}
-
-.template-preview img {
-    transition: transform .7s;
-}
-
-.template-card:hover .template-preview img {
-    transform: scale(1.055);
-}
-
-.preview-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 15px;
-    background: linear-gradient(
-        180deg,
-        rgba(20, 20, 35, .36),
-        transparent 50%,
-        rgba(20, 20, 35, .15)
-    );
-    pointer-events: none;
-}
-
-.preview-number {
-    font-family: var(--heading);
-    font-size: 28px;
-    font-weight: 700;
-    color: white;
-}
-
-.preview-label {
-    padding: 7px 10px;
-    border-radius: 4px;
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: white;
-    background: rgba(30, 30, 45, .65);
-    backdrop-filter: blur(8px);
-}
-
-.preview-open {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    background: white;
-    color: var(--ink);
-    border-radius: 50%;
-    font-size: 18px;
-    transition: .3s;
-}
-
-.preview-open:not(.disabled):hover {
-    background: var(--purple);
-    color: white;
-    transform: rotate(45deg);
-}
-
-.preview-open.disabled {
-    opacity: .7;
-    pointer-events: none;
-}
-
-
-/* TEMPLATE DETAILS */
-
-.template-details {
-    padding: 23px 21px 20px;
-}
-
-.template-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--muted);
-}
-
-.available {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #328e6e;
-}
-
-.available span {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--green);
-}
-
-.coming-soon {
-    color: #b17c39;
-    font-size: 8px;
-}
-
-.template-details h3 {
-    font-family: var(--heading);
-    font-size: 23px;
-    letter-spacing: -.7px;
-    margin-top: 17px;
-}
-
-.template-details p {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.8;
-    min-height: 44px;
-    margin-top: 8px;
-}
-
-.template-button {
-    width: 100%;
-    border: 1px solid var(--line);
-    border-radius: 7px;
-    padding: 13px 14px;
-    margin-top: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    color: var(--ink);
-    font-size: 11px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.template-button:not(.disabled-button):hover {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: white;
-}
-
-.button-arrow {
-    font-size: 17px;
-}
-
-.disabled-button {
-    background: #f8f8fa;
-    color: #aaa9b3;
-    cursor: not-allowed;
-}
-
-
-/* BOTTOM BANNER */
-
-.bottom-banner {
-    margin: 0 10% 85px;
-    background: #f0effc;
-    border-radius: 16px;
-    padding: 32px 38px;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.banner-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 13px;
-    background: var(--yellow);
-    display: grid;
-    place-items: center;
-    font-size: 27px;
-}
-
-.banner-content {
-    flex: 1;
-}
-
-.banner-content > span {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-    color: var(--purple);
-}
-
-.banner-content h2 {
-    font-family: var(--heading);
-    font-size: 22px;
-    margin-top: 5px;
-}
-
-.bottom-banner > a {
-    background: var(--purple);
-    color: white;
-    padding: 14px 18px;
-    border-radius: 7px;
-    font-size: 11px;
-    font-weight: 700;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    transition: .3s;
-}
-
-.bottom-banner > a:hover {
-    background: var(--purple-dark);
-    transform: translateY(-3px);
-}
-
-
-/* FOOTER */
-
-.footer {
-    padding: 28px 7%;
-    border-top: 1px solid var(--line);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer p,
-.footer > span {
-    color: var(--muted);
-    font-size: 10px;
-}
-
-
-/* RESPONSIVE */
-
-@media (max-width: 1000px) {
-
-    .hero,
-    .templates-section {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
-
-    .template-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .bottom-banner {
-        margin-left: 6%;
-        margin-right: 6%;
-    }
-
-}
-
-@media (max-width: 650px) {
-
-    .navbar {
-        height: 70px;
-        padding: 0 20px;
-    }
-
-    .nav-center {
-        display: none;
-    }
-
-    .brand {
-        font-size: 12px;
-    }
-
-    .hero {
-        padding: 40px 22px 30px;
-        min-height: auto;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-        padding: 40px 0 30px;
-    }
-
-    .hero-heading h1 {
-        font-size: clamp(48px, 12vw, 68px);
-        letter-spacing: -3px;
-    }
-
-    .hero-description {
-        max-width: 100%;
-    }
-
-    .section-heading {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .templates-section {
-        padding: 55px 22px 65px;
-    }
-
-    .template-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .template-preview {
-        height: 250px;
-    }
-
-    .template-details p {
-        min-height: auto;
-    }
-
-    .bottom-banner {
-        margin: 0 22px 55px;
-        padding: 25px;
-        flex-wrap: wrap;
-    }
-
-    .banner-content {
-        min-width: 180px;
-    }
-
-    .bottom-banner > a {
+      :root {
+        --purple: #6555e8;
+        --purple-dark: #5141ce;
+        --coral: #ff765e;
+        --yellow: #ffd166;
+        --green: #65c9a5;
+
+        --ink: #28283a;
+        --muted: #737386;
+        --paper: #fbfaf7;
+        --white: #ffffff;
+        --line: #e9e7e2;
+
+        --heading: "Space Grotesk", sans-serif;
+        --body: "DM Sans", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--body);
+        background: var(--paper);
+        color: var(--ink);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      img {
+        display: block;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        height: 82px;
+        padding: 0 7%;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
-    }
+        border-bottom: 1px solid var(--line);
+        background: rgba(251, 250, 247, 0.92);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(15px);
+      }
 
-    .footer {
-        padding: 25px 22px;
-        flex-direction: column;
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-family: var(--heading);
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+      }
+
+      .brand-icon {
+        width: 34px;
+        height: 34px;
+        display: grid;
+        place-items: center;
+        background: var(--purple);
+        color: white;
+        border-radius: 10px 10px 10px 3px;
+        font-size: 19px;
+      }
+
+      .brand-light {
+        font-weight: 400;
+        color: var(--muted);
+      }
+
+      .nav-status {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        background: var(--green);
+        border-radius: 50%;
+      }
+
+      .nav-link {
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .nav-link span {
+        width: 30px;
+        height: 30px;
+        background: var(--ink);
+        color: white;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        transition: 0.3s;
+      }
+
+      .nav-link:hover span {
+        background: var(--purple);
+        transform: rotate(45deg);
+      }
+
+      /* HERO */
+
+      .hero {
+        padding: 55px 10% 42px;
+        min-height: 390px;
+        background:
+          radial-gradient(
+            ellipse at 90% 20%,
+            rgba(101, 85, 232, 0.09),
+            transparent 35%
+          ),
+          var(--paper);
+      }
+
+      .hero-topline {
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.7px;
+        color: var(--muted);
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 50px;
+        padding: 48px 0 40px;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.7px;
+        font-weight: 700;
+        color: var(--purple);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .eyebrow-line {
+        width: 25px;
+        height: 2px;
+        background: var(--coral);
+      }
+
+      .hero-heading h1 {
+        font-family: var(--heading);
+        font-size: clamp(46px, 6.3vw, 82px);
+        line-height: 0.99;
+        letter-spacing: -5px;
+        font-weight: 700;
+      }
+
+      .hero-heading h1 span {
+        color: var(--purple);
+      }
+
+      .hero-description {
+        max-width: 350px;
+        padding-bottom: 5px;
+      }
+
+      .hero-description p {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.9;
+      }
+
+      .explore-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 25px;
+        margin-top: 24px;
+        font-size: 12px;
+        font-weight: 700;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .explore-link span {
+        color: var(--purple);
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .explore-link:hover span {
+        transform: translateY(4px);
+      }
+
+      .hero-decoration {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: #9896a3;
+      }
+
+      .decoration-line {
+        width: 60px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      /* TEMPLATE SECTION */
+
+      .templates-section {
+        padding: 70px 10% 100px;
+        background: white;
+      }
+
+      .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 30px;
+        margin-bottom: 35px;
+      }
+
+      .section-label {
+        font-size: 10px;
+        color: var(--purple);
+        font-weight: 700;
+        letter-spacing: 1.7px;
+      }
+
+      .section-heading h2 {
+        font-family: var(--heading);
+        font-size: clamp(28px, 3.5vw, 43px);
+        letter-spacing: -1.7px;
+        margin-top: 10px;
+      }
+
+      .section-heading h2 span {
+        color: var(--coral);
+      }
+
+      .section-heading p {
+        max-width: 260px;
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      /* TEMPLATE GRID */
+
+      .template-preview img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .template-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+      }
+
+      .template-card {
+        min-width: 0;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        overflow: hidden;
+        transition:
+          transform 0.35s,
+          box-shadow 0.35s,
+          border-color 0.35s;
+      }
+
+      .template-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 22px 50px rgba(40, 40, 58, 0.1);
+        border-color: #d9d4fa;
+      }
+
+      .template-preview {
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        background: #eeedf5;
+      }
+
+      .template-preview img {
+        transition: transform 0.7s;
+      }
+
+      .template-card:hover .template-preview img {
+        transform: scale(1.055);
+      }
+
+      .preview-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: space-between;
         align-items: flex-start;
-    }
+        padding: 15px;
+        background: linear-gradient(
+          180deg,
+          rgba(20, 20, 35, 0.36),
+          transparent 50%,
+          rgba(20, 20, 35, 0.15)
+        );
+        pointer-events: none;
+      }
 
-}
+      .preview-number {
+        font-family: var(--heading);
+        font-size: 28px;
+        font-weight: 700;
+        color: white;
+      }
 
+      .preview-label {
+        padding: 7px 10px;
+        border-radius: 4px;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: white;
+        background: rgba(30, 30, 45, 0.65);
+        backdrop-filter: blur(8px);
+      }
+
+      .preview-open {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        background: white;
+        color: var(--ink);
+        border-radius: 50%;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .preview-open:not(.disabled):hover {
+        background: var(--purple);
+        color: white;
+        transform: rotate(45deg);
+      }
+
+      .preview-open.disabled {
+        opacity: 0.7;
+        pointer-events: none;
+      }
+
+      /* TEMPLATE DETAILS */
+
+      .template-details {
+        padding: 23px 21px 20px;
+      }
+
+      .template-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--muted);
+      }
+
+      .available {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #328e6e;
+      }
+
+      .available span {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green);
+      }
+
+      .coming-soon {
+        color: #b17c39;
+        font-size: 8px;
+      }
+
+      .template-details h3 {
+        font-family: var(--heading);
+        font-size: 23px;
+        letter-spacing: -0.7px;
+        margin-top: 17px;
+      }
+
+      .template-details p {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.8;
+        min-height: 44px;
+        margin-top: 8px;
+      }
+
+      .template-button {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 13px 14px;
+        margin-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        color: var(--ink);
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .template-button:not(.disabled-button):hover {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: white;
+      }
+
+      .button-arrow {
+        font-size: 17px;
+      }
+
+      .disabled-button {
+        background: #f8f8fa;
+        color: #aaa9b3;
+        cursor: not-allowed;
+      }
+
+      /* BOTTOM BANNER */
+
+      .bottom-banner {
+        margin: 0 10% 85px;
+        background: #f0effc;
+        border-radius: 16px;
+        padding: 32px 38px;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+
+      .banner-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 13px;
+        background: var(--yellow);
+        display: grid;
+        place-items: center;
+        font-size: 27px;
+      }
+
+      .banner-content {
+        flex: 1;
+      }
+
+      .banner-content > span {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+        color: var(--purple);
+      }
+
+      .banner-content h2 {
+        font-family: var(--heading);
+        font-size: 22px;
+        margin-top: 5px;
+      }
+
+      .bottom-banner > a {
+        background: var(--purple);
+        color: white;
+        padding: 14px 18px;
+        border-radius: 7px;
+        font-size: 11px;
+        font-weight: 700;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        transition: 0.3s;
+      }
+
+      .bottom-banner > a:hover {
+        background: var(--purple-dark);
+        transform: translateY(-3px);
+      }
+
+      /* FOOTER */
+
+      .footer {
+        padding: 28px 7%;
+        border-top: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .footer p,
+      .footer > span {
+        color: var(--muted);
+        font-size: 10px;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 1000px) {
+        .hero,
+        .templates-section {
+          padding-left: 6%;
+          padding-right: 6%;
+        }
+
+        .template-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .bottom-banner {
+          margin-left: 6%;
+          margin-right: 6%;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .navbar {
+          height: 70px;
+          padding: 0 20px;
+        }
+
+        .nav-center {
+          display: none;
+        }
+
+        .brand {
+          font-size: 12px;
+        }
+
+        .hero {
+          padding: 40px 22px 30px;
+          min-height: auto;
+        }
+
+        .hero-content {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 25px;
+          padding: 40px 0 30px;
+        }
+
+        .hero-heading h1 {
+          font-size: clamp(48px, 12vw, 68px);
+          letter-spacing: -3px;
+        }
+
+        .hero-description {
+          max-width: 100%;
+        }
+
+        .section-heading {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+
+        .templates-section {
+          padding: 55px 22px 65px;
+        }
+
+        .template-grid {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+
+        .template-preview {
+          height: 250px;
+        }
+
+        .template-details p {
+          min-height: auto;
+        }
+
+        .bottom-banner {
+          margin: 0 22px 55px;
+          padding: 25px;
+          flex-wrap: wrap;
+        }
+
+        .banner-content {
+          min-width: 180px;
+        }
+
+        .bottom-banner > a {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .footer {
+          padding: 25px 22px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
     </style>
-    <link rel="stylesheet" href="./css/selection.css">
-</head>
+    <link rel="stylesheet" href="./css/selection.css" />
+  </head>
 
-<body>
-
-
-
+  <body>
     <!-- HERO -->
     <main>
+      <!-- TEMPLATE SECTION -->
+      <section class="templates-section" id="templates">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">THE COLLECTION / 001</span>
+            <h2>Choose your experience<span>.</span></h2>
+          </div>
 
+          <p>
+            Each template tells a different story. Discover the one that feels
+            right.
+          </p>
+        </div>
 
+        <!-- TEMPLATE CARDS -->
+        <div class="template-grid">
+          <!-- TEMPLATE 01 -->
+          <article class="template-card featured">
+            <div class="template-preview">
+              <div
+                class="template-preview"
+                data-template-image="template-1"
+              ></div>
 
-        <!-- TEMPLATE SECTION -->
-        <section class="templates-section" id="templates">
+              <div class="preview-overlay">
+                <span class="preview-number">01</span>
+                <span class="preview-label">CURRENT DESIGN</span>
+              </div>
 
-            <div class="section-heading">
-                <div>
-                    <span class="section-label">THE COLLECTION / 001</span>
-                    <h2>Choose your experience<span>.</span></h2>
-                </div>
-
-                <p>
-                    Each template tells a different story.
-                    Discover the one that feels right.
-                </p>
+              <a
+                href="./template-1/index.html"
+                class="preview-open"
+                aria-label="Open Aurelia Editorial"
+                >↗</a
+              >
             </div>
 
+            <div class="template-details">
+              <div class="template-meta">
+                <span>01 / EDITORIAL</span>
+                <span class="available"> <span></span> AVAILABLE </span>
+              </div>
 
-            <!-- TEMPLATE CARDS -->
-            <div class="template-grid">
+              <h3>Aurelia Editorial</h3>
 
+              <p>
+                Bold typography, expressive layouts and a creative university
+                experience.
+              </p>
 
-                <!-- TEMPLATE 01 -->
-                <article class="template-card featured">
+              <a href="./template-1/index.html" class="template-button">
+                <span>Explore this design</span>
+                <span class="button-arrow">↗</span>
+              </a>
+            </div>
+          </article>
 
-                    <div class="template-preview">
+          
+          <!-- TEMPLATE 02 -->
+          <article class="template-card">
+            <div class="template-preview">
+              <div
+                class="template-preview"
+                data-template-image="template-2"
+              ></div>
 
-                        <div class="template-preview" data-template-image="template-1"></div>
+              <div class="preview-overlay">
+                <span class="preview-number">02</span>
+                <span class="preview-label">New Design</span>
+              </div>
 
-
-                        <div class="preview-overlay">
-                            <span class="preview-number">01</span>
-                            <span class="preview-label">CURRENT DESIGN</span>
-                        </div>
-
-                        <a
-                            href="./template-1/index.html"
-                            class="preview-open"
-                            aria-label="Open Aurelia Editorial"
-                        >↗</a>
-
-                    </div>
-
-                    <div class="template-details">
-
-                        <div class="template-meta">
-                            <span>01 / EDITORIAL</span>
-                            <span class="available">
-                                <span></span> AVAILABLE
-                            </span>
-                        </div>
-
-                        <h3>Aurelia Editorial</h3>
-
-                        <p>
-                            Bold typography, expressive layouts and
-                            a creative university experience.
-                        </p>
-
-                        <a
-                            href="./template-1/index.html"
-                            class="template-button"
-                        >
-                            <span>Explore this design</span>
-                            <span class="button-arrow">↗</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- TEMPLATE 02 -->
-                <article class="template-card">
-
-                    <div class="template-preview">
-
-                        <div class="template-preview" data-template-image="template-2"></div>
-
-
-                        <div class="preview-overlay">
-                            <span class="preview-number">02</span>
-                            <span class="preview-label">COMING SOON</span>
-                        </div>
-
-                        <a
-                            href="./template-2/index.html"
-                            class="preview-open"
-                            aria-label="Open Aurelia Editorial"
-                        >↗</a>
-
-                    </div>
-
-                    <div class="template-details">
-
-                        <div class="template-meta">
-                            <span>02 / MODERN</span>
-                            <span class="available">
-                                <span></span> AVAILABLE
-                            </span>
-                        </div>
-
-                        <h3>Aurelia Modern</h3>
-
-                        <p>
-                            Clean architecture, sophisticated details
-                            and a refined academic identity.
-                        </p>
-
-                        <a
-                            href="./template-2/index.html"
-                            class="template-button"
-                        >
-                            <span>Explore this design</span>
-                            <span class="button-arrow">↗</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- TEMPLATE 03 -->
-                <article class="template-card">
-
-                    <div class="template-preview">
-
-                        <div class="template-preview" data-template-image="template-3"></div>
-
-
-                        <div class="preview-overlay">
-                            <span class="preview-number">03</span>
-                            <span class="preview-label">COMING SOON</span>
-                        </div>
-
-                        <a
-                            href="./template-3/index.html"
-                            class="preview-open"
-                            aria-label="Open Aurelia Editorial"
-                        >↗</a>
-
-                    </div>
-
-                    <div class="template-details">
-
-                        <div class="template-meta">
-                            <span>03 / CREATIVE</span>
-                            <span class="available">
-                                <span></span> AVAILABLE
-                            </span>
-                        </div>
-
-                        <h3>Aurelia Creative</h3>
-
-                        <p>
-                            Vibrant colours, immersive visuals and
-                            a more expressive digital experience.
-                        </p>
-
-                        <a
-                            href="./template-3/index.html"
-                            class="template-button"
-                        >
-                            <span>Explore this design</span>
-                            <span class="button-arrow">↗</span>
-                        </a>
-
-                    </div>
-
-                </article>
-
-
+              <a
+                href="./template-2/index.html"
+                class="preview-open"
+                aria-label="Open Aurelia Editorial"
+                >↗</a
+              >
             </div>
 
-        </section>
+            <div class="template-details">
+              <div class="template-meta">
+                <span>02 / CREATIVE</span>
+                <span class="available"> <span></span> AVAILABLE </span>
+              </div>
 
+              <h3>Aurelia Inspire</h3>
 
+              <p>
+                A fresh, welcoming design with elegant layouts, soft colours and
+                thoughtful details that make every school experience feel
+                inspiring.
+              </p>
 
+              <a href="./template-2/index.html" class="template-button">
+                <span>Explore this design</span>
+                <span class="button-arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- TEMPLATE 02 -->
+          <article class="template-card">
+            <div class="template-preview">
+              <div
+                class="template-preview"
+                data-template-image="template-3"
+              ></div>
+
+              <div class="preview-overlay">
+                <span class="preview-number">03</span>
+                <span class="preview-label">COMING SOON</span>
+              </div>
+
+              <a
+                href="./template-3/index.html"
+                class="preview-open"
+                aria-label="Open Aurelia Editorial"
+                >↗</a
+              >
+            </div>
+
+            <div class="template-details">
+              <div class="template-meta">
+                <span>03 / MODERN</span>
+                <span class="available"> <span></span> AVAILABLE </span>
+              </div>
+
+              <h3>Aurelia Modern</h3>
+
+              <p>
+                Clean architecture, sophisticated details and a refined academic
+                identity.
+              </p>
+
+              <a href="./template-3/index.html" class="template-button">
+                <span>Explore this design</span>
+                <span class="button-arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- TEMPLATE 03 -->
+          <article class="template-card">
+            <div class="template-preview">
+              <div
+                class="template-preview"
+                data-template-image="template-4"
+              ></div>
+
+              <div class="preview-overlay">
+                <span class="preview-number">04</span>
+                <span class="preview-label">COMING SOON</span>
+              </div>
+
+              <a
+                href="./template-4/index.html"
+                class="preview-open"
+                aria-label="Open Aurelia Editorial"
+                >↗</a
+              >
+            </div>
+
+            <div class="template-details">
+              <div class="template-meta">
+                <span>04 / CREATIVE</span>
+                <span class="available"> <span></span> AVAILABLE </span>
+              </div>
+
+              <h3>Aurelia Creative</h3>
+
+              <p>
+                Vibrant colours, immersive visuals and a more expressive digital
+                experience.
+              </p>
+
+              <a href="./template-4/index.html" class="template-button">
+                <span>Explore this design</span>
+                <span class="button-arrow">↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
     </main>
 
-<script>
+    <script>
+      const templates = [
+        {
+          id: "template-1",
+          name: "Aurelia Editorial",
+          image: "./assets/template-1.jpg",
+          alt: "Aurelia Editorial website preview",
+        },
+        {
+          id: "template-2",
+          name: "Aurelia Inspire",
+          image: "./assets/template-2.jpg",
+          alt: "Aurelia Inspire website preview",
+        },
+        {
+          id: "template-3",
+          name: "Aurelia Modern",
+          image: "./assets/template-3.jpg",
+          alt: "Aurelia Modern website preview",
+        },
+        {
+          id: "template-4",
+          name: "Aurelia Creative",
+          image: "./assets/template-4.jpg",
+          alt: "Aurelia Creative website preview",
+        },
+      ];
 
-    const templates = [
-    {
-        id: "template-1",
-        name: "Aurelia Editorial",
-        image: "./assets/template-1.jpg",
-        alt: "Aurelia Editorial website preview"
-    },
-    {
-        id: "template-2",
-        name: "Aurelia Modern",
-        image: "./assets/template-2.jpg",
-        alt: "Aurelia Modern website preview"
-    },
-    {
-        id: "template-3",
-        name: "Aurelia Creative",
-        image: "./assets/template-3.jpg",
-        alt: "Aurelia Creative website preview"
-    }
-];
+      function renderTemplateImages() {
+        templates.forEach((template) => {
+          const container = document.querySelector(
+            `[data-template-image="${template.id}"]`,
+          );
 
-function renderTemplateImages() {
+          if (!container) return;
 
-    templates.forEach(template => {
+          const img = document.createElement("img");
 
-        const container = document.querySelector(
-            `[data-template-image="${template.id}"]`
-        );
+          img.src = template.image;
+          img.alt = template.alt;
+          img.loading = "lazy";
 
-        if (!container) return;
+          container.appendChild(img);
+        });
+      }
 
-        const img = document.createElement("img");
+      document.addEventListener("DOMContentLoaded", () => {
+        renderTemplateImages();
+      });
 
-        img.src = template.image;
-        img.alt = template.alt;
-        img.loading = "lazy";
-
-        container.appendChild(img);
-
-    });
-
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    renderTemplateImages();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Smooth scroll for internal navigation
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-        link.addEventListener("click", event => {
-
+      document.addEventListener("DOMContentLoaded", () => {
+        // Smooth scroll for internal navigation
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+          link.addEventListener("click", (event) => {
             const targetId = link.getAttribute("href");
 
             if (targetId === "#") return;
@@ -920,59 +918,69 @@ document.addEventListener("DOMContentLoaded", () => {
             const target = document.querySelector(targetId);
 
             if (target) {
-                event.preventDefault();
+              event.preventDefault();
 
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
             }
-
+          });
         });
+      });
+    </script>
 
-    });
-
-});
-
-</script>
-
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-</body>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.",
+        );
+      }
+      // ]]>
+    </script>
+  </body>
 </html>
