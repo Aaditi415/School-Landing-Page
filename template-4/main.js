@@ -1,28 +1,15 @@
 
-/* =====================================================
-   ANNOUNCEMENT BAR
-===================================================== */
 
 function initAnnouncement() {
-
     const bar = document.getElementById("announcementBar");
-
-    if (!bar) return;
-
     const label = document.getElementById("announcementLabel");
     const track = document.getElementById("announcementTrack");
     const cta = document.getElementById("announcementCta");
     const progress = document.getElementById("announcementProgress");
 
-    if (!label || !track || !cta || !progress) return;
-
-
-    /* ================================================
-       ANNOUNCEMENT DATA
-    ================================================ */
+    if (!bar || !label || !track || !cta || !progress) return;
 
     const announcements = [
-
         {
             label: "ADMISSIONS",
             message: "Admissions are now open for the 2027–28 academic year.",
@@ -30,7 +17,6 @@ function initAnnouncement() {
             link: "#admissions",
             color: "#FFB86B"
         },
-
         {
             label: "CAMPUS LIFE",
             message: "Discover a world of creativity, learning and opportunities.",
@@ -38,7 +24,6 @@ function initAnnouncement() {
             link: "#facilities",
             color: "#78CDB5"
         },
-
         {
             label: "ACADEMICS",
             message: "Building knowledge, confidence and future-ready skills.",
@@ -46,40 +31,19 @@ function initAnnouncement() {
             link: "#academics",
             color: "#C3BFFF"
         }
-
     ];
 
-
-    /* ================================================
-       SETTINGS
-    ================================================ */
-
     const duration = 7000;
-
     const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
     ).matches;
 
-
-    /* ================================================
-       CREATE SLIDES
-    ================================================ */
-
-    announcements.forEach(item => {
-
+    announcements.forEach(({ message }) => {
         const slide = document.createElement("div");
-
         slide.className = "announcement-slide";
-        slide.textContent = item.message;
-
+        slide.textContent = message;
         track.appendChild(slide);
-
     });
-
-
-    /* ================================================
-       STATE
-    ================================================ */
 
     let currentIndex = 0;
     let elapsed = 0;
@@ -87,18 +51,11 @@ function initAnnouncement() {
     let animationFrame = null;
     let isPaused = false;
 
-
-    /* ================================================
-       UPDATE ANNOUNCEMENT
-    ================================================ */
-
     function updateAnnouncement(index) {
-
         const item = announcements[index];
 
         label.textContent = item.label;
-
-        cta.textContent = "";
+        cta.replaceChildren();
 
         const buttonText = document.createElement("span");
         buttonText.textContent = item.button;
@@ -107,7 +64,6 @@ function initAnnouncement() {
             "http://www.w3.org/2000/svg",
             "svg"
         );
-
         arrow.setAttribute("viewBox", "0 0 24 24");
         arrow.setAttribute("fill", "none");
         arrow.setAttribute("aria-hidden", "true");
@@ -116,7 +72,6 @@ function initAnnouncement() {
             "http://www.w3.org/2000/svg",
             "path"
         );
-
         path.setAttribute("d", "M7 17L17 7M7 7H17V17");
         path.setAttribute("stroke", "currentColor");
         path.setAttribute("stroke-width", "1.8");
@@ -124,45 +79,21 @@ function initAnnouncement() {
         path.setAttribute("stroke-linejoin", "round");
 
         arrow.appendChild(path);
-
         cta.append(buttonText, arrow);
-
         cta.href = item.link;
 
-        bar.style.setProperty(
-            "--announcement-progress-color",
-            item.color
-        );
-
-        track.style.transform =
-            `translateY(-${index * 20}px)`;
-
+        bar.style.setProperty("--announcement-progress-color", item.color);
+        track.style.transform = `translateY(-${index * 20}px)`;
         progress.style.width = "0%";
-
     }
-
-
-    /* ================================================
-       SLIDE TO NEXT ANNOUNCEMENT
-    ================================================ */
 
     function nextAnnouncement() {
-
         currentIndex = (currentIndex + 1) % announcements.length;
-
         updateAnnouncement(currentIndex);
-
         elapsed = 0;
-
     }
 
-
-    /* ================================================
-       PROGRESS ANIMATION
-    ================================================ */
-
     function animateProgress(timestamp) {
-
         if (isPaused) {
             animationFrame = null;
             return;
@@ -170,152 +101,67 @@ function initAnnouncement() {
 
         if (!lastTime) lastTime = timestamp;
 
-        const delta = timestamp - lastTime;
-
+        elapsed += timestamp - lastTime;
         lastTime = timestamp;
 
-        elapsed += delta;
+        progress.style.width = `${Math.min((elapsed / duration) * 100, 100)}%`;
 
-        const percentage = Math.min(
-            (elapsed / duration) * 100,
-            100
-        );
+        if (elapsed >= duration) nextAnnouncement();
 
-        progress.style.width = `${percentage}%`;
-
-        if (elapsed >= duration) {
-
-            nextAnnouncement();
-
-        }
-
-        animationFrame = requestAnimationFrame(
-            animateProgress
-        );
-
+        animationFrame = requestAnimationFrame(animateProgress);
     }
-
-
-    /* ================================================
-       START ROTATION
-    ================================================ */
 
     function startRotation() {
-
-        if (isPaused || animationFrame !== null) return;
+        if (reducedMotion || isPaused || animationFrame !== null) return;
 
         lastTime = 0;
-
-        animationFrame = requestAnimationFrame(
-            animateProgress
-        );
-
+        animationFrame = requestAnimationFrame(animateProgress);
     }
 
-
-    /* ================================================
-       PAUSE ROTATION
-    ================================================ */
-
     function pauseRotation() {
-
         if (isPaused) return;
 
         isPaused = true;
 
         if (animationFrame !== null) {
-
             cancelAnimationFrame(animationFrame);
-
             animationFrame = null;
-
         }
-
     }
-
-
-    /* ================================================
-       RESUME ROTATION
-    ================================================ */
 
     function resumeRotation() {
-
-        if (!isPaused) return;
+        if (reducedMotion || !isPaused) return;
 
         isPaused = false;
-
         startRotation();
-
     }
-
-
-    /* ================================================
-       ACCESSIBILITY & USER INTERACTION
-    ================================================ */
 
     bar.addEventListener("mouseenter", pauseRotation);
     bar.addEventListener("mouseleave", resumeRotation);
-
     bar.addEventListener("focusin", pauseRotation);
-    bar.addEventListener("focusout", (event) => {
 
-        if (!bar.contains(event.relatedTarget)) {
-            resumeRotation();
-        }
-
+    bar.addEventListener("focusout", event => {
+        if (!bar.contains(event.relatedTarget)) resumeRotation();
     });
 
-
     document.addEventListener("visibilitychange", () => {
-
         if (document.hidden) {
             pauseRotation();
         } else {
             resumeRotation();
         }
-
     });
 
-
-    /* ================================================
-       INITIALIZE
-    ================================================ */
-
     updateAnnouncement(currentIndex);
-
-    if (!reducedMotion) {
-
-        startRotation();
-
-    }
-
+    startRotation();
 }
 
 
 /* =====================================================
-   INITIALIZE AFTER DOM LOAD
-===================================================== */
-
-if (document.readyState === "loading") {
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        initAnnouncement
-    );
-
-} else {
-
-    initAnnouncement();
-
-}
-
-
-/* =====================================================
-   NAVBAR FUNCTIONALITY
+   NAVBAR
 ===================================================== */
 
 function initNavbar() {
-
     const header = document.getElementById("mainHeader");
     const toggle = document.getElementById("navbarToggle");
     const menu = document.getElementById("navbarMenu");
@@ -324,208 +170,102 @@ function initNavbar() {
 
     const links = menu.querySelectorAll(".nav-link");
 
-
-    /* ================================================
-       OPEN / CLOSE MOBILE MENU
-    ================================================ */
-
     function setMenuState(open) {
-
         menu.classList.toggle("open", open);
         toggle.classList.toggle("active", open);
-
         toggle.setAttribute("aria-expanded", String(open));
-
         toggle.setAttribute(
             "aria-label",
             open ? "Close navigation menu" : "Open navigation menu"
         );
-
     }
-
 
     toggle.addEventListener("click", () => {
-
-        const isOpen = menu.classList.contains("open");
-
-        setMenuState(!isOpen);
-
+        setMenuState(!menu.classList.contains("open"));
     });
-
-
-    /* ================================================
-       CLOSE AFTER NAVIGATION
-    ================================================ */
 
     links.forEach(link => {
-
         link.addEventListener("click", () => {
-
             setMenuState(false);
-
-            links.forEach(item => {
-                item.classList.remove("active");
-            });
-
+            links.forEach(item => item.classList.remove("active"));
             link.classList.add("active");
-
         });
-
     });
-
-
-    /* ================================================
-       CLOSE WHEN CLICKING OUTSIDE
-    ================================================ */
 
     document.addEventListener("click", event => {
-
-        if (
-            !header.contains(event.target) &&
-            menu.classList.contains("open")
-        ) {
-
+        if (!header.contains(event.target) && menu.classList.contains("open")) {
             setMenuState(false);
-
         }
-
     });
-
-
-    /* ================================================
-       ESCAPE KEY
-    ================================================ */
 
     document.addEventListener("keydown", event => {
-
-        if (event.key === "Escape") {
-
+        if (event.key === "Escape" && menu.classList.contains("open")) {
             setMenuState(false);
-
             toggle.focus();
-
         }
-
     });
-
-
-    /* ================================================
-       CLOSE MENU WHEN RESIZING TO DESKTOP
-    ================================================ */
 
     window.addEventListener("resize", () => {
-
-        if (window.innerWidth > 900) {
-
-            setMenuState(false);
-
-        }
-
+        if (window.innerWidth > 900) setMenuState(false);
     });
-
-
-    /* ================================================
-       HEADER SCROLL EFFECT
-    ================================================ */
 
     function updateHeader() {
-
-        header.classList.toggle(
-            "scrolled",
-            window.scrollY > 20
-        );
-
+        header.classList.toggle("scrolled", window.scrollY > 20);
     }
 
-    window.addEventListener("scroll", updateHeader, {
-        passive: true
-    });
-
+    window.addEventListener("scroll", updateHeader, { passive: true });
     updateHeader();
 
-
-    /* ================================================
-       ACTIVE SECTION DETECTION
-    ================================================ */
-
-    const sections = document.querySelectorAll(
-        "section[id], main[id]"
-    );
-
     if ("IntersectionObserver" in window) {
+        const sections = document.querySelectorAll("section[id], main[id]");
 
         const observer = new IntersectionObserver(entries => {
-
             entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
 
-                if (entry.isIntersecting) {
+                const sectionId = entry.target.id;
 
-                    const sectionId = entry.target.id;
-
-                    links.forEach(link => {
-
-                        const isActive =
-                            link.getAttribute("href") === `#${sectionId}`;
-
-                        link.classList.toggle("active", isActive);
-
-                    });
-
-                }
-
+                links.forEach(link => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === `#${sectionId}`
+                    );
+                });
             });
-
         }, {
             rootMargin: "-25% 0px -65% 0px"
         });
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
+        sections.forEach(section => observer.observe(section));
     }
-
 }
 
 
 /* =====================================================
-   INITIALIZE
+   STATISTICS
 ===================================================== */
-
-if (document.readyState === "loading") {
-
-    document.addEventListener("DOMContentLoaded", initNavbar);
-
-} else {
-
-    initNavbar();
-
-}
-
-
 
 function animateCounter(element) {
     const target = Number(element.dataset.target);
+    if (!Number.isFinite(target)) return;
+
     const duration = 2000;
     const startTime = performance.now();
-
     const suffix = element.querySelector("span")?.textContent || "";
 
     function updateCounter(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-
-        // Smooth ease-out animation
+        const progress = Math.min((currentTime - startTime) / duration, 1);
         const easedProgress = 1 - Math.pow(1 - progress, 4);
-
         const currentValue = Math.floor(target * easedProgress);
 
-        element.innerHTML = `${currentValue.toLocaleString("en-IN")}<span>${suffix}</span>`;
+        element.innerHTML =
+            `${currentValue.toLocaleString("en-IN")}<span>${suffix}</span>`;
 
         if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
-            element.innerHTML = `${target.toLocaleString("en-IN")}<span>${suffix}</span>`;
+            element.innerHTML =
+                `${target.toLocaleString("en-IN")}<span>${suffix}</span>`;
         }
     }
 
@@ -534,55 +274,45 @@ function animateCounter(element) {
 
 function initStatistics() {
     const statsSection = document.querySelector(".stats-section");
-
     if (!statsSection) return;
 
     const counters = statsSection.querySelectorAll(".stat-number");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                counters.forEach((counter) => {
-                    animateCounter(counter);
-                });
+    if ("IntersectionObserver" in window && counters.length) {
+        const counterObserver = new IntersectionObserver(entries => {
+            if (!entries.some(entry => entry.isIntersecting)) return;
 
-                observer.disconnect();
-            }
-        });
-    }, {
-        threshold: 0.4
-    });
+            counters.forEach(animateCounter);
+            counterObserver.disconnect();
+        }, { threshold: 0.4 });
 
-    observer.observe(statsSection);
+        counterObserver.observe(statsSection);
+    }
+
+    const statItems = document.querySelectorAll(".stat-item");
+
+    if ("IntersectionObserver" in window && statItems.length) {
+        const itemObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("show");
+                itemObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.2 });
+
+        statItems.forEach(item => itemObserver.observe(item));
+    } else {
+        statItems.forEach(item => item.classList.add("show"));
+    }
 }
-
-document.addEventListener("DOMContentLoaded", initStatistics);
-
-const statItems = document.querySelectorAll(".stat-item");
-
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.2
-});
-
-statItems.forEach((item) => {
-    statsObserver.observe(item);
-});
-
 
 
 /* =====================================================
-   EVENTS FEATURED IMAGE INTERACTION
+   EVENTS FEATURED IMAGE
 ===================================================== */
 
 function initEventPreview() {
-
     const featuredEvent = document.querySelector("#featuredEvent");
     const upcomingEventsPanel = document.querySelector(".upcoming-events");
 
@@ -594,7 +324,15 @@ function initEventPreview() {
     const featuredTitle = document.querySelector("#featuredEventTitle");
     const featuredDescription = document.querySelector("#featuredEventDescription");
 
-    const upcomingEvents = document.querySelectorAll(".upcoming-event");
+    if (
+        !featuredImage ||
+        !featuredCategory ||
+        !featuredDate ||
+        !featuredTitle ||
+        !featuredDescription
+    ) return;
+
+    const upcomingEvents = upcomingEventsPanel.querySelectorAll(".upcoming-event");
 
     const defaultEvent = {
         image: featuredEvent.dataset.defaultImage,
@@ -607,50 +345,40 @@ function initEventPreview() {
     let activeImage = defaultEvent.image;
 
     function updateFeaturedEvent(eventData) {
-
-        // Update event content immediately
-        featuredCategory.textContent = eventData.category;
-        featuredDate.textContent = eventData.date;
-        featuredTitle.textContent = eventData.title;
-        featuredDescription.textContent = eventData.description;
+        featuredCategory.textContent = eventData.category || "";
+        featuredDate.textContent = eventData.date || "";
+        featuredTitle.textContent = eventData.title || "";
+        featuredDescription.textContent = eventData.description || "";
 
         if (!eventData.image || eventData.image === activeImage) return;
 
         activeImage = eventData.image;
-
         featuredImage.style.opacity = "0";
 
         const newImage = new Image();
 
         newImage.onload = () => {
-
             if (activeImage !== eventData.image) return;
 
             featuredImage.src = eventData.image;
-            featuredImage.alt = eventData.title;
+            featuredImage.alt = eventData.title || "";
 
             requestAnimationFrame(() => {
                 featuredImage.style.opacity = "1";
             });
-
         };
 
         newImage.onerror = () => {
-
-            console.error("Event image could not load:", eventData.image);
-
             if (activeImage === eventData.image) {
                 featuredImage.style.opacity = "1";
             }
-
+            console.error("Event image could not load:", eventData.image);
         };
 
         newImage.src = eventData.image;
     }
 
-    // Upcoming event hover interaction
     upcomingEvents.forEach(event => {
-
         const eventData = {
             image: event.dataset.image,
             category: event.dataset.category,
@@ -666,37 +394,19 @@ function initEventPreview() {
         event.addEventListener("focusin", () => {
             updateFeaturedEvent(eventData);
         });
-
     });
 
-    // Restore default event
     upcomingEventsPanel.addEventListener("mouseleave", () => {
         updateFeaturedEvent(defaultEvent);
     });
 
     upcomingEventsPanel.addEventListener("focusout", event => {
-
         if (!upcomingEventsPanel.contains(event.relatedTarget)) {
             updateFeaturedEvent(defaultEvent);
         }
-
     });
-
 }
 
-// Safe initialization
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initEventPreview);
-} else {
-    initEventPreview();
-}
-
-// Update footer copyright year
-const footerYear = document.getElementById("footerYear");
-
-if (footerYear) {
-    footerYear.textContent = new Date().getFullYear();
-}
 
 /* =====================================================
    BACK TO TOP
@@ -704,28 +414,20 @@ if (footerYear) {
 
 function initBackToTop() {
     const backToTop = document.getElementById("backToTop");
-
     if (!backToTop) return;
 
     function toggleBackToTop() {
         backToTop.classList.toggle("show", window.scrollY > 400);
     }
 
-    window.addEventListener("scroll", toggleBackToTop, {
-        passive: true
-    });
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
 
     backToTop.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     toggleBackToTop();
 }
-
-document.addEventListener("DOMContentLoaded", initBackToTop);
 
 
 /* =====================================================
@@ -734,20 +436,21 @@ document.addEventListener("DOMContentLoaded", initBackToTop);
 
 function initFaqAccordion() {
     const faqItems = document.querySelectorAll(".faq-item");
-
     if (!faqItems.length) return;
 
-    faqItems.forEach((item) => {
+    faqItems.forEach(item => {
         const question = item.querySelector(".faq-question");
+        if (!question) return;
 
         question.addEventListener("click", () => {
             const isActive = item.classList.contains("active");
 
-            faqItems.forEach((faqItem) => {
+            faqItems.forEach(faqItem => {
                 faqItem.classList.remove("active");
-
-                const button = faqItem.querySelector(".faq-question");
-                button.setAttribute("aria-expanded", "false");
+                faqItem.querySelector(".faq-question")?.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
             });
 
             if (!isActive) {
@@ -758,5 +461,27 @@ function initFaqAccordion() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", initFaqAccordion);
 
+/* =====================================================
+   PAGE INITIALIZATION
+===================================================== */
+
+function initSchoolWebsite() {
+    initAnnouncement();
+    initNavbar();
+    initStatistics();
+    initEventPreview();
+    initBackToTop();
+    initFaqAccordion();
+
+    const footerYear = document.getElementById("footerYear");
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSchoolWebsite, { once: true });
+} else {
+    initSchoolWebsite();
+}
