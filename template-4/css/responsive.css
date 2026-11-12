@@ -178,7 +178,31 @@
         grid-template-rows: repeat(6, 65px);
         gap: 10px;
     }
+
+    .events-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .featured-event {
+        min-height: 500px;
+    }
+
+    .upcoming-events {
+        padding: 22px;
+    }
+
+    .upcoming-event {
+        gap: 11px;
+    }
+
+    .event-date-box {
+        width: 54px;
+        height: 60px;
+    }
 }
+
+
 
 
 @media (max-width: 900px) {
@@ -538,7 +562,26 @@
     .gallery-masonry {
         grid-template-rows: repeat(6, 75px);
     }
+
+    .events-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .events-header-right {
+        max-width: 600px;
+    }
+
+    .events-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-event {
+        min-height: 480px;
+    }
 }
+
 @media (max-width: 600px) {
     .hero-section {
         height: auto;
@@ -989,6 +1032,68 @@
 
     .gallery-highlight {
         margin-top: 30px;
+    }
+
+    .events-header {
+        margin-bottom: 30px;
+    }
+
+    .featured-event {
+        min-height: 430px;
+        border-radius: var(--radius-lg);
+    }
+
+    .featured-event-top {
+        top: 16px;
+        left: 16px;
+        right: 16px;
+    }
+
+    .featured-event-content {
+        left: 20px;
+        right: 20px;
+        bottom: 22px;
+    }
+
+    .featured-event-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .featured-event-content p {
+        font-size: var(--fs-small);
+    }
+
+    .upcoming-events {
+        padding: 19px;
+        border-radius: var(--radius-lg);
+    }
+
+    .upcoming-event {
+        gap: 12px;
+        padding: 19px 0;
+    }
+
+    .event-date-box {
+        width: 51px;
+        height: 57px;
+        border-radius: 12px;
+    }
+
+    .event-date-box span {
+        font-size: 22px;
+    }
+
+    .upcoming-event-info h4 {
+        font-size: 13px;
+    }
+
+    .upcoming-event-info p {
+        font-size: 11px;
+    }
+
+    .upcoming-event-arrow {
+        width: 30px;
+        height: 30px;
     }
 }
 

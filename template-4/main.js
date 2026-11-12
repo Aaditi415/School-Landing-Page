@@ -574,3 +574,119 @@ const statsObserver = new IntersectionObserver((entries) => {
 statItems.forEach((item) => {
     statsObserver.observe(item);
 });
+
+
+
+/* =====================================================
+   EVENTS FEATURED IMAGE INTERACTION
+===================================================== */
+
+function initEventPreview() {
+
+    const featuredEvent = document.querySelector("#featuredEvent");
+    const upcomingEventsPanel = document.querySelector(".upcoming-events");
+
+    if (!featuredEvent || !upcomingEventsPanel) return;
+
+    const featuredImage = document.querySelector("#featuredEventImage");
+    const featuredCategory = document.querySelector("#featuredEventCategory");
+    const featuredDate = document.querySelector("#featuredEventDate");
+    const featuredTitle = document.querySelector("#featuredEventTitle");
+    const featuredDescription = document.querySelector("#featuredEventDescription");
+
+    const upcomingEvents = document.querySelectorAll(".upcoming-event");
+
+    const defaultEvent = {
+        image: featuredEvent.dataset.defaultImage,
+        category: featuredCategory.textContent.trim(),
+        date: featuredDate.textContent.trim(),
+        title: featuredTitle.textContent.trim(),
+        description: featuredDescription.textContent.trim()
+    };
+
+    let activeImage = defaultEvent.image;
+
+    function updateFeaturedEvent(eventData) {
+
+        // Update event content immediately
+        featuredCategory.textContent = eventData.category;
+        featuredDate.textContent = eventData.date;
+        featuredTitle.textContent = eventData.title;
+        featuredDescription.textContent = eventData.description;
+
+        if (!eventData.image || eventData.image === activeImage) return;
+
+        activeImage = eventData.image;
+
+        featuredImage.style.opacity = "0";
+
+        const newImage = new Image();
+
+        newImage.onload = () => {
+
+            if (activeImage !== eventData.image) return;
+
+            featuredImage.src = eventData.image;
+            featuredImage.alt = eventData.title;
+
+            requestAnimationFrame(() => {
+                featuredImage.style.opacity = "1";
+            });
+
+        };
+
+        newImage.onerror = () => {
+
+            console.error("Event image could not load:", eventData.image);
+
+            if (activeImage === eventData.image) {
+                featuredImage.style.opacity = "1";
+            }
+
+        };
+
+        newImage.src = eventData.image;
+    }
+
+    // Upcoming event hover interaction
+    upcomingEvents.forEach(event => {
+
+        const eventData = {
+            image: event.dataset.image,
+            category: event.dataset.category,
+            date: event.dataset.date,
+            title: event.dataset.title,
+            description: event.dataset.description
+        };
+
+        event.addEventListener("mouseenter", () => {
+            updateFeaturedEvent(eventData);
+        });
+
+        event.addEventListener("focusin", () => {
+            updateFeaturedEvent(eventData);
+        });
+
+    });
+
+    // Restore default event
+    upcomingEventsPanel.addEventListener("mouseleave", () => {
+        updateFeaturedEvent(defaultEvent);
+    });
+
+    upcomingEventsPanel.addEventListener("focusout", event => {
+
+        if (!upcomingEventsPanel.contains(event.relatedTarget)) {
+            updateFeaturedEvent(defaultEvent);
+        }
+
+    });
+
+}
+
+// Safe initialization
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initEventPreview);
+} else {
+    initEventPreview();
+}
