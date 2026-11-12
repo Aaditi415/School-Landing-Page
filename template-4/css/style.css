@@ -1539,7 +1539,8 @@ p {
 .admission-subheading,
 .events-subheading,
 .reviews-subheading,
-.faq-subheading {
+.faq-subheading,
+.student-life-subheading {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -1562,7 +1563,8 @@ p {
 .admission-subheading-line,
 .events-subheading-line,
 .reviews-subheading-line,
-.faq-subheading-line  {
+.faq-subheading-line,
+.student-life-subheading-line  {
     width: 27px;
     height: 2px;
     background: var(--accent-orange);
@@ -2062,7 +2064,7 @@ p {
 .learning-section {
     width: 100%;
     padding: var(--section-space) 0;
-    background: var(--bg-main);
+    background: var(--bg-white);
 }
 
 /* Header */
@@ -3618,14 +3620,14 @@ p {
     height: 17px;
 }
 
-.events-heading h2 {
+.events-heading h2  {
     color: var(--text-heading);
     font-size: var(--fs-h2);
     line-height: var(--lh-heading);
     margin: 0;
 }
 
-.events-heading h2 span {
+.events-heading h2 span { 
     color: var(--secondary);
 }
 
@@ -4231,7 +4233,7 @@ p {
 ===================================================== */
 
 .contact-section {
-    background: var(--bg-main);
+    background: var(--bg-white);
     padding-block: var(--section-space);
     overflow: hidden;
 }
@@ -4986,9 +4988,6 @@ p {
     object-position: right bottom;
 }
 
-
-
-
 /* =====================================================
    LEADERSHIP MESSAGES
 ===================================================== */
@@ -5270,7 +5269,7 @@ p {
 ===================================================== */
 
 .achievements-section {
-    background: var(--bg-white);
+    background: var(--bg-main);
     overflow: hidden;
 }
 
@@ -5512,7 +5511,7 @@ p {
 ===================================================== */
 
 .admission-section {
-    background: var(--bg-main);
+    background: var(--bg-white);
     overflow: hidden;
 }
 
@@ -5724,7 +5723,7 @@ p {
 ===================================================== */
 
 .faq-section {
-    background: var(--bg-white);
+    background: var(--bg-main);
     overflow: hidden;
 }
 
@@ -5918,4 +5917,282 @@ p {
     color: var(--text-body);
     font-size: var(--fs-small);
     line-height: var(--lh-body);
+}
+
+/* =====================================================
+   STUDENT LIFE
+===================================================== */
+
+.student-life-section {
+    background: var(--bg-main);
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.student-life-header {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    align-items: end;
+    gap: 60px;
+    margin-bottom: 42px;
+}
+
+.student-life-heading h2 {
+    max-width: 600px;
+    margin-top: 16px;
+    font-size: var(--fs-h2);
+    line-height: var(--lh-heading);
+}
+
+.student-life-heading h2 span {
+    color: var(--secondary);
+}
+
+.student-life-intro p {
+    color: var(--text-body);
+    line-height: var(--lh-body);
+    margin-bottom: 17px;
+}
+
+/* FEATURED IMAGE */
+
+.student-life-featured {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: var(--radius-xl);
+    background: var(--primary);
+}
+
+.student-life-main-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 700ms ease;
+}
+
+.student-life-featured:hover .student-life-main-image {
+    transform: scale(1.04);
+}
+
+.student-life-image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(20, 35, 67, 0.88) 0%,
+        rgba(20, 35, 67, 0.52) 45%,
+        rgba(20, 35, 67, 0.05) 100%
+    );
+}
+
+.student-life-featured-content {
+    position: absolute;
+    left: 45px;
+    bottom: 5px;
+    max-width: 490px;
+    color: var(--text-white);
+}
+
+.student-life-image-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--accent-orange);
+    font-size: var(--fs-label);
+    font-weight: var(--fw-bold);
+    letter-spacing: 1.5px;
+}
+
+.student-life-featured-content h3 {
+    margin-bottom: 13px;
+    color: var(--text-white);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    line-height: var(--lh-heading);
+}
+
+.student-life-featured-content p {
+    max-width: 420px;
+    color: rgba(255,255,255,0.85);
+    line-height: var(--lh-body);
+}
+
+/* FLOATING NOTE */
+
+.student-life-floating-note {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 19px;
+    border: 1px solid rgba(255,255,255,0.65);
+    border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.94);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(12px);
+}
+
+.student-life-note-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    color: var(--secondary);
+    background: var(--pastel-rose);
+}
+
+.student-life-note-icon i {
+    width: 20px;
+    height: 20px;
+}
+
+.student-life-floating-note strong,
+.student-life-floating-note span {
+    display: block;
+}
+
+.student-life-floating-note strong {
+    color: var(--text-heading);
+    font-size: var(--fs-small);
+    margin-bottom: 4px;
+}
+
+.student-life-floating-note span {
+    color: var(--text-muted);
+    font-size: var(--fs-label);
+}
+
+/* ACTIVITY CARDS */
+
+.student-life-activities {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.student-life-card {
+    position: relative;
+    min-height: 245px;
+    padding: 24px 22px;
+    border-radius: var(--radius-lg);
+    transition: var(--transition-normal);
+}
+
+.student-life-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.life-creative {
+    background: var(--pastel-lavender);
+}
+
+.life-active {
+    background: var(--pastel-mint);
+}
+
+.life-curious {
+    background: var(--pastel-peach);
+}
+
+.life-together {
+    background: var(--pastel-blue);
+}
+
+.student-life-card-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    color: var(--primary);
+    background: rgba(255,255,255,0.75);
+}
+
+.student-life-card-icon i {
+    width: 23px;
+    height: 23px;
+}
+
+.student-life-card > span {
+    color: var(--text-body);
+    font-size: var(--fs-label);
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+}
+
+.student-life-card h3 {
+    max-width: 220px;
+    margin: 9px 0;
+    color: var(--text-heading);
+    font-size: var(--fs-h3);
+    line-height: var(--lh-subheading);
+}
+
+.student-life-card p {
+    color: var(--text-body);
+    font-size: var(--fs-small);
+    line-height: 1.65;
+    padding-right: 10px;
+}
+
+.student-life-card > a {
+    position: absolute;
+    right: 19px;
+    bottom: 19px;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: var(--primary);
+    background: rgba(255,255,255,0.8);
+    transition: var(--transition-normal);
+}
+
+.student-life-card > a:hover {
+    color: var(--text-white);
+    background: var(--primary);
+    transform: rotate(45deg);
+}
+
+.student-life-card > a i {
+    width: 17px;
+    height: 17px;
+}
+
+/* BOTTOM HIGHLIGHTS */
+
+.student-life-highlights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.student-life-highlight {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--text-body);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+}
+
+.student-life-highlight i {
+    width: 19px;
+    height: 19px;
+    color: var(--secondary);
 }
